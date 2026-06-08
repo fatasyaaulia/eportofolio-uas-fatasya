@@ -1,0 +1,1608 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Artifak & Analisis - E-Portfolio 2 Fatasya Aulia Suyono</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              mono: ["Fira Code", "monospace"],
+            },
+            colors: {
+              cyber: {
+                blue: "#007AFF",
+                cyan: "#32ADE6",
+                purple: "#AF52DE",
+                indigo: "#5856D6",
+              },
+            },
+            animation: {
+              "fade-in-up":
+                "fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+              float: "float 6s ease-in-out infinite",
+              "pulse-ring":
+                "pulseRing 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              blink: "blink 1s step-end infinite",
+            },
+            keyframes: {
+              fadeInUp: {
+                "0%": { opacity: "0", transform: "translateY(40px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-15px)" },
+              },
+              pulseRing: {
+                "0%": { transform: "scale(0.8)", opacity: "0.5" },
+                "100%": { transform: "scale(1.5)", opacity: "0" },
+              },
+              blink: {
+                "0%, 100%": { opacity: "1" },
+                "50%": { opacity: "0" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        background-color: #f2f4f8;
+        background-image:
+          radial-gradient(
+            at 0% 0%,
+            rgba(50, 173, 230, 0.15) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 100% 0%,
+            rgba(175, 82, 222, 0.15) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 100% 100%,
+            rgba(0, 122, 255, 0.15) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 0% 100%,
+            rgba(88, 86, 214, 0.15) 0px,
+            transparent 50%
+          );
+        background-attachment: fixed;
+        color: #1d1d1f;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      .tech-grid-bg {
+        background-size: 40px 40px;
+        background-image:
+          linear-gradient(
+            to right,
+            rgba(0, 122, 255, 0.05) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(0, 122, 255, 0.05) 1px,
+            transparent 1px
+          );
+      }
+
+      .bento-card {
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(24px) saturate(150%);
+        -webkit-backdrop-filter: blur(24px) saturate(150%);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        border-right: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow:
+          0 20px 40px -10px rgba(0, 122, 255, 0.08),
+          inset 0 1px 0 rgba(255, 255, 255, 1);
+        border-radius: 2.5rem;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .bento-card:hover {
+        transform: translateY(-5px);
+        box-shadow:
+          0 30px 60px -15px rgba(0, 122, 255, 0.15),
+          inset 0 1px 0 rgba(255, 255, 255, 1);
+        border-color: rgba(0, 122, 255, 0.3);
+        background: rgba(255, 255, 255, 0.65);
+      }
+
+      .iframe-thumb {
+        width: 200%;
+        height: 200%;
+        transform: scale(0.5);
+        transform-origin: 0 0;
+        border: none;
+      }
+
+      .delay-100 {
+        animation-delay: 100ms;
+      }
+      .delay-200 {
+        animation-delay: 200ms;
+      }
+      .delay-300 {
+        animation-delay: 300ms;
+      }
+    </style>
+  </head>
+  <body class="antialiased relative min-h-screen flex flex-col">
+    <div class="fixed inset-0 tech-grid-bg pointer-events-none z-0"></div>
+    <div
+      class="fixed top-20 left-20 w-72 h-72 border-[1px] border-cyber-purple/20 rounded-full animate-[spin_25s_linear_infinite] border-dashed pointer-events-none z-0"
+    ></div>
+
+    <nav class="fixed w-full z-50 mt-4 px-6 transition-all duration-300">
+      <div
+        class="max-w-[1300px] mx-auto bg-white/60 backdrop-blur-2xl border border-white/80 shadow-[0_8px_30px_rgba(0,0,0,0.04)] rounded-full px-6 py-3 flex justify-between items-center"
+      >
+        <div class="flex items-center gap-3 group cursor-pointer relative">
+          <div
+            class="absolute inset-0 bg-cyber-blue rounded-xl animate-pulse-ring"
+          ></div>
+          <div
+            class="w-10 h-10 bg-gradient-to-br from-cyber-blue to-cyber-cyan text-white rounded-xl flex items-center justify-center font-mono font-bold text-lg shadow-lg relative z-10 group-hover:scale-105 transition-transform"
+          >
+            &lt;/&gt;
+          </div>
+          <div>
+            <h1
+              class="font-bold text-gray-900 text-lg leading-none tracking-tight"
+            >
+              Fatasya<span class="text-cyber-blue animate-blink">_</span>
+            </h1>
+            <p
+              class="text-[9px] text-gray-500 font-bold font-mono uppercase tracking-widest mt-1"
+            >
+              E-Portofolio UAS
+            </p>
+          </div>
+        </div>
+
+        <div class="hidden md:flex items-center gap-1">
+          <a
+            href="index.html"
+            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-cyber-blue rounded-full text-sm font-semibold transition"
+            >Beranda</a
+          >
+          <a
+            href="filosofi.html"
+            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-cyber-blue rounded-full text-sm font-semibold transition"
+            >Filosofi Mengajar</a
+          >
+          <a
+            href="artifak.html"
+            class="px-5 py-2.5 bg-white text-cyber-blue border-b-2 border-cyber-blue rounded-full text-sm font-bold shadow-sm transition"
+            >Artifak & Analisis</a
+          >
+          <a
+            href="refleksi.html"
+            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-cyber-blue rounded-full text-sm font-semibold transition"
+            >Refleksi Akhir</a
+          >
+        </div>
+
+        <a
+          href="https://wa.me/6285732003774"
+          target="_blank"
+          class="hidden md:flex items-center gap-2 bg-gradient-to-r from-cyber-blue to-cyber-cyan text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-blue-500/30 hover:scale-105 transition-transform"
+        >
+          <i class="fab fa-whatsapp"></i> Kontak
+        </a>
+
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-gray-800 text-2xl focus:outline-none bg-white/50 p-2 rounded-full"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden absolute top-20 left-6 right-6 bg-white/90 backdrop-blur-2xl border border-white shadow-2xl rounded-3xl flex flex-col p-4 space-y-2 font-medium z-40"
+      >
+        <a
+          href="index.html"
+          class="block w-full text-gray-600 hover:bg-gray-50 p-3 rounded-2xl"
+          >Beranda</a
+        >
+        <a
+          href="filosofi.html"
+          class="block w-full text-gray-600 hover:bg-gray-50 p-3 rounded-2xl"
+          >Filosofi Mengajar</a
+        >
+        <a
+          href="artifak.html"
+          class="block w-full text-cyber-blue bg-blue-50 p-3 rounded-2xl font-bold"
+          >Artifak & Analisis</a
+        >
+        <a
+          href="refleksi.html"
+          class="block w-full text-gray-600 hover:bg-gray-50 p-3 rounded-2xl"
+          >Refleksi Akhir</a
+        >
+      </div>
+    </nav>
+    <main
+      class="flex-1 max-w-[1300px] mx-auto w-full pt-40 pb-20 px-6 lg:px-8 relative z-10 space-y-8"
+    >
+      <section
+        class="bento-card p-10 lg:p-14 opacity-0 animate-fade-in-up flex flex-col md:flex-row items-center justify-between gap-10 bg-white/80"
+      >
+        <div class="flex-1">
+          <div
+            class="flex items-center gap-2 mb-4 w-max bg-blue-50 px-4 py-2 rounded-full border border-blue-100"
+          >
+            <div class="w-2 h-2 rounded-full bg-cyber-blue animate-pulse"></div>
+            <span
+              class="text-cyber-blue font-bold text-[10px] uppercase tracking-widest"
+              >DOKUMENTASI PRAKTIK TERBIMBING</span
+            >
+          </div>
+
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.1] tracking-tight mb-2 z-10 relative"
+          >
+            Analisis Artefak <br />
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-cyber-cyan to-cyber-purple"
+              >Pembelajaran PPL</span
+            >
+          </h1>
+
+          <p
+            class="text-gray-600 text-base md:text-lg leading-relaxed max-w-xl"
+          >
+            Evaluasi komprehensif atas perangkat pembelajaran (RPP, Media, LKPD)
+            dan bukti otentik penilaian Guru Pamong yang dianalisis menggunakan
+            kajian teori untuk mendukung perbaikan berkelanjutan.
+          </p>
+        </div>
+
+        <div
+          class="w-full max-w-[280px] lg:max-w-[360px] relative animate-float"
+        >
+          <div
+            class="absolute inset-0 bg-cyber-blue/20 blur-3xl rounded-full"
+          ></div>
+          <img
+            src="https://cdn3d.iconscout.com/3d/premium/thumb/data-analysis-5342748-4468820.png"
+            alt="3D Education Analytics"
+            class="relative z-10 w-full object-contain drop-shadow-2xl"
+            onerror="
+              this.src =
+                'https://cdn3d.iconscout.com/3d/premium/thumb/web-analytics-4996160-4159673.png'
+            "
+          />
+        </div>
+      </section>
+
+      <section
+        class="bento-card p-6 md:p-10 opacity-0 animate-fade-in-up delay-100"
+      >
+        <div class="flex items-center gap-4 mb-8 pb-6 border-b border-gray-100">
+          <div
+            class="w-12 h-12 bg-gray-900 text-white rounded-xl flex items-center justify-center text-xl font-bold font-mono shadow-[0_8px_20px_rgba(0,0,0,0.2)]"
+          >
+            01
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900">
+              Siklus 1: Informatika Masa Depan & Society 5.0
+            </h2>
+            <p
+              class="text-xs text-cyber-blue font-medium mt-1 flex items-center gap-1.5"
+            >
+              <i class="fas fa-location-dot"></i> SMA Negeri 14 Surabaya
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-6 space-y-6">
+            <div
+              class="flex items-center gap-2 mb-2 bg-gray-50 w-max px-4 py-2 rounded-lg border border-gray-100"
+            >
+              <i class="fas fa-layer-group text-cyber-blue"></i>
+              <h3 class="font-bold text-gray-800 text-sm">
+                Bukti Artefak Pembelajaran
+              </h3>
+            </div>
+
+            <div
+              class="bg-white/80 border border-gray-200 p-5 rounded-3xl flex flex-col relative overflow-hidden shadow-sm"
+            >
+              <div class="w-full flex items-center gap-3 mb-4 text-gray-500">
+                <i class="fas fa-file-word text-blue-500 text-2xl"></i>
+                <span class="font-bold text-base text-gray-700"
+                  >Modul Ajar Siklus 1</span
+                >
+              </div>
+              <div
+                class="relative group cursor-pointer"
+                onclick="
+                  openModal(
+                    '<i class=\'fas fa-file-word text-blue-500\'></i> Modul Ajar Siklus 1',
+                    'https://drive.google.com/file/d/1es-1YeiK_AizgZh5S0eVtRJzS6KZ7HGx/preview',
+                  )
+                "
+              >
+                <div
+                  class="relative bg-gray-900 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white aspect-video md:aspect-[4/3] w-full"
+                >
+                  <iframe
+                    src="https://drive.google.com/file/d/1es-1YeiK_AizgZh5S0eVtRJzS6KZ7HGx/preview"
+                    class="absolute top-0 left-0 iframe-thumb opacity-60 pointer-events-none"
+                    frameborder="0"
+                  ></iframe>
+                  <div
+                    class="absolute inset-0 flex flex-col items-center justify-center bg-black/40 group-hover:bg-black/60 transition-all"
+                  >
+                    <div
+                      class="w-12 h-12 bg-white text-cyber-blue rounded-full flex items-center justify-center mb-3 animate-pulse-slow shadow-xl"
+                    >
+                      <i class="fas fa-expand-alt text-xl"></i>
+                    </div>
+                    <span
+                      class="bg-cyber-blue text-white px-6 py-2 rounded-full text-xs font-bold tracking-wide"
+                      >Pratinjau Modul</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <button
+                onclick="
+                  openModal(
+                    '<i class=\'fas fa-desktop text-orange-500\'></i> Media PPT',
+                    'https://drive.google.com/file/d/1rrcxEUiOIIoU6cfULzQnHPZww4kzq7dW/preview',
+                  )
+                "
+                class="bg-gradient-to-br from-white to-orange-50 border border-orange-200 text-orange-600 hover:border-orange-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+              >
+                <div class="flex justify-between w-full items-center">
+                  <i
+                    class="fas fa-desktop text-xl group-hover:scale-110 transition-transform"
+                  ></i>
+                  <div
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <i class="fas fa-expand text-[10px]"></i>
+                  </div>
+                </div>
+                <div class="mt-1">
+                  <span
+                    class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
+                    >Media Utama</span
+                  >
+                  <span class="text-xs font-bold text-gray-900 block"
+                    >Slide PPT Interaktif</span
+                  >
+                </div>
+              </button>
+
+              <button
+                onclick="
+                  openModal(
+                    '<i class=\'fas fa-play-circle text-red-500\'></i> Video Mengajar',
+                    'https://drive.google.com/file/d/1THO2Md3tnQjytM1G44vtA35PhWpNypjg/preview',
+                  )
+                "
+                class="bg-gradient-to-br from-white to-red-50 border border-red-200 text-red-600 hover:border-red-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+              >
+                <div class="flex justify-between w-full items-center">
+                  <i
+                    class="fas fa-play-circle text-xl group-hover:scale-110 transition-transform"
+                  ></i>
+                  <div
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <i class="fas fa-expand text-[10px]"></i>
+                  </div>
+                </div>
+                <div class="mt-1">
+                  <span
+                    class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
+                    >Video</span
+                  >
+                  <span class="text-xs font-bold text-gray-900 block"
+                    >Praktik Mengajar</span
+                  >
+                </div>
+              </button>
+
+              <button
+                onclick="
+                  openModal(
+                    '<i class=\'fas fa-book-open text-blue-500\'></i> Hasil LKPD Siswa',
+                    'https://drive.google.com/file/d/1skiBjwApnIbaQmO91nZ-zH8cTLpYYOuz/preview',
+                  )
+                "
+                class="bg-gradient-to-br from-white to-blue-50 border border-blue-200 text-blue-600 hover:border-blue-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+              >
+                <div class="flex justify-between w-full items-center">
+                  <i
+                    class="fas fa-book-open text-xl group-hover:scale-110 transition-transform"
+                  ></i>
+                  <div
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <i class="fas fa-expand text-[10px]"></i>
+                  </div>
+                </div>
+                <div class="mt-1">
+                  <span
+                    class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
+                    >Penugasan</span
+                  >
+                  <span class="text-xs font-bold text-gray-900 block"
+                    >Hasil LKPD Siswa</span
+                  >
+                </div>
+              </button>
+
+              <button
+                onclick="
+                  openModal(
+                    '<i class=\'fas fa-clipboard-check text-green-500\'></i> Umpan Balik Guru Pamong',
+                    'https://drive.google.com/file/d/1CfZT8nXf0GohA6RXtdNhMSFvqS7o85-W/preview',
+                  )
+                "
+                class="bg-gradient-to-br from-white to-green-50 border border-green-200 text-green-600 hover:border-green-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+              >
+                <div class="flex justify-between w-full items-center">
+                  <i
+                    class="fas fa-clipboard-check text-xl group-hover:scale-110 transition-transform"
+                  ></i>
+                  <div
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <i class="fas fa-expand text-[10px]"></i>
+                  </div>
+                </div>
+                <div class="mt-1">
+                  <span
+                    class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
+                    >Penilaian</span
+                  >
+                  <span class="text-xs font-bold text-gray-900 block"
+                    >Umpan Balik GP & DPL</span
+                  >
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 space-y-4">
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-blue-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-blue-100 text-cyber-blue flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-info"></i>
+                  </div>
+                  1. Konteks & Tujuan Pembuatan
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i class="fas fa-chevron-down transition-transform"></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  <strong>Konteks:</strong> Modul ini digunakan untuk 2 Jam
+                  Pelajaran (2 x 45 menit) di Kelas Fase E, membahas subbab
+                  "Informatika Masa Depan & Karier". Materi meliputi peran
+                  teknologi dalam Society 5.0, pencapaian SDGs, dan pemetaan
+                  profesi teknologi.<br /><br />
+                  <strong>Tujuan:</strong> Perangkat dan media dibuat agar siswa
+                  tidak hanya menghafal, tetapi mampu menganalisis secara kritis
+                  dampak teknologi pada masyarakat dan merencanakan kompetensi
+                  yang dibutuhkan untuk karier impian mereka.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-green-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-check"></i>
+                  </div>
+                  2. Analisis Kelebihan Artifak
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i class="fas fa-chevron-down transition-transform"></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  Kelebihan utama dari perangkat ini adalah penggunaan
+                  <strong
+                    >Media Pembelajaran Berbasis Gamifikasi (Kahoot!)</strong
+                  >
+                  yang terlampir. Apersepsi yang menghubungkan teknologi modern
+                  dengan gaya hidup siswa secara nyata memicu antusiasme belajar
+                  yang sangat tinggi. Media interaktif ini sukses menghidupkan
+                  kompetisi positif, bahkan siswa yang pasif pun terdorong untuk
+                  berpartisipasi dan merespons pertanyaan pemantik.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-red-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-red-100 text-red-500 flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-minus-circle"></i>
+                  </div>
+                  3. Analisis Kekurangan Artifak
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i class="fas fa-chevron-down transition-transform"></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  Kekurangan dari Modul Ajar dan pelaksanaannya terletak pada
+                  <strong>estimasi alokasi waktu pada bagian inti</strong>.
+                  Porsi diskusi mengenai sertifikasi internasional ternyata
+                  memancing banyak pertanyaan kritis dari siswa, sehingga waktu
+                  melebar melebihi rencana (RPP). Akibatnya, durasi untuk
+                  melakukan *refleksi penutup dan kesimpulan* di akhir jam
+                  pelajaran menjadi terlalu sempit dan terburu-buru.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-purple-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-book"></i>
+                  </div>
+                  4. Kajian Teori & Integrasi Mata Kuliah
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i class="fas fa-chevron-down transition-transform"></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  Perangkat ini disusun berdasarkan
+                  <strong>Teori Konstruktivisme Sosial Lev Vygotsky</strong>, di
+                  mana pemahaman mengenai masa depan teknologi tidak didekte,
+                  melainkan dibangun oleh siswa melalui diskusi kelompok
+                  (*scaffolding* teman sejawat). Artifak kuis Kahoot!
+                  terintegrasi secara langsung dengan prinsip **Assessment for
+                  Learning** yang dipelajari pada mata kuliah
+                  <em>Pembelajaran Mendalam dan Asesmen (PMA)</em>, berfungsi
+                  sebagai evaluasi formatif yang *joyful* (menyenangkan).
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="bento-card p-6 md:p-10 opacity-0 animate-fade-in-up delay-200"
+      >
+        <div class="flex items-center gap-4 mb-8 pb-6 border-b border-gray-100">
+          <div
+            class="w-12 h-12 bg-gray-900 text-white rounded-xl flex items-center justify-center text-xl font-bold font-mono shadow-[0_8px_20px_rgba(0,0,0,0.2)]"
+          >
+            02
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900">
+              Siklus 2: Proyek Visualisasi Road Map Karier
+            </h2>
+            <p
+              class="text-xs text-cyber-blue font-medium mt-1 flex items-center gap-1.5"
+            >
+              <i class="fas fa-location-dot"></i> SMA Negeri 14 Surabaya
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-6 space-y-6">
+            <div
+              class="flex items-center gap-2 mb-2 bg-gray-50 w-max px-4 py-2 rounded-lg border border-gray-100"
+            >
+              <i class="fas fa-layer-group text-cyber-blue"></i>
+              <h3 class="font-bold text-gray-800 text-sm">
+                Bukti Artefak Pembelajaran
+              </h3>
+            </div>
+
+            <div
+              class="bg-white/80 border border-gray-200 p-5 rounded-3xl flex flex-col relative overflow-hidden shadow-sm"
+            >
+              <div class="w-full flex items-center gap-3 mb-4 text-gray-500">
+                <i class="fas fa-file-word text-blue-500 text-2xl"></i>
+                <span class="font-bold text-base text-gray-700"
+                  >Modul Ajar Siklus 2</span
+                >
+              </div>
+              <div
+                class="relative group cursor-pointer"
+                onclick="
+                  openModal(
+                    '<i class=\'fas fa-file-word text-blue-500\'></i> Modul Ajar Siklus 2',
+                    'https://drive.google.com/file/d/1905kkXTN6sItLusWCZh7IHogHKmDvmxk/preview',
+                  )
+                "
+              >
+                <div
+                  class="relative bg-gray-900 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white aspect-video md:aspect-[4/3] w-full"
+                >
+                  <iframe
+                    src="https://drive.google.com/file/d/1905kkXTN6sItLusWCZh7IHogHKmDvmxk/preview"
+                    class="absolute top-0 left-0 iframe-thumb opacity-60 pointer-events-none"
+                    frameborder="0"
+                  ></iframe>
+                  <div
+                    class="absolute inset-0 flex flex-col items-center justify-center bg-black/40 group-hover:bg-black/60 transition-all"
+                  >
+                    <div
+                      class="w-12 h-12 bg-white text-cyber-blue rounded-full flex items-center justify-center mb-3 animate-pulse-slow shadow-xl"
+                    >
+                      <i class="fas fa-expand-alt text-xl"></i>
+                    </div>
+                    <span
+                      class="bg-cyber-blue text-white px-6 py-2 rounded-full text-xs font-bold tracking-wide"
+                      >Pratinjau Modul</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <button
+                onclick="
+                  openModal(
+                    '<i class=\'fas fa-desktop text-orange-500\'></i> Slide Materi',
+                    'https://drive.google.com/file/d/1weCeRa_2GYwYJb7Ntj9-v-JPWAZD2J3k/preview',
+                  )
+                "
+                class="bg-gradient-to-br from-white to-orange-50 border border-orange-200 text-orange-600 hover:border-orange-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+              >
+                <div class="flex justify-between w-full items-center">
+                  <i
+                    class="fas fa-desktop text-xl group-hover:scale-110 transition-transform"
+                  ></i>
+                  <div
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <i class="fas fa-expand text-[10px]"></i>
+                  </div>
+                </div>
+                <div class="mt-1">
+                  <span
+                    class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
+                    >Media Utama</span
+                  >
+                  <span class="text-xs font-bold text-gray-900 block"
+                    >PPT & Apersepsi Canva</span
+                  >
+                </div>
+              </button>
+
+              <button
+                onclick="
+                  openModal(
+                    '<i class=\'fas fa-play-circle text-red-500\'></i> Video Dokumentasi',
+                    'https://drive.google.com/file/d/1THO2Md3tnQjytM1G44vtA35PhWpNypjg/preview',
+                  )
+                "
+                class="bg-gradient-to-br from-white to-red-50 border border-red-200 text-red-600 hover:border-red-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+              >
+                <div class="flex justify-between w-full items-center">
+                  <i
+                    class="fas fa-play-circle text-xl group-hover:scale-110 transition-transform"
+                  ></i>
+                  <div
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <i class="fas fa-expand text-[10px]"></i>
+                  </div>
+                </div>
+                <div class="mt-1">
+                  <span
+                    class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
+                    >Video</span
+                  >
+                  <span class="text-xs font-bold text-gray-900 block"
+                    >Sesi Presentasi Siswa</span
+                  >
+                </div>
+              </button>
+
+              <button
+                onclick="
+                  openModal(
+                    '<i class=\'fas fa-book-open text-blue-500\'></i> Rubrik & LKPD',
+                    'https://drive.google.com/file/d/1ByCWVntKjFE4tqTT_u3P8scSSo0qQ95M/preview',
+                  )
+                "
+                class="bg-gradient-to-br from-white to-blue-50 border border-blue-200 text-blue-600 hover:border-blue-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+              >
+                <div class="flex justify-between w-full items-center">
+                  <i
+                    class="fas fa-book-open text-xl group-hover:scale-110 transition-transform"
+                  ></i>
+                  <div
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <i class="fas fa-expand text-[10px]"></i>
+                  </div>
+                </div>
+                <div class="mt-1">
+                  <span
+                    class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
+                    >Penugasan & Instrumen</span
+                  >
+                  <span class="text-xs font-bold text-gray-900 block"
+                    >Rubrik Proyek Visual</span
+                  >
+                </div>
+              </button>
+
+              <button
+                onclick="
+                  openModal(
+                    '<i class=\'fas fa-clipboard-check text-green-500\'></i> Umpan Balik GP',
+                    'https://drive.google.com/file/d/1CfZT8nXf0GohA6RXtdNhMSFvqS7o85-W/preview',
+                  )
+                "
+                class="bg-gradient-to-br from-white to-green-50 border border-green-200 text-green-600 hover:border-green-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+              >
+                <div class="flex justify-between w-full items-center">
+                  <i
+                    class="fas fa-clipboard-check text-xl group-hover:scale-110 transition-transform"
+                  ></i>
+                  <div
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <i class="fas fa-expand text-[10px]"></i>
+                  </div>
+                </div>
+                <div class="mt-1">
+                  <span
+                    class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
+                    >Penilaian</span
+                  >
+                  <span class="text-xs font-bold text-gray-900 block"
+                    >Lembar Observasi GP</span
+                  >
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 space-y-4">
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-blue-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-blue-100 text-cyber-blue flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-info"></i>
+                  </div>
+                  1. Konteks & Tujuan Pembuatan
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i class="fas fa-chevron-down transition-transform"></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  <strong>Konteks:</strong> Pembelajaran ini difokuskan pada
+                  aktivitas penciptaan karya (Project). Siswa dibagi dalam
+                  kelompok untuk melakukan riset di internet mengenai profesi
+                  spesifik IT dan memvisualisasikannya dalam bentuk Peta Jalan
+                  (Road Map) Karier.<br /><br />
+                  <strong>Tujuan:</strong> Peserta didik mampu melatih kemampuan
+                  kolaborasi, mengoperasikan perangkat desain digital, menyaring
+                  informasi kredibel dari internet, serta mengasah kepercayaan
+                  diri dan komunikasi verbal saat sesi presentasi.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-green-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-check"></i>
+                  </div>
+                  2. Analisis Kelebihan Artifak
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i class="fas fa-chevron-down transition-transform"></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  Kekuatan perangkat ini terletak pada instrumen
+                  <strong>Rubrik Penilaian Proyek</strong> yang sangat jelas dan
+                  objektif. Rubrik tidak hanya menilai estetika visual *road
+                  map*, tetapi juga kedalaman riset dan kekompakan tim. Selain
+                  itu, penggunaan papan tulis virtual (seperti *Canva sticky
+                  notes*) pada saat apersepsi berhasil memberikan ruang
+                  partisipasi yang inklusif bagi semua siswa sebelum proyek
+                  dimulai.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-red-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-red-100 text-red-500 flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-minus-circle"></i>
+                  </div>
+                  3. Analisis Kekurangan Artifak
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i class="fas fa-chevron-down transition-transform"></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  Kekurangannya terletak pada skenario
+                  <strong>Manajemen Dinamika Kelompok</strong> yang tertuang
+                  dalam RPP. Karena antusiasme riset internet yang tinggi,
+                  pendidik kewalahan melakukan transisi perhatian siswa dari
+                  *gadget* kembali ke instruksi di depan kelas. Perbedaan
+                  kecepatan kelompok dalam merampungkan proyek juga membuat
+                  kelompok yang sudah selesai harus menunggu lama sebelum
+                  presentasi dimulai, sehingga memicu sedikit kegaduhan.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-purple-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-book"></i>
+                  </div>
+                  4. Kajian Teori & Integrasi Mata Kuliah
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i class="fas fa-chevron-down transition-transform"></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  Pelaksanaan ini bersandar pada model pembelajaran
+                  <strong>Project-Based Learning (PjBL)</strong>. Terintegrasi
+                  erat dengan mata kuliah
+                  <em>Pemahaman Peserta Didik dan Pembelajarannya</em>,
+                  pendekatan ini mengakomodasi kebutuhan gaya belajar
+                  *kinestetik-visual* dan memberikan ruang otonomi kepada siswa
+                  untuk meregulasi proses belajarnya sendiri secara merdeka.
+                  Rubrik rubrik instrumen proyek juga merupakan perwujudan
+                  langsung dari teori <strong>Assessment of Learning</strong>.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="bento-card p-6 md:p-10 opacity-0 animate-fade-in-up delay-300"
+      >
+        <div class="flex items-center gap-4 mb-8 pb-6 border-b border-gray-100">
+          <div
+            class="w-12 h-12 bg-gray-900 text-white rounded-xl flex items-center justify-center text-xl font-bold font-mono shadow-[0_8px_20px_rgba(0,0,0,0.2)]"
+          >
+            03
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900">
+              Siklus 3: Pembuatan Aplikasi Mobile dengan MIT App Inventor
+            </h2>
+            <p
+              class="text-xs text-cyber-blue font-medium mt-1 flex items-center gap-1.5"
+            >
+              <i class="fas fa-location-dot"></i> SMA Negeri 14 Surabaya
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-6 space-y-6">
+            <div
+              class="flex items-center gap-2 mb-2 bg-gray-50 w-max px-4 py-2 rounded-lg border border-gray-100"
+            >
+              <i class="fas fa-layer-group text-cyber-blue"></i>
+              <h3 class="font-bold text-gray-800 text-sm">
+                Bukti Artefak Pembelajaran
+              </h3>
+            </div>
+
+            <div
+              class="bg-white/80 border border-gray-200 p-5 rounded-3xl flex flex-col relative overflow-hidden shadow-sm"
+            >
+              <div class="w-full flex items-center gap-3 mb-4 text-gray-500">
+                <i class="fas fa-file-word text-blue-500 text-2xl"></i>
+                <span class="font-bold text-base text-gray-700"
+                  >Modul Ajar Siklus 3</span
+                >
+              </div>
+              <div
+                class="relative group cursor-pointer"
+                onclick="
+                  openModal(
+                    '<i class=\'fas fa-file-word text-blue-500\'></i> Modul Ajar Siklus 3',
+                    'https://drive.google.com/file/d/1c83Yevhkax_9xOum6PkoJyBmGftKDAfn/preview',
+                  )
+                "
+              >
+                <div
+                  class="relative bg-gray-900 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white aspect-video md:aspect-[4/3] w-full"
+                >
+                  <iframe
+                    src="https://drive.google.com/file/d/1c83Yevhkax_9xOum6PkoJyBmGftKDAfn/preview"
+                    class="absolute top-0 left-0 iframe-thumb opacity-60 pointer-events-none"
+                    frameborder="0"
+                  ></iframe>
+                  <div
+                    class="absolute inset-0 flex flex-col items-center justify-center bg-black/40 group-hover:bg-black/60 transition-all"
+                  >
+                    <div
+                      class="w-12 h-12 bg-white text-cyber-blue rounded-full flex items-center justify-center mb-3 animate-pulse-slow shadow-xl"
+                    >
+                      <i class="fas fa-expand-alt text-xl"></i>
+                    </div>
+                    <span
+                      class="bg-cyber-blue text-white px-6 py-2 rounded-full text-xs font-bold tracking-wide"
+                      >Pratinjau Modul</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <button
+                onclick="
+                  openModal(
+                    '<i class=\'fas fa-desktop text-orange-500\'></i> Modul App Inventor',
+                    'https://drive.google.com/file/d/1rrcxEUiOIIoU6cfULzQnHPZww4kzq7dW/preview',
+                  )
+                "
+                class="bg-gradient-to-br from-white to-orange-50 border border-orange-200 text-orange-600 hover:border-orange-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+              >
+                <div class="flex justify-between w-full items-center">
+                  <i
+                    class="fas fa-desktop text-xl group-hover:scale-110 transition-transform"
+                  ></i>
+                  <div
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <i class="fas fa-expand text-[10px]"></i>
+                  </div>
+                </div>
+                <div class="mt-1">
+                  <span
+                    class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
+                    >Media Utama</span
+                  >
+                  <span class="text-xs font-bold text-gray-900 block"
+                    >Panduan Blok & UI</span
+                  >
+                </div>
+              </button>
+
+              <button
+                onclick="
+                  openModal(
+                    '<i class=\'fas fa-play-circle text-red-500\'></i> Video Praktik',
+                    'https://drive.google.com/file/d/1THO2Md3tnQjytM1G44vtA35PhWpNypjg/preview',
+                  )
+                "
+                class="bg-gradient-to-br from-white to-red-50 border border-red-200 text-red-600 hover:border-red-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+              >
+                <div class="flex justify-between w-full items-center">
+                  <i
+                    class="fas fa-play-circle text-xl group-hover:scale-110 transition-transform"
+                  ></i>
+                  <div
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <i class="fas fa-expand text-[10px]"></i>
+                  </div>
+                </div>
+                <div class="mt-1">
+                  <span
+                    class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
+                    >Video</span
+                  >
+                  <span class="text-xs font-bold text-gray-900 block"
+                    >Aktivitas Lab Komputer</span
+                  >
+                </div>
+              </button>
+
+              <button
+                onclick="
+                  openModal(
+                    '<i class=\'fas fa-book-open text-blue-500\'></i> LKPD App Inventor',
+                    'https://drive.google.com/file/d/1pBCIDac59DIi0UleDc2pZnnPDV5zdhbk/preview',
+                  )
+                "
+                class="bg-gradient-to-br from-white to-blue-50 border border-blue-200 text-blue-600 hover:border-blue-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+              >
+                <div class="flex justify-between w-full items-center">
+                  <i
+                    class="fas fa-book-open-reader text-xl group-hover:scale-110 transition-transform"
+                  ></i>
+                  <div
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <i class="fas fa-expand text-[10px]"></i>
+                  </div>
+                </div>
+                <div class="mt-1">
+                  <span
+                    class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
+                    >Lembar Kerja</span
+                  >
+                  <span class="text-xs font-bold text-gray-900 block"
+                    >Sintaks & Uji Coba App</span
+                  >
+                </div>
+              </button>
+
+              <button
+                onclick="
+                  openModal(
+                    '<i class=\'fas fa-clipboard-check text-green-500\'></i> Umpan Balik GP',
+                    'https://drive.google.com/file/d/1CfZT8nXf0GohA6RXtdNhMSFvqS7o85-W/preview',
+                  )
+                "
+                class="bg-gradient-to-br from-white to-green-50 border border-green-200 text-green-600 hover:border-green-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+              >
+                <div class="flex justify-between w-full items-center">
+                  <i
+                    class="fas fa-clipboard-check text-xl group-hover:scale-110 transition-transform"
+                  ></i>
+                  <div
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <i class="fas fa-expand text-[10px]"></i>
+                  </div>
+                </div>
+                <div class="mt-1">
+                  <span
+                    class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
+                    >Penilaian Akhir</span
+                  >
+                  <span class="text-xs font-bold text-gray-900 block"
+                    >Lembar Penilaian DPL/GP</span
+                  >
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 space-y-4">
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-blue-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-blue-100 text-cyber-blue flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-info"></i>
+                  </div>
+                  1. Konteks & Tujuan Pembuatan
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i class="fas fa-chevron-down transition-transform"></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  <strong>Konteks:</strong> Siklus ini dilaksanakan di
+                  laboratorium komputer, berfokus pada pengenalan antarmuka dan
+                  penyusunan logika pemrograman visual (*block-based
+                  programming*) menggunakan *MIT App Inventor* untuk menciptakan
+                  aplikasi *mobile* sederhana.<br /><br />
+                  <strong>Tujuan:</strong> Peserta didik diharapkan mampu
+                  menerapkan *Computational Thinking*, merancang *User
+                  Interface* (UI), menyusun logika *puzzle block* pemrograman,
+                  serta menguji (running/testing) aplikasi buatan mereka secara
+                  langsung di perangkat *smartphone* masing-masing.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-green-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-check"></i>
+                  </div>
+                  2. Analisis Kelebihan Artifak
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i class="fas fa-chevron-down transition-transform"></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  Kelebihan utama modul dan LKPD ini adalah kemampuannya
+                  menghadirkan <strong>*Joyful Learning* yang nyata</strong>.
+                  Pendekatan *block-based programming* terbukti mengeliminasi
+                  ketakutan siswa terhadap kode-kode yang rumit (*syntax
+                  error*). Reaksi siswa sangat positif dan bersemangat ketika
+                  mereka memindai kode QR dari layar PC dan aplikasi yang mereka
+                  rancang langsung beroperasi dan memunculkan animasi UI di
+                  *smartphone* pribadi mereka.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-red-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-red-100 text-red-500 flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-minus-circle"></i>
+                  </div>
+                  3. Analisis Kekurangan Artifak
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i class="fas fa-chevron-down transition-transform"></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  Terdapat celah kekurangan pada
+                  <strong>antisipasi kendala teknis (infrastruktur)</strong>
+                  dalam RPP. Aplikasi MIT App Inventor membutuhkan koneksi
+                  internet yang stabil di seluruh komputer lab. Pada saat
+                  praktik, *bandwidth* yang terbagi menyebabkan kelambatan
+                  (*lag*) saat memuat proyek emulator. Selain itu, modul kurang
+                  menyediakan "jalur pintas" instruksi tertulis, sehingga ketika
+                  ada siswa tertinggal merakit satu blok logika, pendidik harus
+                  menjelaskan ulang secara personal yang menyita waktu cukup
+                  banyak.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-purple-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-book"></i>
+                  </div>
+                  4. Kajian Teori & Integrasi Mata Kuliah
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i class="fas fa-chevron-down transition-transform"></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  Desain perangkat pembelajaran ini mengadopsi
+                  <strong>Metode Tutor Sebaya (*Peer Tutoring*)</strong> yang
+                  merupakan turunan dari Teori Vygotsky (*Zone of Proximal
+                  Development*), di mana peserta didik yang lebih cepat memahami
+                  algoritma blok diminta untuk melakukan *debugging* aplikasi
+                  milik teman di sebelahnya. Pendekatan ini relevan dengan mata
+                  kuliah <em>Pemahaman Peserta Didik</em> karena memfasilitasi
+                  keragaman tingkat abstraksi siswa, dengan memberikan
+                  pengalaman belajar *hands-on* yang konkrit bagi siswa bergaya
+                  belajar kinestetik-visual.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="py-8 border-t border-white/50 relative z-10 bg-white/40 backdrop-blur-md mt-auto"
+    >
+      <div
+        class="max-w-[1300px] mx-auto px-6 flex flex-col md:flex-row items-center justify-center text-xs font-mono text-gray-500 font-medium"
+      >
+        <p>© 2026 Fatasya Aulia Suyono. E-Portofolio 2 Refleksi Akhir PPL.</p>
+      </div>
+    </footer>
+
+    <div
+      id="mediaModal"
+      class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-gray-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-300"
+    >
+      <div
+        class="bg-white rounded-3xl w-11/12 md:w-4/5 lg:w-3/4 xl:w-2/3 h-[85vh] flex flex-col shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300 relative border border-white/40"
+      >
+        <div
+          class="flex justify-between items-center p-4 md:px-6 bg-gray-50 border-b border-gray-200"
+        >
+          <h3
+            id="modalTitle"
+            class="font-bold text-gray-800 text-sm md:text-base flex items-center gap-2"
+          >
+            Pratinjau Dokumen
+          </h3>
+          <button
+            onclick="closeModal()"
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-red-500 hover:text-white transition-colors"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="flex-1 bg-gray-100 relative">
+          <div
+            id="modalLoading"
+            class="absolute inset-0 flex flex-col items-center justify-center z-0"
+          >
+            <i
+              class="fas fa-circle-notch fa-spin text-4xl text-cyber-blue mb-4"
+            ></i>
+            <p class="text-sm font-mono text-gray-500 animate-pulse">
+              Memuat Dokumen...
+            </p>
+          </div>
+          <iframe
+            id="modalIframe"
+            src=""
+            class="absolute inset-0 w-full h-full border-none z-10 bg-white"
+            allow="autoplay"
+            onload="
+              document.getElementById('modalLoading').classList.add('hidden')
+            "
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // 1. Mobile Menu Toggle
+      const btn = document.getElementById("mobile-menu-button");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        const icon = btn.querySelector("i");
+        if (menu.classList.contains("hidden")) {
+          icon.classList.replace("fa-times", "fa-bars");
+        } else {
+          icon.classList.replace("fa-bars", "fa-times");
+        }
+      });
+
+      // 2. Accordion Logic (Auto-close others in the same group)
+      function toggleAccordion(headerElement) {
+        const content = headerElement.nextElementSibling;
+        const chevron = headerElement.querySelector(
+          ".fa-chevron-down, .fa-chevron-up",
+        );
+        const wrapper = headerElement.closest(".accordion-wrapper");
+        const iconBox = headerElement.querySelector(".chevron-box");
+        const parentContainer = wrapper.parentElement;
+        const allWrappers =
+          parentContainer.querySelectorAll(".accordion-wrapper");
+
+        // Close all others
+        allWrappers.forEach((otherWrapper) => {
+          if (otherWrapper !== wrapper) {
+            const otherContent =
+              otherWrapper.querySelector(".accordion-content");
+            const otherChevron = otherWrapper.querySelector(".fa-chevron-up");
+            const otherIconBox = otherWrapper.querySelector(".chevron-box");
+            if (
+              otherContent.style.maxHeight &&
+              otherContent.style.maxHeight !== "0px"
+            ) {
+              otherContent.style.maxHeight = "0px";
+              otherContent.classList.remove("opacity-100");
+              otherContent.classList.add("opacity-0");
+              if (otherChevron)
+                otherChevron.classList.replace(
+                  "fa-chevron-up",
+                  "fa-chevron-down",
+                );
+              otherWrapper.classList.remove(
+                "border-blue-300",
+                "shadow-[0_10px_25px_-5px_rgba(0,122,255,0.15)]",
+              );
+              if (otherIconBox) {
+                otherIconBox.classList.remove("bg-blue-100", "text-cyber-blue");
+                otherIconBox.classList.add("bg-gray-50", "text-gray-400");
+              }
+            }
+          }
+        });
+
+        // Toggle target
+        if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+          content.style.maxHeight = "0px";
+          content.classList.remove("opacity-100");
+          content.classList.add("opacity-0");
+          chevron.classList.replace("fa-chevron-up", "fa-chevron-down");
+          wrapper.classList.remove(
+            "border-blue-300",
+            "shadow-[0_10px_25px_-5px_rgba(0,122,255,0.15)]",
+          );
+          iconBox.classList.remove("bg-blue-100", "text-cyber-blue");
+          iconBox.classList.add("bg-gray-50", "text-gray-400");
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          content.classList.remove("opacity-0");
+          content.classList.add("opacity-100");
+          chevron.classList.replace("fa-chevron-down", "fa-chevron-up");
+          wrapper.classList.add(
+            "border-blue-300",
+            "shadow-[0_10px_25px_-5px_rgba(0,122,255,0.15)]",
+          );
+          iconBox.classList.remove("bg-gray-50", "text-gray-400");
+          iconBox.classList.add("bg-blue-100", "text-cyber-blue");
+        }
+      }
+
+      // Open first accordion by default
+      document.addEventListener("DOMContentLoaded", function () {
+        const firstAccordions = document.querySelectorAll(
+          "section.bento-card .accordion-wrapper:first-child .cursor-pointer",
+        );
+        firstAccordions.forEach((acc) => {
+          toggleAccordion(acc);
+        });
+      });
+
+      // 3. Modal Scripts
+      function openModal(titleHTML, url) {
+        document.getElementById("modalTitle").innerHTML = titleHTML;
+        document.getElementById("modalLoading").classList.remove("hidden");
+        document.getElementById("modalIframe").src = url;
+        const modal = document.getElementById("mediaModal");
+        modal.classList.remove("hidden");
+        setTimeout(() => {
+          modal.classList.remove("opacity-0");
+          modal.querySelector("div.bg-white").classList.remove("scale-95");
+          modal.querySelector("div.bg-white").classList.add("scale-100");
+        }, 10);
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("mediaModal");
+        modal.classList.add("opacity-0");
+        modal.querySelector("div.bg-white").classList.remove("scale-100");
+        modal.querySelector("div.bg-white").classList.add("scale-95");
+        setTimeout(() => {
+          modal.classList.add("hidden");
+          document.getElementById("modalIframe").src = "";
+          document.body.style.overflow = "auto";
+        }, 300);
+      }
+
+      document
+        .getElementById("mediaModal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) closeModal();
+        });
+    </script>
+  </body>
+</html>

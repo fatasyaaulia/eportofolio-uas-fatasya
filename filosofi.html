@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Filosofi Mengajar - E-Portfolio 2 Fatasya Aulia Suyono</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              mono: ["Fira Code", "monospace"],
+              serif: ["Lora", "serif"],
+            },
+            colors: {
+              cyber: {
+                blue: "#007AFF",
+                cyan: "#32ADE6",
+                purple: "#AF52DE",
+                indigo: "#5856D6",
+              },
+            },
+            animation: {
+              "fade-in-up":
+                "fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+              float: "float 6s ease-in-out infinite",
+              "pulse-ring":
+                "pulseRing 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              blink: "blink 1s step-end infinite",
+              scroll: "scroll 25s linear infinite",
+            },
+            keyframes: {
+              fadeInUp: {
+                "0%": { opacity: "0", transform: "translateY(40px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-15px)" },
+              },
+              pulseRing: {
+                "0%": { transform: "scale(0.8)", opacity: "0.5" },
+                "100%": { transform: "scale(1.5)", opacity: "0" },
+              },
+              blink: {
+                "0%, 100%": { opacity: "1" },
+                "50%": { opacity: "0" },
+              },
+              scroll: {
+                "0%": { transform: "translateX(0)" },
+                "100%": { transform: "translateX(calc(-50% - 12px))" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        background-color: #f2f4f8;
+        background-image:
+          radial-gradient(
+            at 0% 0%,
+            rgba(50, 173, 230, 0.15) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 100% 0%,
+            rgba(175, 82, 222, 0.15) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 100% 100%,
+            rgba(0, 122, 255, 0.15) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 0% 100%,
+            rgba(88, 86, 214, 0.15) 0px,
+            transparent 50%
+          );
+        background-attachment: fixed;
+        color: #1d1d1f;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      .tech-grid-bg {
+        background-size: 40px 40px;
+        background-image:
+          linear-gradient(
+            to right,
+            rgba(0, 122, 255, 0.05) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(0, 122, 255, 0.05) 1px,
+            transparent 1px
+          );
+      }
+
+      .bento-card {
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(24px) saturate(150%);
+        -webkit-backdrop-filter: blur(24px) saturate(150%);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        border-right: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow:
+          0 20px 40px -10px rgba(0, 122, 255, 0.08),
+          inset 0 1px 0 rgba(255, 255, 255, 1);
+        border-radius: 2.5rem;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .bento-card:hover {
+        transform: translateY(-5px);
+        box-shadow:
+          0 30px 60px -15px rgba(0, 122, 255, 0.15),
+          inset 0 1px 0 rgba(255, 255, 255, 1);
+        border-color: rgba(0, 122, 255, 0.3);
+        background: rgba(255, 255, 255, 0.65);
+      }
+
+      .carousel-track:hover {
+        animation-play-state: paused;
+      }
+
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      .delay-100 {
+        animation-delay: 100ms;
+      }
+      .delay-200 {
+        animation-delay: 200ms;
+      }
+      .delay-300 {
+        animation-delay: 300ms;
+      }
+      .delay-400 {
+        animation-delay: 400ms;
+      }
+    </style>
+  </head>
+  <body class="antialiased relative min-h-screen flex flex-col">
+    <div class="fixed inset-0 tech-grid-bg pointer-events-none z-0"></div>
+    <div
+      class="fixed top-20 left-20 w-72 h-72 border-[1px] border-cyber-purple/20 rounded-full animate-[spin_25s_linear_infinite] border-dashed pointer-events-none z-0"
+    ></div>
+
+    <!-- ================= NAVIGASI MENU ================= -->
+    <nav class="fixed w-full z-50 mt-4 px-6 transition-all duration-300">
+      <div
+        class="max-w-[1300px] mx-auto bg-white/60 backdrop-blur-2xl border border-white/80 shadow-[0_8px_30px_rgba(0,0,0,0.04)] rounded-full px-6 py-3 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-3 group cursor-pointer relative">
+          <div
+            class="absolute inset-0 bg-cyber-blue rounded-xl animate-pulse-ring"
+          ></div>
+          <div
+            class="w-10 h-10 bg-gradient-to-br from-cyber-blue to-cyber-cyan text-white rounded-xl flex items-center justify-center font-mono font-bold text-lg shadow-lg relative z-10 group-hover:scale-105 transition-transform"
+          >
+            &lt;/&gt;
+          </div>
+          <div>
+            <h1
+              class="font-bold text-gray-900 text-lg leading-none tracking-tight"
+            >
+              Fatasya<span class="text-cyber-blue animate-blink">_</span>
+            </h1>
+            <p
+              class="text-[9px] text-gray-500 font-bold font-mono uppercase tracking-widest mt-1"
+            >
+              E-Portofolio UAS
+            </p>
+          </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-1">
+          <a
+            href="index.html"
+            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-cyber-blue rounded-full text-sm font-semibold transition"
+            >Beranda</a
+          >
+          <a
+            href="filosofi.html"
+            class="px-5 py-2.5 bg-white text-cyber-blue border-b-2 border-cyber-blue rounded-full text-sm font-bold shadow-sm transition"
+            >Filosofi Mengajar</a
+          >
+          <a
+            href="artifak.html"
+            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-cyber-blue rounded-full text-sm font-semibold transition"
+            >Artifak & Analisis</a
+          >
+          <a
+            href="refleksi.html"
+            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-cyber-blue rounded-full text-sm font-semibold transition"
+            >Refleksi Akhir</a
+          >
+        </div>
+
+        <!-- Kontak Button -->
+        <a
+          href="https://wa.me/6285732003774"
+          target="_blank"
+          class="hidden md:flex items-center gap-2 bg-gradient-to-r from-cyber-blue to-cyber-cyan text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-blue-500/30 hover:scale-105 transition-transform"
+        >
+          <i class="fab fa-whatsapp"></i> Kontak
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-gray-800 text-2xl focus:outline-none bg-white/50 p-2 rounded-full"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden absolute top-20 left-6 right-6 bg-white/90 backdrop-blur-2xl border border-white shadow-2xl rounded-3xl flex flex-col p-4 space-y-2 font-medium z-40"
+      >
+        <a
+          href="index.html"
+          class="block w-full text-gray-600 hover:bg-gray-50 p-3 rounded-2xl"
+          >Beranda</a
+        >
+        <a
+          href="filosofi.html"
+          class="block w-full text-cyber-blue bg-blue-50 p-3 rounded-2xl font-bold"
+          >Filosofi Mengajar</a
+        >
+        <a
+          href="artifak.html"
+          class="block w-full text-gray-600 hover:bg-gray-50 p-3 rounded-2xl"
+          >Artifak & Analisis</a
+        >
+        <a
+          href="refleksi.html"
+          class="block w-full text-gray-600 hover:bg-gray-50 p-3 rounded-2xl"
+          >Refleksi Akhir</a
+        >
+      </div>
+    </nav>
+    <!-- ================= END NAVIGASI ================= -->
+
+    <main
+      class="flex-1 max-w-[1300px] mx-auto w-full pt-32 pb-20 px-6 lg:px-8 relative z-10 space-y-8"
+    >
+      <!-- ================= HERO SECTION ================= -->
+      <section
+        class="bento-card p-8 md:p-12 opacity-0 animate-fade-in-up flex flex-col md:flex-row items-center justify-between gap-8 bg-gradient-to-br from-white/60 to-blue-50/40"
+      >
+        <div class="flex-1 space-y-6 z-10">
+          <div
+            class="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase border border-blue-200"
+          >
+            IDEOLOGI & NILAI PENDIDIK
+          </div>
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight"
+          >
+            Filosofi & Model <br />
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-cyber-cyan to-cyber-purple"
+              >Guru Profesional</span
+            >
+          </h1>
+          <p class="text-gray-600 text-lg md:text-xl leading-relaxed max-w-xl">
+            Sintesis pemikiran pedagogis yang mendasari praktik pengajaran saya
+            selama PPL Terbimbing, memadukan kehangatan humanis dan kecakapan
+            teknologi.
+          </p>
+        </div>
+
+        <div
+          class="w-full md:w-1/2 lg:w-[450px] flex justify-center relative h-[380px] group mt-8 md:mt-0"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-blue-400/30 to-purple-400/30 rounded-full blur-3xl group-hover:blur-2xl transition-all duration-500"
+          ></div>
+
+          <div
+            class="absolute top-8 w-full max-w-[380px] h-[260px] bg-white/70 backdrop-blur-xl rounded-2xl border border-white/80 shadow-2xl flex flex-col overflow-hidden transition-transform duration-500 group-hover:scale-[1.02]"
+          >
+            <div
+              class="h-8 bg-gray-100/90 border-b border-gray-200 flex items-center px-4 gap-2"
+            >
+              <div class="w-3 h-3 rounded-full bg-red-400"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+              <div class="w-3 h-3 rounded-full bg-green-400"></div>
+            </div>
+            <div
+              class="flex-1 bg-gradient-to-br from-blue-50/50 to-indigo-50/50 relative"
+            ></div>
+          </div>
+
+          <div
+            class="absolute top-0 right-10 bg-white/90 backdrop-blur-md p-3 rounded-2xl shadow-xl border border-white/60 animate-float z-20"
+          >
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 text-blue-600 rounded-xl flex items-center justify-center text-2xl shadow-inner"
+            >
+              <i class="fas fa-lightbulb"></i>
+            </div>
+          </div>
+
+          <img
+            src="https://drive.google.com/thumbnail?id=1OGyrtuH2jL0DkF8EU3-MJO2a57I6S7nq&sz=w1000"
+            alt="Profile"
+            class="absolute bottom-10 h-[340px] object-contain drop-shadow-[0_25px_25px_rgba(0,0,0,0.25)] z-10 transition-transform duration-500 group-hover:scale-105"
+          />
+
+          <div
+            class="absolute bottom-0 left-6 right-6 bg-white/60 backdrop-blur-xl border border-white/80 p-4 rounded-3xl z-30 flex items-center gap-4 transform translate-y-2 group-hover:-translate-y-2 transition-transform duration-500 shadow-[0_15px_30px_rgba(0,0,0,0.1)]"
+          >
+            <div class="bg-white p-2 rounded-full shadow-lg shrink-0">
+              <i class="fas fa-book-open text-cyber-blue text-xl m-1"></i>
+            </div>
+            <div>
+              <p
+                class="text-[10px] text-gray-600 font-bold uppercase tracking-widest font-mono mb-0.5"
+              >
+                Ideologi Pendidik
+              </p>
+              <p class="text-sm font-bold text-gray-900 leading-tight">
+                Refleksi Praktik Mengajar
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ESAI FILOSOFI MENGAJAR ================= -->
+      <section
+        class="bento-card p-8 md:p-12 opacity-0 animate-fade-in-up delay-100"
+      >
+        <div class="max-w-4xl mx-auto">
+          <div class="flex items-center justify-center gap-3 mb-8">
+            <i class="fas fa-leaf text-green-500 text-2xl"></i>
+            <h2 class="text-3xl font-bold text-gray-900 text-center">
+              Esai Filosofi Mengajar
+            </h2>
+          </div>
+
+          <div
+            class="prose prose-lg text-gray-700 font-serif leading-loose text-justify mx-auto space-y-6"
+          >
+            <p>
+              Selama menjalani Praktik Pengalaman Lapangan (PPL) Terbimbing,
+              mulai dari tahap observasi, asistensi, hingga praktik mengajar
+              secara mandiri, saya menyadari satu hal fundamental: menjadi guru
+              bukanlah sekadar profesi tentang transfer ilmu pengetahuan.
+              Prinsip dan nilai utama yang saya pegang teguh adalah bahwa setiap
+              peserta didik memiliki potensi dan keunikannya masing-masing yang
+              harus difasilitasi dengan pendekatan yang memanusiakan manusia.
+              Saya meyakini bahwa ruang kelas harus dirancang menjadi lingkungan
+              belajar yang aman, inklusif, dan interaktif. Dalam konteks ini,
+              saya memposisikan teknologi bukan sekadar sebagai alat tempel yang
+              menggugurkan kewajiban mengajar, melainkan sebagai jembatan yang
+              dapat mengakomodasi berbagai karakteristik dan gaya belajar siswa
+              yang beragam.
+            </p>
+
+            <p>
+              Filosofi dan keyakinan ini sangat sejalan dengan pemikiran tokoh
+              pendidikan nasional kita, <strong>Ki Hajar Dewantara</strong>,
+              khususnya mengenai Sistem Among:
+              <em
+                >Ing Ngarso Sung Tulodo, Ing Madyo Mangun Karso, Tut Wuri
+                Handayani</em
+              >. Sebagai pendidik mata pelajaran Informatika, di depan saya
+              harus bisa memberikan teladan berliterasi digital yang bijak; di
+              tengah saya memfasilitasi inovasi saat mendampingi mereka menyusun
+              proyek; dan di belakang saya memberikan dorongan agar mereka
+              mandiri dalam memecahkan masalah <em>(problem solving)</em>.
+              Pendekatan ini juga memiliki relevansi yang kuat dengan
+              <strong>Teori Belajar Konstruktivisme dari Lev Vygotsky</strong>.
+              Vygotsky menekankan bahwa pembelajaran adalah proses aktif di mana
+              siswa membangun pengetahuannya sendiri melalui interaksi sosial.
+              Oleh karena itu, tugas saya adalah memberikan
+              <em>scaffolding</em> (bantuan terstruktur) yang tepat sasaran,
+              sehingga siswa dapat mencapai potensi maksimal mereka melampaui
+              kemampuan dasarnya.
+            </p>
+
+            <p>
+              Lebih lanjut, untuk menjawab tantangan pendidikan abad ke-21,
+              nilai pengajaran saya berakar kuat pada kerangka kerja
+              <strong
+                >TPACK (Technological Pedagogical Content Knowledge)</strong
+              >. Saya meyakini bahwa penguasaan konten keilmuan Informatika yang
+              mendalam dan kecakapan menggunakan teknologi mutakhir tidak akan
+              bermakna tanpa diikat oleh kemampuan Pedagogik (cara mendidik)
+              yang kuat. Berdasarkan prinsip-prinsip tersebut,
+              <strong>model guru yang saya tuju</strong> adalah sosok pendidik
+              yang reflektif, adaptif, dan berempati. Saya ingin menjadi seorang
+              fasilitator yang mampu meracik kecanggihan teknologi dengan
+              kehangatan komunikasi, sehingga peserta didik tidak hanya tumbuh
+              menjadi individu yang cakap secara digital
+              <em>(digital native)</em>, tetapi juga memiliki karakter, etika,
+              dan integritas yang tangguh untuk menghadapi dinamika masa depan.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= QUOTE SECTION ================= -->
+      <section
+        class="bg-[#faf9f6] text-center rounded-[2.5rem] p-10 shadow-sm border border-gray-200 opacity-0 animate-fade-in-up delay-200 relative"
+      >
+        <i
+          class="fas fa-quote-left text-4xl text-amber-300 absolute top-8 left-1/2 transform -translate-x-1/2"
+        ></i>
+        <div class="max-w-4xl mx-auto mt-8">
+          <p
+            class="text-xl md:text-2xl font-serif italic text-gray-800 leading-relaxed"
+          >
+            "Technology will not replace great teachers, but technology in the
+            hands of great teachers can be transformational."
+          </p>
+          <div class="mt-8 flex flex-col items-center justify-center gap-2">
+            <div class="w-8 h-1 bg-amber-400 rounded-full"></div>
+            <span
+              class="text-xs font-bold text-gray-400 tracking-widest uppercase"
+              >- George Couros -</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= GALERI DOKUMENTASI ================= -->
+      <section
+        class="bento-card p-8 md:p-10 opacity-0 animate-fade-in-up delay-300"
+      >
+        <div class="text-center mb-8">
+          <span
+            class="bg-blue-100 text-blue-600 font-bold px-3 py-1 rounded-full text-[10px] uppercase tracking-widest border border-blue-200"
+          >
+            <i class="fas fa-images mr-1"></i> Visualisasi Model Guru
+          </span>
+          <h2 class="text-2xl font-bold text-gray-900 mt-4">
+            Dokumentasi Praktik Pembelajaran Terbimbing
+          </h2>
+        </div>
+
+        <div
+          class="relative w-full overflow-hidden no-scrollbar py-4"
+          id="carouselWrapper"
+        >
+          <div
+            class="flex w-max gap-6 animate-scroll carousel-track"
+            id="carouselTrack"
+          >
+            <!-- CARD 1 -->
+            <div
+              class="w-64 flex-shrink-0 bg-white border border-gray-100 rounded-2xl p-4 shadow-sm group cursor-pointer"
+              onclick="
+                openImageModal(
+                  'https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w2000',
+                  'Pembukaan & Apersepsi',
+                )
+              "
+            >
+              <div
+                class="w-full h-40 bg-gray-100 rounded-xl overflow-hidden relative mb-4"
+              >
+                <img
+                  src="https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w800"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  alt="Doc 1"
+                />
+                <div
+                  class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                >
+                  <div
+                    class="bg-white/90 w-10 h-10 rounded-full flex items-center justify-center text-blue-600"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </div>
+                </div>
+              </div>
+              <h4 class="font-bold text-sm text-gray-800 mb-2">
+                Pembukaan & Apersepsi
+              </h4>
+              <span
+                class="text-[10px] bg-blue-50 text-blue-500 px-2 py-1 rounded-md font-semibold"
+                >Pendekatan</span
+              >
+            </div>
+
+            <!-- CARD 2 -->
+            <div
+              class="w-64 flex-shrink-0 bg-white border border-gray-100 rounded-2xl p-4 shadow-sm group cursor-pointer"
+              onclick="
+                openImageModal(
+                  'https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w2000',
+                  'Kegiatan Inti Pembelajaran',
+                )
+              "
+            >
+              <div
+                class="w-full h-40 bg-gray-100 rounded-xl overflow-hidden relative mb-4"
+              >
+                <img
+                  src="https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w800"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  alt="Doc 2"
+                />
+                <div
+                  class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                >
+                  <div
+                    class="bg-white/90 w-10 h-10 rounded-full flex items-center justify-center text-blue-600"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </div>
+                </div>
+              </div>
+              <h4 class="font-bold text-sm text-gray-800 mb-2">
+                Kegiatan Inti Pembelajaran
+              </h4>
+              <span
+                class="text-[10px] bg-blue-50 text-blue-500 px-2 py-1 rounded-md font-semibold"
+                >Integrasi TPACK</span
+              >
+            </div>
+
+            <!-- CARD 3 -->
+            <div
+              class="w-64 flex-shrink-0 bg-white border border-gray-100 rounded-2xl p-4 shadow-sm group cursor-pointer"
+              onclick="
+                openImageModal(
+                  'https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w2000',
+                  'Pendampingan Siswa',
+                )
+              "
+            >
+              <div
+                class="w-full h-40 bg-gray-100 rounded-xl overflow-hidden relative mb-4"
+              >
+                <img
+                  src="https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w800"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  alt="Doc 3"
+                />
+                <div
+                  class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                >
+                  <div
+                    class="bg-white/90 w-10 h-10 rounded-full flex items-center justify-center text-blue-600"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </div>
+                </div>
+              </div>
+              <h4 class="font-bold text-sm text-gray-800 mb-2">
+                Pendampingan Siswa
+              </h4>
+              <span
+                class="text-[10px] bg-amber-50 text-amber-500 px-2 py-1 rounded-md font-semibold"
+                >Scaffolding Vygotsky</span
+              >
+            </div>
+
+            <!-- CARD 4 -->
+            <div
+              class="w-64 flex-shrink-0 bg-white border border-gray-100 rounded-2xl p-4 shadow-sm group cursor-pointer"
+              onclick="
+                openImageModal(
+                  'https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w2000',
+                  'Presentasi Hasil Proyek',
+                )
+              "
+            >
+              <div
+                class="w-full h-40 bg-gray-100 rounded-xl overflow-hidden relative mb-4"
+              >
+                <img
+                  src="https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w800"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  alt="Doc 4"
+                />
+                <div
+                  class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                >
+                  <div
+                    class="bg-white/90 w-10 h-10 rounded-full flex items-center justify-center text-blue-600"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </div>
+                </div>
+              </div>
+              <h4 class="font-bold text-sm text-gray-800 mb-2">
+                Presentasi Hasil Proyek
+              </h4>
+              <span
+                class="text-[10px] bg-green-50 text-green-600 px-2 py-1 rounded-md font-semibold"
+                >Konstruktivisme</span
+              >
+            </div>
+
+            <!-- CARD 5 -->
+            <div
+              class="w-64 flex-shrink-0 bg-white border border-gray-100 rounded-2xl p-4 shadow-sm group cursor-pointer"
+              onclick="
+                openImageModal(
+                  'https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w2000',
+                  'Evaluasi & Refleksi',
+                )
+              "
+            >
+              <div
+                class="w-full h-40 bg-gray-100 rounded-xl overflow-hidden relative mb-4"
+              >
+                <img
+                  src="https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w800"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  alt="Doc 5"
+                />
+                <div
+                  class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                >
+                  <div
+                    class="bg-white/90 w-10 h-10 rounded-full flex items-center justify-center text-blue-600"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </div>
+                </div>
+              </div>
+              <h4 class="font-bold text-sm text-gray-800 mb-2">
+                Evaluasi & Refleksi
+              </h4>
+              <span
+                class="text-[10px] bg-purple-50 text-purple-600 px-2 py-1 rounded-md font-semibold"
+                >Refleksi</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="py-8 border-t border-white/50 relative z-10 bg-white/40 backdrop-blur-md mt-auto"
+    >
+      <div
+        class="max-w-[1300px] mx-auto px-6 flex flex-col md:flex-row items-center justify-center text-xs font-mono text-gray-500 font-medium"
+      >
+        <p>© 2026 Fatasya Aulia Suyono. E-Portofolio 2 Refleksi Akhir PPL.</p>
+      </div>
+    </footer>
+
+    <!-- MODAL PREVIEW GAMBAR -->
+    <div
+      id="imageModal"
+      class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-gray-900/80 backdrop-blur-sm opacity-0 transition-opacity duration-300 p-4"
+    >
+      <div
+        class="bg-white rounded-3xl max-w-4xl w-full flex flex-col shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300 relative border border-white/40"
+      >
+        <div
+          class="flex justify-between items-center p-4 md:px-6 bg-gray-50 border-b border-gray-200"
+        >
+          <h3
+            id="imageModalTitle"
+            class="font-bold text-gray-800 text-sm md:text-base flex items-center gap-2"
+          >
+            Pratinjau Dokumentasi
+          </h3>
+          <button
+            onclick="closeImageModal()"
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-red-500 hover:text-white transition-colors"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div
+          class="bg-black/5 relative flex justify-center items-center p-4 min-h-[400px]"
+        >
+          <div
+            id="imageModalLoading"
+            class="absolute inset-0 flex flex-col items-center justify-center z-0"
+          >
+            <i
+              class="fas fa-circle-notch fa-spin text-4xl text-cyber-blue mb-4"
+            ></i>
+            <p class="text-sm font-mono text-gray-500 animate-pulse">
+              Memuat Gambar...
+            </p>
+          </div>
+          <img
+            id="modalImageContent"
+            src=""
+            alt="Preview"
+            class="max-h-[70vh] object-contain rounded-xl shadow-md z-10 hidden"
+            onload="
+              document
+                .getElementById('imageModalLoading')
+                .classList.add('hidden');
+              this.classList.remove('hidden');
+            "
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      // Mobile Menu Script
+      const btn = document.getElementById("mobile-menu-button");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        const icon = btn.querySelector("i");
+        if (menu.classList.contains("hidden")) {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        } else {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+        }
+      });
+
+      // Infinite Carousel Script
+      const track = document.getElementById("carouselTrack");
+      const items = [...track.children];
+      items.forEach((item) => {
+        const clone = item.cloneNode(true);
+        track.appendChild(clone);
+      });
+
+      // Image Modal Functionality
+      function openImageModal(imgUrl, title) {
+        document.getElementById("imageModalTitle").innerHTML =
+          `<i class="fas fa-image text-blue-500"></i> ${title}`;
+        document.getElementById("imageModalLoading").classList.remove("hidden");
+        const imgElement = document.getElementById("modalImageContent");
+        imgElement.classList.add("hidden");
+        imgElement.src = imgUrl;
+
+        const modal = document.getElementById("imageModal");
+        modal.classList.remove("hidden");
+        setTimeout(() => {
+          modal.classList.remove("opacity-0");
+          modal.querySelector("div.bg-white").classList.remove("scale-95");
+          modal.querySelector("div.bg-white").classList.add("scale-100");
+        }, 10);
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeImageModal() {
+        const modal = document.getElementById("imageModal");
+        modal.classList.add("opacity-0");
+        modal.querySelector("div.bg-white").classList.remove("scale-100");
+        modal.querySelector("div.bg-white").classList.add("scale-95");
+        setTimeout(() => {
+          modal.classList.add("hidden");
+          document.getElementById("modalImageContent").src = "";
+          document.body.style.overflow = "auto";
+        }, 300);
+      }
+
+      document
+        .getElementById("imageModal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) closeImageModal();
+        });
+    </script>
+  </body>
+</html>
