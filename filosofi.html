@@ -32,11 +32,11 @@
               serif: ["Lora", "serif"],
             },
             colors: {
-              cyber: {
-                blue: "#007AFF",
-                cyan: "#32ADE6",
-                purple: "#AF52DE",
-                indigo: "#5856D6",
+              sunset: {
+                orange: "#e96443",
+                peach: "#f48c71",
+                plum: "#904e95",
+                wine: "#6d3972",
               },
             },
             animation: {
@@ -76,27 +76,28 @@
     </script>
 
     <style>
+      /* Grapefruit Sunset Background Gradient */
       body {
-        background-color: #f2f4f8;
+        background-color: #fffaf9;
         background-image:
           radial-gradient(
             at 0% 0%,
-            rgba(50, 173, 230, 0.15) 0px,
+            rgba(233, 100, 67, 0.15) 0px,
             transparent 50%
           ),
           radial-gradient(
             at 100% 0%,
-            rgba(175, 82, 222, 0.15) 0px,
+            rgba(144, 78, 149, 0.15) 0px,
             transparent 50%
           ),
           radial-gradient(
             at 100% 100%,
-            rgba(0, 122, 255, 0.15) 0px,
+            rgba(233, 100, 67, 0.15) 0px,
             transparent 50%
           ),
           radial-gradient(
             at 0% 100%,
-            rgba(88, 86, 214, 0.15) 0px,
+            rgba(144, 78, 149, 0.15) 0px,
             transparent 50%
           );
         background-attachment: fixed;
@@ -110,12 +111,12 @@
         background-image:
           linear-gradient(
             to right,
-            rgba(0, 122, 255, 0.05) 1px,
+            rgba(233, 100, 67, 0.05) 1px,
             transparent 1px
           ),
           linear-gradient(
             to bottom,
-            rgba(0, 122, 255, 0.05) 1px,
+            rgba(233, 100, 67, 0.05) 1px,
             transparent 1px
           );
       }
@@ -128,7 +129,7 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.4);
         border-right: 1px solid rgba(255, 255, 255, 0.4);
         box-shadow:
-          0 20px 40px -10px rgba(0, 122, 255, 0.08),
+          0 20px 40px -10px rgba(233, 100, 67, 0.08),
           inset 0 1px 0 rgba(255, 255, 255, 1);
         border-radius: 2.5rem;
         transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -139,9 +140,9 @@
       .bento-card:hover {
         transform: translateY(-5px);
         box-shadow:
-          0 30px 60px -15px rgba(0, 122, 255, 0.15),
+          0 30px 60px -15px rgba(233, 100, 67, 0.15),
           inset 0 1px 0 rgba(255, 255, 255, 1);
-        border-color: rgba(0, 122, 255, 0.3);
+        border-color: rgba(233, 100, 67, 0.3);
         background: rgba(255, 255, 255, 0.65);
       }
 
@@ -174,21 +175,19 @@
   <body class="antialiased relative min-h-screen flex flex-col">
     <div class="fixed inset-0 tech-grid-bg pointer-events-none z-0"></div>
     <div
-      class="fixed top-20 left-20 w-72 h-72 border-[1px] border-cyber-purple/20 rounded-full animate-[spin_25s_linear_infinite] border-dashed pointer-events-none z-0"
+      class="fixed top-20 left-20 w-72 h-72 border-[1px] border-sunset-plum/20 rounded-full animate-[spin_25s_linear_infinite] border-dashed pointer-events-none z-0"
     ></div>
 
-    <!-- ================= NAVIGASI MENU ================= -->
     <nav class="fixed w-full z-50 mt-4 px-6 transition-all duration-300">
       <div
         class="max-w-[1300px] mx-auto bg-white/60 backdrop-blur-2xl border border-white/80 shadow-[0_8px_30px_rgba(0,0,0,0.04)] rounded-full px-6 py-3 flex justify-between items-center"
       >
-        <!-- Logo -->
         <div class="flex items-center gap-3 group cursor-pointer relative">
           <div
-            class="absolute inset-0 bg-cyber-blue rounded-xl animate-pulse-ring"
+            class="absolute inset-0 bg-sunset-orange rounded-xl animate-pulse-ring"
           ></div>
           <div
-            class="w-10 h-10 bg-gradient-to-br from-cyber-blue to-cyber-cyan text-white rounded-xl flex items-center justify-center font-mono font-bold text-lg shadow-lg relative z-10 group-hover:scale-105 transition-transform"
+            class="w-10 h-10 bg-gradient-to-br from-sunset-orange to-sunset-peach text-white rounded-xl flex items-center justify-center font-mono font-bold text-lg shadow-lg relative z-10 group-hover:scale-105 transition-transform"
           >
             &lt;/&gt;
           </div>
@@ -196,7 +195,7 @@
             <h1
               class="font-bold text-gray-900 text-lg leading-none tracking-tight"
             >
-              Fatasya<span class="text-cyber-blue animate-blink">_</span>
+              Fatasya<span class="text-sunset-orange animate-blink">_</span>
             </h1>
             <p
               class="text-[9px] text-gray-500 font-bold font-mono uppercase tracking-widest mt-1"
@@ -206,40 +205,37 @@
           </div>
         </div>
 
-        <!-- Desktop Menu -->
         <div class="hidden md:flex items-center gap-1">
           <a
             href="index.html"
-            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-cyber-blue rounded-full text-sm font-semibold transition"
+            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-sunset-orange rounded-full text-sm font-semibold transition"
             >Beranda</a
           >
           <a
             href="filosofi.html"
-            class="px-5 py-2.5 bg-white text-cyber-blue border-b-2 border-cyber-blue rounded-full text-sm font-bold shadow-sm transition"
+            class="px-5 py-2.5 bg-white text-sunset-orange border-b-2 border-sunset-orange rounded-full text-sm font-bold shadow-sm transition"
             >Filosofi Mengajar</a
           >
           <a
             href="artifak.html"
-            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-cyber-blue rounded-full text-sm font-semibold transition"
+            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-sunset-orange rounded-full text-sm font-semibold transition"
             >Artifak & Analisis</a
           >
           <a
             href="refleksi.html"
-            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-cyber-blue rounded-full text-sm font-semibold transition"
+            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-sunset-orange rounded-full text-sm font-semibold transition"
             >Refleksi Akhir</a
           >
         </div>
 
-        <!-- Kontak Button -->
         <a
           href="https://wa.me/6285732003774"
           target="_blank"
-          class="hidden md:flex items-center gap-2 bg-gradient-to-r from-cyber-blue to-cyber-cyan text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-blue-500/30 hover:scale-105 transition-transform"
+          class="hidden md:flex items-center gap-2 bg-gradient-to-r from-sunset-orange to-sunset-peach text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-orange-500/30 hover:scale-105 transition-transform"
         >
           <i class="fab fa-whatsapp"></i> Kontak
         </a>
 
-        <!-- Mobile Toggle -->
         <button
           id="mobile-menu-button"
           class="md:hidden text-gray-800 text-2xl focus:outline-none bg-white/50 p-2 rounded-full"
@@ -248,45 +244,41 @@
         </button>
       </div>
 
-      <!-- Mobile Menu -->
       <div
         id="mobile-menu"
         class="hidden md:hidden absolute top-20 left-6 right-6 bg-white/90 backdrop-blur-2xl border border-white shadow-2xl rounded-3xl flex flex-col p-4 space-y-2 font-medium z-40"
       >
         <a
           href="index.html"
-          class="block w-full text-gray-600 hover:bg-gray-50 p-3 rounded-2xl"
+          class="block w-full text-gray-600 hover:bg-orange-50 p-3 rounded-2xl"
           >Beranda</a
         >
         <a
           href="filosofi.html"
-          class="block w-full text-cyber-blue bg-blue-50 p-3 rounded-2xl font-bold"
+          class="block w-full text-sunset-orange bg-orange-50 p-3 rounded-2xl font-bold"
           >Filosofi Mengajar</a
         >
         <a
           href="artifak.html"
-          class="block w-full text-gray-600 hover:bg-gray-50 p-3 rounded-2xl"
+          class="block w-full text-gray-600 hover:bg-orange-50 p-3 rounded-2xl"
           >Artifak & Analisis</a
         >
         <a
           href="refleksi.html"
-          class="block w-full text-gray-600 hover:bg-gray-50 p-3 rounded-2xl"
+          class="block w-full text-gray-600 hover:bg-orange-50 p-3 rounded-2xl"
           >Refleksi Akhir</a
         >
       </div>
     </nav>
-    <!-- ================= END NAVIGASI ================= -->
-
     <main
       class="flex-1 max-w-[1300px] mx-auto w-full pt-32 pb-20 px-6 lg:px-8 relative z-10 space-y-8"
     >
-      <!-- ================= HERO SECTION ================= -->
       <section
-        class="bento-card p-8 md:p-12 opacity-0 animate-fade-in-up flex flex-col md:flex-row items-center justify-between gap-8 bg-gradient-to-br from-white/60 to-blue-50/40"
+        class="bento-card p-8 md:p-12 opacity-0 animate-fade-in-up flex flex-col md:flex-row items-center justify-between gap-8 bg-gradient-to-br from-white/60 to-orange-50/40"
       >
         <div class="flex-1 space-y-6 z-10">
           <div
-            class="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase border border-blue-200"
+            class="inline-flex items-center gap-2 bg-orange-100 text-sunset-orange px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase border border-orange-200"
           >
             IDEOLOGI & NILAI PENDIDIK
           </div>
@@ -295,14 +287,13 @@
           >
             Filosofi & Model <br />
             <span
-              class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-cyber-cyan to-cyber-purple"
+              class="text-transparent bg-clip-text bg-gradient-to-r from-sunset-orange via-sunset-peach to-sunset-plum"
               >Guru Profesional</span
             >
           </h1>
           <p class="text-gray-600 text-lg md:text-xl leading-relaxed max-w-xl">
-            Sintesis pemikiran pedagogis yang mendasari praktik pengajaran saya
-            selama PPL Terbimbing, memadukan kehangatan humanis dan kecakapan
-            teknologi.
+            &quot;Prinsip mengajar saya memadukan kemampuan teknis Informatika
+            dengan sikap humanis yang mengutamakan kebutuhan siswa.&quot;
           </p>
         </div>
 
@@ -310,7 +301,7 @@
           class="w-full md:w-1/2 lg:w-[450px] flex justify-center relative h-[380px] group mt-8 md:mt-0"
         >
           <div
-            class="absolute inset-0 bg-gradient-to-br from-blue-400/30 to-purple-400/30 rounded-full blur-3xl group-hover:blur-2xl transition-all duration-500"
+            class="absolute inset-0 bg-gradient-to-br from-orange-400/30 to-fuchsia-400/30 rounded-full blur-3xl group-hover:blur-2xl transition-all duration-500"
           ></div>
 
           <div
@@ -324,7 +315,7 @@
               <div class="w-3 h-3 rounded-full bg-green-400"></div>
             </div>
             <div
-              class="flex-1 bg-gradient-to-br from-blue-50/50 to-indigo-50/50 relative"
+              class="flex-1 bg-gradient-to-br from-orange-50/50 to-fuchsia-50/50 relative"
             ></div>
           </div>
 
@@ -332,7 +323,7 @@
             class="absolute top-0 right-10 bg-white/90 backdrop-blur-md p-3 rounded-2xl shadow-xl border border-white/60 animate-float z-20"
           >
             <div
-              class="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 text-blue-600 rounded-xl flex items-center justify-center text-2xl shadow-inner"
+              class="w-12 h-12 bg-gradient-to-br from-orange-100 to-orange-200 text-orange-600 rounded-xl flex items-center justify-center text-2xl shadow-inner"
             >
               <i class="fas fa-lightbulb"></i>
             </div>
@@ -348,7 +339,7 @@
             class="absolute bottom-0 left-6 right-6 bg-white/60 backdrop-blur-xl border border-white/80 p-4 rounded-3xl z-30 flex items-center gap-4 transform translate-y-2 group-hover:-translate-y-2 transition-transform duration-500 shadow-[0_15px_30px_rgba(0,0,0,0.1)]"
           >
             <div class="bg-white p-2 rounded-full shadow-lg shrink-0">
-              <i class="fas fa-book-open text-cyber-blue text-xl m-1"></i>
+              <i class="fas fa-book-open text-sunset-orange text-xl m-1"></i>
             </div>
             <div>
               <p
@@ -364,7 +355,6 @@
         </div>
       </section>
 
-      <!-- ================= ESAI FILOSOFI MENGAJAR ================= -->
       <section
         class="bento-card p-8 md:p-12 opacity-0 animate-fade-in-up delay-100"
       >
@@ -382,10 +372,10 @@
             <p>
               Selama menjalani Praktik Pengalaman Lapangan (PPL) Terbimbing,
               mulai dari tahap observasi, asistensi, hingga praktik mengajar
-              secara mandiri, saya menyadari satu hal fundamental: menjadi guru
+              secara mandiri, saya menyadari satu hal dasar menjadi guru
               bukanlah sekadar profesi tentang transfer ilmu pengetahuan.
               Prinsip dan nilai utama yang saya pegang teguh adalah bahwa setiap
-              peserta didik memiliki potensi dan keunikannya masing-masing yang
+              peserta didik memiliki potensi dan keunikannya masing- masing yang
               harus difasilitasi dengan pendekatan yang memanusiakan manusia.
               Saya meyakini bahwa ruang kelas harus dirancang menjadi lingkungan
               belajar yang aman, inklusif, dan interaktif. Dalam konteks ini,
@@ -399,20 +389,28 @@
               Filosofi dan keyakinan ini sangat sejalan dengan pemikiran tokoh
               pendidikan nasional kita, <strong>Ki Hajar Dewantara</strong>,
               khususnya mengenai Sistem Among:
-              <em
-                >Ing Ngarso Sung Tulodo, Ing Madyo Mangun Karso, Tut Wuri
-                Handayani</em
-              >. Sebagai pendidik mata pelajaran Informatika, di depan saya
-              harus bisa memberikan teladan berliterasi digital yang bijak; di
-              tengah saya memfasilitasi inovasi saat mendampingi mereka menyusun
-              proyek; dan di belakang saya memberikan dorongan agar mereka
-              mandiri dalam memecahkan masalah <em>(problem solving)</em>.
-              Pendekatan ini juga memiliki relevansi yang kuat dengan
-              <strong>Teori Belajar Konstruktivisme dari Lev Vygotsky</strong>.
+              <strong
+                ><em
+                  >Ing Ngarso Sung Tulodo, Ing Madyo Mangun Karso, Tut Wuri
+                  Handayani.</em
+                ></strong
+              >
+              Sebagai pendidik mata pelajaran Informatika, di depan saya harus
+              bisa memberikan teladan berliterasi digital yang bijak, di tengah
+              saya memfasilitasi inovasi saat mendampingi mereka menyusun
+              proyek, dan di belakang saya memberikan dorongan agar mereka
+              mandiri dalam memecahkan masalah
+              <i>(problem solving).</i> Pendekatan ini juga memiliki relevansi
+              yang kuat dengan
+              <strong
+                ><em
+                  >Teori Belajar Konstruktivisme dari Lev Vygotsky.</em
+                ></strong
+              >
               Vygotsky menekankan bahwa pembelajaran adalah proses aktif di mana
               siswa membangun pengetahuannya sendiri melalui interaksi sosial.
               Oleh karena itu, tugas saya adalah memberikan
-              <em>scaffolding</em> (bantuan terstruktur) yang tepat sasaran,
+              <i>scaffolding</i> (bantuan terstruktur) yang tepat sasaran,
               sehingga siswa dapat mencapai potensi maksimal mereka melampaui
               kemampuan dasarnya.
             </p>
@@ -421,8 +419,11 @@
               Lebih lanjut, untuk menjawab tantangan pendidikan abad ke-21,
               nilai pengajaran saya berakar kuat pada kerangka kerja
               <strong
-                >TPACK (Technological Pedagogical Content Knowledge)</strong
-              >. Saya meyakini bahwa penguasaan konten keilmuan Informatika yang
+                ><em
+                  >TPACK (Technological Pedagogical Content Knowledge).</em
+                ></strong
+              >
+              Saya meyakini bahwa penguasaan konten keilmuan Informatika yang
               mendalam dan kecakapan menggunakan teknologi mutakhir tidak akan
               bermakna tanpa diikat oleh kemampuan Pedagogik (cara mendidik)
               yang kuat. Berdasarkan prinsip-prinsip tersebut,
@@ -431,14 +432,14 @@
               fasilitator yang mampu meracik kecanggihan teknologi dengan
               kehangatan komunikasi, sehingga peserta didik tidak hanya tumbuh
               menjadi individu yang cakap secara digital
-              <em>(digital native)</em>, tetapi juga memiliki karakter, etika,
-              dan integritas yang tangguh untuk menghadapi dinamika masa depan.
+              <em>(digital native),</em>
+              tetapi juga memiliki karakter, etika, dan integritas yang tangguh
+              untuk menghadapi dinamika masa depan.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- ================= QUOTE SECTION ================= -->
       <section
         class="bg-[#faf9f6] text-center rounded-[2.5rem] p-10 shadow-sm border border-gray-200 opacity-0 animate-fade-in-up delay-200 relative"
       >
@@ -462,13 +463,12 @@
         </div>
       </section>
 
-      <!-- ================= GALERI DOKUMENTASI ================= -->
       <section
         class="bento-card p-8 md:p-10 opacity-0 animate-fade-in-up delay-300"
       >
         <div class="text-center mb-8">
           <span
-            class="bg-blue-100 text-blue-600 font-bold px-3 py-1 rounded-full text-[10px] uppercase tracking-widest border border-blue-200"
+            class="bg-orange-100 text-orange-600 font-bold px-3 py-1 rounded-full text-[10px] uppercase tracking-widest border border-orange-200"
           >
             <i class="fas fa-images mr-1"></i> Visualisasi Model Guru
           </span>
@@ -485,13 +485,12 @@
             class="flex w-max gap-6 animate-scroll carousel-track"
             id="carouselTrack"
           >
-            <!-- CARD 1 -->
             <div
               class="w-64 flex-shrink-0 bg-white border border-gray-100 rounded-2xl p-4 shadow-sm group cursor-pointer"
               onclick="
                 openImageModal(
-                  'https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w2000',
-                  'Pembukaan & Apersepsi',
+                  'https://drive.google.com/thumbnail?id=18GActHMeU9XaczKX_gfG7jiKSfBrohOB&sz=w2000',
+                  'Supervisi DPL & Guru Pamong',
                 )
               "
             >
@@ -499,7 +498,7 @@
                 class="w-full h-40 bg-gray-100 rounded-xl overflow-hidden relative mb-4"
               >
                 <img
-                  src="https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w800"
+                  src="https://drive.google.com/thumbnail?id=18GActHMeU9XaczKX_gfG7jiKSfBrohOB&sz=w800"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   alt="Doc 1"
                 />
@@ -507,28 +506,27 @@
                   class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
                 >
                   <div
-                    class="bg-white/90 w-10 h-10 rounded-full flex items-center justify-center text-blue-600"
+                    class="bg-white/90 w-10 h-10 rounded-full flex items-center justify-center text-sunset-orange"
                   >
                     <i class="fas fa-search-plus"></i>
                   </div>
                 </div>
               </div>
               <h4 class="font-bold text-sm text-gray-800 mb-2">
-                Pembukaan & Apersepsi
+                Supervisi DPL & Guru Pamong
               </h4>
               <span
-                class="text-[10px] bg-blue-50 text-blue-500 px-2 py-1 rounded-md font-semibold"
-                >Pendekatan</span
+                class="text-[10px] bg-orange-50 text-orange-500 px-2 py-1 rounded-md font-semibold"
+                >Supervisi</span
               >
             </div>
 
-            <!-- CARD 2 -->
             <div
               class="w-64 flex-shrink-0 bg-white border border-gray-100 rounded-2xl p-4 shadow-sm group cursor-pointer"
               onclick="
                 openImageModal(
-                  'https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w2000',
-                  'Kegiatan Inti Pembelajaran',
+                  'https://drive.google.com/thumbnail?id=1BGy9GfBjLPID8oUFHWjjSm9vQQgaKnG8&sz=w2000',
+                  'Diskusi Bersama Kepala Sekolah',
                 )
               "
             >
@@ -536,7 +534,7 @@
                 class="w-full h-40 bg-gray-100 rounded-xl overflow-hidden relative mb-4"
               >
                 <img
-                  src="https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w800"
+                  src="https://drive.google.com/thumbnail?id=1BGy9GfBjLPID8oUFHWjjSm9vQQgaKnG8&sz=w800"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   alt="Doc 2"
                 />
@@ -544,28 +542,27 @@
                   class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
                 >
                   <div
-                    class="bg-white/90 w-10 h-10 rounded-full flex items-center justify-center text-blue-600"
+                    class="bg-white/90 w-10 h-10 rounded-full flex items-center justify-center text-sunset-orange"
                   >
                     <i class="fas fa-search-plus"></i>
                   </div>
                 </div>
               </div>
               <h4 class="font-bold text-sm text-gray-800 mb-2">
-                Kegiatan Inti Pembelajaran
+                Diskusi Bersama Kepala Sekolah
               </h4>
               <span
-                class="text-[10px] bg-blue-50 text-blue-500 px-2 py-1 rounded-md font-semibold"
-                >Integrasi TPACK</span
+                class="text-[10px] bg-rose-50 text-rose-500 px-2 py-1 rounded-md font-semibold"
+                >Diskusi</span
               >
             </div>
 
-            <!-- CARD 3 -->
             <div
               class="w-64 flex-shrink-0 bg-white border border-gray-100 rounded-2xl p-4 shadow-sm group cursor-pointer"
               onclick="
                 openImageModal(
-                  'https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w2000',
-                  'Pendampingan Siswa',
+                  'https://drive.google.com/thumbnail?id=1Nh9XqY5Nys--TBcNUQ2UnBiSJMX5Pbzl&sz=w2000',
+                  'Praktik Mengajar Terbimbing',
                 )
               "
             >
@@ -573,7 +570,7 @@
                 class="w-full h-40 bg-gray-100 rounded-xl overflow-hidden relative mb-4"
               >
                 <img
-                  src="https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w800"
+                  src="https://drive.google.com/thumbnail?id=1Nh9XqY5Nys--TBcNUQ2UnBiSJMX5Pbzl&sz=w800"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   alt="Doc 3"
                 />
@@ -581,27 +578,26 @@
                   class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
                 >
                   <div
-                    class="bg-white/90 w-10 h-10 rounded-full flex items-center justify-center text-blue-600"
+                    class="bg-white/90 w-10 h-10 rounded-full flex items-center justify-center text-sunset-orange"
                   >
                     <i class="fas fa-search-plus"></i>
                   </div>
                 </div>
               </div>
               <h4 class="font-bold text-sm text-gray-800 mb-2">
-                Pendampingan Siswa
+                Praktik Mengajar Terbimbing
               </h4>
               <span
                 class="text-[10px] bg-amber-50 text-amber-500 px-2 py-1 rounded-md font-semibold"
-                >Scaffolding Vygotsky</span
+                >Praktik Mengajar</span
               >
             </div>
 
-            <!-- CARD 4 -->
             <div
               class="w-64 flex-shrink-0 bg-white border border-gray-100 rounded-2xl p-4 shadow-sm group cursor-pointer"
               onclick="
                 openImageModal(
-                  'https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w2000',
+                  'https://drive.google.com/thumbnail?id=1j-nFQcFcQXT6IlnP8vX3RI3MDwF_eN9p&sz=w2000',
                   'Presentasi Hasil Proyek',
                 )
               "
@@ -610,7 +606,7 @@
                 class="w-full h-40 bg-gray-100 rounded-xl overflow-hidden relative mb-4"
               >
                 <img
-                  src="https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w800"
+                  src="https://drive.google.com/thumbnail?id=1j-nFQcFcQXT6IlnP8vX3RI3MDwF_eN9p&sz=w800"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   alt="Doc 4"
                 />
@@ -618,7 +614,7 @@
                   class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
                 >
                   <div
-                    class="bg-white/90 w-10 h-10 rounded-full flex items-center justify-center text-blue-600"
+                    class="bg-white/90 w-10 h-10 rounded-full flex items-center justify-center text-sunset-orange"
                   >
                     <i class="fas fa-search-plus"></i>
                   </div>
@@ -629,17 +625,16 @@
               </h4>
               <span
                 class="text-[10px] bg-green-50 text-green-600 px-2 py-1 rounded-md font-semibold"
-                >Konstruktivisme</span
+                >Proyek</span
               >
             </div>
 
-            <!-- CARD 5 -->
             <div
               class="w-64 flex-shrink-0 bg-white border border-gray-100 rounded-2xl p-4 shadow-sm group cursor-pointer"
               onclick="
                 openImageModal(
-                  'https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w2000',
-                  'Evaluasi & Refleksi',
+                  'https://drive.google.com/thumbnail?id=1uK5fGgFDSYVQU1HlC3wNJCE-xBkQOkzb&sz=w2000',
+                  'Scaffolding Pembelajaran',
                 )
               "
             >
@@ -647,7 +642,7 @@
                 class="w-full h-40 bg-gray-100 rounded-xl overflow-hidden relative mb-4"
               >
                 <img
-                  src="https://drive.google.com/thumbnail?id=185QvAdt6XN9BrUYrSFv8_ZjY-I0mZ_6O&sz=w800"
+                  src="https://drive.google.com/thumbnail?id=1uK5fGgFDSYVQU1HlC3wNJCE-xBkQOkzb&sz=w800"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   alt="Doc 5"
                 />
@@ -655,18 +650,18 @@
                   class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
                 >
                   <div
-                    class="bg-white/90 w-10 h-10 rounded-full flex items-center justify-center text-blue-600"
+                    class="bg-white/90 w-10 h-10 rounded-full flex items-center justify-center text-sunset-orange"
                   >
                     <i class="fas fa-search-plus"></i>
                   </div>
                 </div>
               </div>
               <h4 class="font-bold text-sm text-gray-800 mb-2">
-                Evaluasi & Refleksi
+                Scaffolding Pembelajaran
               </h4>
               <span
                 class="text-[10px] bg-purple-50 text-purple-600 px-2 py-1 rounded-md font-semibold"
-                >Refleksi</span
+                >Scaffolding</span
               >
             </div>
           </div>
@@ -674,18 +669,16 @@
       </section>
     </main>
 
-    <!-- Footer -->
     <footer
       class="py-8 border-t border-white/50 relative z-10 bg-white/40 backdrop-blur-md mt-auto"
     >
       <div
         class="max-w-[1300px] mx-auto px-6 flex flex-col md:flex-row items-center justify-center text-xs font-mono text-gray-500 font-medium"
       >
-        <p>© 2026 Fatasya Aulia Suyono. E-Portofolio 2 Refleksi Akhir PPL.</p>
+        <p>© 2026 Fatasya Aulia Suyono. E-Portofolio UAS Refleksi Akhir PPL.</p>
       </div>
     </footer>
 
-    <!-- MODAL PREVIEW GAMBAR -->
     <div
       id="imageModal"
       class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-gray-900/80 backdrop-blur-sm opacity-0 transition-opacity duration-300 p-4"
@@ -717,7 +710,7 @@
             class="absolute inset-0 flex flex-col items-center justify-center z-0"
           >
             <i
-              class="fas fa-circle-notch fa-spin text-4xl text-cyber-blue mb-4"
+              class="fas fa-circle-notch fa-spin text-4xl text-sunset-orange mb-4"
             ></i>
             <p class="text-sm font-mono text-gray-500 animate-pulse">
               Memuat Gambar...
@@ -739,7 +732,6 @@
       </div>
     </div>
 
-    <!-- Scripts -->
     <script>
       // Mobile Menu Script
       const btn = document.getElementById("mobile-menu-button");
@@ -768,7 +760,7 @@
       // Image Modal Functionality
       function openImageModal(imgUrl, title) {
         document.getElementById("imageModalTitle").innerHTML =
-          `<i class="fas fa-image text-blue-500"></i> ${title}`;
+          `<i class="fas fa-image text-sunset-orange"></i> ${title}`;
         document.getElementById("imageModalLoading").classList.remove("hidden");
         const imgElement = document.getElementById("modalImageContent");
         imgElement.classList.add("hidden");
