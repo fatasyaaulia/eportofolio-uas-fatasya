@@ -31,11 +31,11 @@
               mono: ["Fira Code", "monospace"],
             },
             colors: {
-              cyber: {
-                blue: "#007AFF",
-                cyan: "#32ADE6",
-                purple: "#AF52DE",
-                indigo: "#5856D6",
+              sunset: {
+                orange: "#e96443",
+                peach: "#f48c71",
+                plum: "#904e95",
+                wine: "#6d3972",
               },
             },
             animation: {
@@ -70,27 +70,28 @@
     </script>
 
     <style>
+      /* Grapefruit Sunset Background Gradient */
       body {
-        background-color: #f2f4f8;
+        background-color: #fffaf9;
         background-image:
           radial-gradient(
             at 0% 0%,
-            rgba(50, 173, 230, 0.15) 0px,
+            rgba(233, 100, 67, 0.15) 0px,
             transparent 50%
           ),
           radial-gradient(
             at 100% 0%,
-            rgba(175, 82, 222, 0.15) 0px,
+            rgba(144, 78, 149, 0.15) 0px,
             transparent 50%
           ),
           radial-gradient(
             at 100% 100%,
-            rgba(0, 122, 255, 0.15) 0px,
+            rgba(233, 100, 67, 0.15) 0px,
             transparent 50%
           ),
           radial-gradient(
             at 0% 100%,
-            rgba(88, 86, 214, 0.15) 0px,
+            rgba(144, 78, 149, 0.15) 0px,
             transparent 50%
           );
         background-attachment: fixed;
@@ -104,12 +105,12 @@
         background-image:
           linear-gradient(
             to right,
-            rgba(0, 122, 255, 0.05) 1px,
+            rgba(233, 100, 67, 0.05) 1px,
             transparent 1px
           ),
           linear-gradient(
             to bottom,
-            rgba(0, 122, 255, 0.05) 1px,
+            rgba(233, 100, 67, 0.05) 1px,
             transparent 1px
           );
       }
@@ -122,7 +123,7 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.4);
         border-right: 1px solid rgba(255, 255, 255, 0.4);
         box-shadow:
-          0 20px 40px -10px rgba(0, 122, 255, 0.08),
+          0 20px 40px -10px rgba(233, 100, 67, 0.08),
           inset 0 1px 0 rgba(255, 255, 255, 1);
         border-radius: 2.5rem;
         transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -133,9 +134,9 @@
       .bento-card:hover {
         transform: translateY(-5px);
         box-shadow:
-          0 30px 60px -15px rgba(0, 122, 255, 0.15),
+          0 30px 60px -15px rgba(233, 100, 67, 0.15),
           inset 0 1px 0 rgba(255, 255, 255, 1);
-        border-color: rgba(0, 122, 255, 0.3);
+        border-color: rgba(233, 100, 67, 0.3);
         background: rgba(255, 255, 255, 0.65);
       }
 
@@ -161,7 +162,7 @@
   <body class="antialiased relative min-h-screen flex flex-col">
     <div class="fixed inset-0 tech-grid-bg pointer-events-none z-0"></div>
     <div
-      class="fixed top-20 left-20 w-72 h-72 border-[1px] border-cyber-purple/20 rounded-full animate-[spin_25s_linear_infinite] border-dashed pointer-events-none z-0"
+      class="fixed top-20 left-20 w-72 h-72 border-[1px] border-sunset-plum/20 rounded-full animate-[spin_25s_linear_infinite] border-dashed pointer-events-none z-0"
     ></div>
 
     <nav class="fixed w-full z-50 mt-4 px-6 transition-all duration-300">
@@ -170,10 +171,10 @@
       >
         <div class="flex items-center gap-3 group cursor-pointer relative">
           <div
-            class="absolute inset-0 bg-cyber-blue rounded-xl animate-pulse-ring"
+            class="absolute inset-0 bg-sunset-orange rounded-xl animate-pulse-ring"
           ></div>
           <div
-            class="w-10 h-10 bg-gradient-to-br from-cyber-blue to-cyber-cyan text-white rounded-xl flex items-center justify-center font-mono font-bold text-lg shadow-lg relative z-10 group-hover:scale-105 transition-transform"
+            class="w-10 h-10 bg-gradient-to-br from-sunset-orange to-sunset-peach text-white rounded-xl flex items-center justify-center font-mono font-bold text-lg shadow-lg relative z-10 group-hover:scale-105 transition-transform"
           >
             &lt;/&gt;
           </div>
@@ -181,7 +182,7 @@
             <h1
               class="font-bold text-gray-900 text-lg leading-none tracking-tight"
             >
-              Fatasya<span class="text-cyber-blue animate-blink">_</span>
+              Fatasya<span class="text-sunset-orange animate-blink">_</span>
             </h1>
             <p
               class="text-[9px] text-gray-500 font-bold font-mono uppercase tracking-widest mt-1"
@@ -194,22 +195,22 @@
         <div class="hidden md:flex items-center gap-1">
           <a
             href="index.html"
-            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-cyber-blue rounded-full text-sm font-semibold transition"
+            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-sunset-orange rounded-full text-sm font-semibold transition"
             >Beranda</a
           >
           <a
             href="filosofi.html"
-            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-cyber-blue rounded-full text-sm font-semibold transition"
+            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-sunset-orange rounded-full text-sm font-semibold transition"
             >Filosofi Mengajar</a
           >
           <a
             href="artifak.html"
-            class="px-5 py-2.5 bg-white text-cyber-blue border-b-2 border-cyber-blue rounded-full text-sm font-bold shadow-sm transition"
+            class="px-5 py-2.5 bg-white text-sunset-orange border-b-2 border-sunset-orange rounded-full text-sm font-bold shadow-sm transition"
             >Artifak & Analisis</a
           >
           <a
             href="refleksi.html"
-            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-cyber-blue rounded-full text-sm font-semibold transition"
+            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-sunset-orange rounded-full text-sm font-semibold transition"
             >Refleksi Akhir</a
           >
         </div>
@@ -217,7 +218,7 @@
         <a
           href="https://wa.me/6285732003774"
           target="_blank"
-          class="hidden md:flex items-center gap-2 bg-gradient-to-r from-cyber-blue to-cyber-cyan text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-blue-500/30 hover:scale-105 transition-transform"
+          class="hidden md:flex items-center gap-2 bg-gradient-to-r from-sunset-orange to-sunset-peach text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-orange-500/30 hover:scale-105 transition-transform"
         >
           <i class="fab fa-whatsapp"></i> Kontak
         </a>
@@ -246,7 +247,7 @@
         >
         <a
           href="artifak.html"
-          class="block w-full text-cyber-blue bg-blue-50 p-3 rounded-2xl font-bold"
+          class="block w-full text-sunset-orange bg-orange-50 p-3 rounded-2xl font-bold"
           >Artifak & Analisis</a
         >
         <a
@@ -264,11 +265,13 @@
       >
         <div class="flex-1">
           <div
-            class="flex items-center gap-2 mb-4 w-max bg-blue-50 px-4 py-2 rounded-full border border-blue-100"
+            class="flex items-center gap-2 mb-4 w-max bg-orange-50 px-4 py-2 rounded-full border border-orange-100"
           >
-            <div class="w-2 h-2 rounded-full bg-cyber-blue animate-pulse"></div>
+            <div
+              class="w-2 h-2 rounded-full bg-sunset-orange animate-pulse"
+            ></div>
             <span
-              class="text-cyber-blue font-bold text-[10px] uppercase tracking-widest"
+              class="text-sunset-orange font-bold text-[10px] uppercase tracking-widest"
               >DOKUMENTASI PRAKTIK TERBIMBING</span
             >
           </div>
@@ -278,7 +281,7 @@
           >
             Analisis Artefak <br />
             <span
-              class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-cyber-cyan to-cyber-purple"
+              class="text-transparent bg-clip-text bg-gradient-to-r from-sunset-orange via-sunset-peach to-sunset-plum"
               >Pembelajaran PPL</span
             >
           </h1>
@@ -296,7 +299,7 @@
           class="w-full max-w-[280px] lg:max-w-[360px] relative animate-float"
         >
           <div
-            class="absolute inset-0 bg-cyber-blue/20 blur-3xl rounded-full"
+            class="absolute inset-0 bg-sunset-orange/20 blur-3xl rounded-full"
           ></div>
           <img
             src="https://cdn3d.iconscout.com/3d/premium/thumb/data-analysis-5342748-4468820.png"
@@ -321,12 +324,14 @@
           </div>
           <div>
             <h2 class="text-2xl font-bold text-gray-900">
-              Siklus 1: Informatika Masa Depan & Society 5.0
+              Siklus 1: Dampak Sosial Informatika (Informatika Masa Depan,
+              Karier, dan Studi Lanjut)
             </h2>
             <p
-              class="text-xs text-cyber-blue font-medium mt-1 flex items-center gap-1.5"
+              class="text-xs text-sunset-orange font-medium mt-1 flex items-center gap-1.5"
             >
-              <i class="fas fa-location-dot"></i> SMA Negeri 14 Surabaya
+              <i class="fas fa-location-dot"></i> Praktik di: SMA Negeri 14
+              Surabaya
             </p>
           </div>
         </div>
@@ -336,26 +341,25 @@
             <div
               class="flex items-center gap-2 mb-2 bg-gray-50 w-max px-4 py-2 rounded-lg border border-gray-100"
             >
-              <i class="fas fa-layer-group text-cyber-blue"></i>
-              <h3 class="font-bold text-gray-800 text-sm">
-                Bukti Artefak Pembelajaran
-              </h3>
+              <i class="fas fa-layer-group text-sunset-orange"></i>
+              <h3 class="font-bold text-gray-800 text-sm">Artefak Utama</h3>
             </div>
 
             <div
               class="bg-white/80 border border-gray-200 p-5 rounded-3xl flex flex-col relative overflow-hidden shadow-sm"
             >
               <div class="w-full flex items-center gap-3 mb-4 text-gray-500">
-                <i class="fas fa-file-word text-blue-500 text-2xl"></i>
+                <i class="fas fa-file-word text-sunset-plum text-2xl"></i>
                 <span class="font-bold text-base text-gray-700"
                   >Modul Ajar Siklus 1</span
                 >
               </div>
+
               <div
                 class="relative group cursor-pointer"
                 onclick="
                   openModal(
-                    '<i class=\'fas fa-file-word text-blue-500\'></i> Modul Ajar Siklus 1',
+                    '<i class=\'fas fa-file-word text-sunset-plum\'></i> Modul Ajar Siklus 1',
                     'https://drive.google.com/file/d/1es-1YeiK_AizgZh5S0eVtRJzS6KZ7HGx/preview',
                   )
                 "
@@ -372,12 +376,12 @@
                     class="absolute inset-0 flex flex-col items-center justify-center bg-black/40 group-hover:bg-black/60 transition-all"
                   >
                     <div
-                      class="w-12 h-12 bg-white text-cyber-blue rounded-full flex items-center justify-center mb-3 animate-pulse-slow shadow-xl"
+                      class="w-12 h-12 bg-white text-sunset-orange rounded-full flex items-center justify-center mb-3 animate-pulse-slow shadow-xl"
                     >
                       <i class="fas fa-expand-alt text-xl"></i>
                     </div>
                     <span
-                      class="bg-cyber-blue text-white px-6 py-2 rounded-full text-xs font-bold tracking-wide"
+                      class="bg-sunset-orange text-white px-6 py-2 rounded-full text-xs font-bold tracking-wide"
                       >Pratinjau Modul</span
                     >
                   </div>
@@ -393,46 +397,46 @@
                     'https://drive.google.com/file/d/1rrcxEUiOIIoU6cfULzQnHPZww4kzq7dW/preview',
                   )
                 "
-                class="bg-gradient-to-br from-white to-orange-50 border border-orange-200 text-orange-600 hover:border-orange-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+                class="bg-gradient-to-br from-white to-orange-50 border border-orange-200 text-orange-600 hover:border-orange-400 hover:shadow-[0_10px_25px_rgba(249,115,22,0.2)] hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all w-full text-left group"
               >
                 <div class="flex justify-between w-full items-center">
                   <i
                     class="fas fa-desktop text-xl group-hover:scale-110 transition-transform"
                   ></i>
                   <div
-                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-orange-100"
                   >
-                    <i class="fas fa-expand text-[10px]"></i>
+                    <i class="fas fa-expand text-[10px] text-orange-500"></i>
                   </div>
                 </div>
                 <div class="mt-1">
                   <span
                     class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
-                    >Media Utama</span
+                    >Media</span
                   >
-                  <span class="text-xs font-bold text-gray-900 block"
-                    >Slide PPT Interaktif</span
+                  <span
+                    class="text-xs font-bold text-gray-900 block group-hover:text-orange-600 transition-colors"
+                    >PPT</span
                   >
                 </div>
               </button>
-
               <button
                 onclick="
                   openModal(
-                    '<i class=\'fas fa-play-circle text-red-500\'></i> Video Mengajar',
+                    '<i class=\'fas fa-play-circle text-red-500\'></i> Video Praktik',
                     'https://drive.google.com/file/d/1THO2Md3tnQjytM1G44vtA35PhWpNypjg/preview',
                   )
                 "
-                class="bg-gradient-to-br from-white to-red-50 border border-red-200 text-red-600 hover:border-red-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+                class="bg-gradient-to-br from-white to-red-50 border border-red-200 text-red-600 hover:border-red-400 hover:shadow-[0_10px_25px_rgba(239,68,68,0.2)] hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all w-full text-left group"
               >
                 <div class="flex justify-between w-full items-center">
                   <i
                     class="fas fa-play-circle text-xl group-hover:scale-110 transition-transform"
                   ></i>
                   <div
-                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-red-100"
                   >
-                    <i class="fas fa-expand text-[10px]"></i>
+                    <i class="fas fa-expand text-[10px] text-red-500"></i>
                   </div>
                 </div>
                 <div class="mt-1">
@@ -440,68 +444,69 @@
                     class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
                     >Video</span
                   >
-                  <span class="text-xs font-bold text-gray-900 block"
-                    >Praktik Mengajar</span
+                  <span
+                    class="text-xs font-bold text-gray-900 block group-hover:text-red-600 transition-colors"
+                    >Praktik</span
                   >
                 </div>
               </button>
-
               <button
                 onclick="
                   openModal(
-                    '<i class=\'fas fa-book-open text-blue-500\'></i> Hasil LKPD Siswa',
+                    '<i class=\'fas fa-book-open-reader text-fuchsia-500\'></i> LKPD Siswa',
                     'https://drive.google.com/file/d/1skiBjwApnIbaQmO91nZ-zH8cTLpYYOuz/preview',
                   )
                 "
-                class="bg-gradient-to-br from-white to-blue-50 border border-blue-200 text-blue-600 hover:border-blue-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+                class="bg-gradient-to-br from-white to-fuchsia-50 border border-fuchsia-200 text-fuchsia-600 hover:border-fuchsia-400 hover:shadow-[0_10px_25px_rgba(217,70,239,0.2)] hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all w-full text-left group"
               >
                 <div class="flex justify-between w-full items-center">
                   <i
-                    class="fas fa-book-open text-xl group-hover:scale-110 transition-transform"
+                    class="fas fa-book-open-reader text-xl group-hover:scale-110 transition-transform"
                   ></i>
                   <div
-                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-fuchsia-100"
                   >
-                    <i class="fas fa-expand text-[10px]"></i>
+                    <i class="fas fa-expand text-[10px] text-fuchsia-500"></i>
                   </div>
                 </div>
                 <div class="mt-1">
                   <span
                     class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
-                    >Penugasan</span
+                    >LKPD</span
                   >
-                  <span class="text-xs font-bold text-gray-900 block"
-                    >Hasil LKPD Siswa</span
+                  <span
+                    class="text-xs font-bold text-gray-900 block group-hover:text-fuchsia-600 transition-colors"
+                    >Siswa</span
                   >
                 </div>
               </button>
-
               <button
                 onclick="
                   openModal(
-                    '<i class=\'fas fa-clipboard-check text-green-500\'></i> Umpan Balik Guru Pamong',
-                    'https://drive.google.com/file/d/1CfZT8nXf0GohA6RXtdNhMSFvqS7o85-W/preview',
+                    '<i class=\'fas fa-list-check text-green-500\'></i> LK PPL',
+                    'https://drive.google.com/file/d/1fuL8ELQyjIzHti0QWypyA9ax-LMTu6Zw/preview',
                   )
                 "
-                class="bg-gradient-to-br from-white to-green-50 border border-green-200 text-green-600 hover:border-green-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+                class="bg-gradient-to-br from-white to-green-50 border border-green-200 text-green-600 hover:border-green-400 hover:shadow-[0_10px_25px_rgba(34,197,94,0.2)] hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all w-full text-left group"
               >
                 <div class="flex justify-between w-full items-center">
                   <i
-                    class="fas fa-clipboard-check text-xl group-hover:scale-110 transition-transform"
+                    class="fas fa-list-check text-xl group-hover:scale-110 transition-transform"
                   ></i>
                   <div
-                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-green-100"
                   >
-                    <i class="fas fa-expand text-[10px]"></i>
+                    <i class="fas fa-expand text-[10px] text-green-500"></i>
                   </div>
                 </div>
                 <div class="mt-1">
                   <span
                     class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
-                    >Penilaian</span
+                    >Lembar Kerja</span
                   >
-                  <span class="text-xs font-bold text-gray-900 block"
-                    >Umpan Balik GP & DPL</span
+                  <span
+                    class="text-xs font-bold text-gray-900 block group-hover:text-green-600 transition-colors"
+                    >PPL</span
                   >
                 </div>
               </button>
@@ -513,23 +518,25 @@
               class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
             >
               <div
-                class="p-5 flex justify-between items-center cursor-pointer hover:bg-blue-50/50 transition-colors"
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-orange-50/50 transition-colors"
                 onclick="toggleAccordion(this)"
               >
                 <h4
                   class="font-bold text-gray-900 flex items-center gap-3 text-sm"
                 >
                   <div
-                    class="w-8 h-8 rounded-full bg-blue-100 text-cyber-blue flex items-center justify-center text-sm"
+                    class="w-8 h-8 rounded-full bg-orange-100 text-sunset-orange flex items-center justify-center text-sm chevron-box"
                   >
                     <i class="fas fa-info"></i>
                   </div>
-                  1. Konteks & Tujuan Pembuatan
+                  1. Konteks & Tujuan
                 </h4>
                 <div
                   class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
                 >
-                  <i class="fas fa-chevron-down transition-transform"></i>
+                  <i
+                    class="fas fa-chevron-down transition-transform duration-300"
+                  ></i>
                 </div>
               </div>
               <div
@@ -538,15 +545,20 @@
                 <div
                   class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
                 >
-                  <strong>Konteks:</strong> Modul ini digunakan untuk 2 Jam
-                  Pelajaran (2 x 45 menit) di Kelas Fase E, membahas subbab
-                  "Informatika Masa Depan & Karier". Materi meliputi peran
-                  teknologi dalam Society 5.0, pencapaian SDGs, dan pemetaan
-                  profesi teknologi.<br /><br />
-                  <strong>Tujuan:</strong> Perangkat dan media dibuat agar siswa
-                  tidak hanya menghafal, tetapi mampu menganalisis secara kritis
-                  dampak teknologi pada masyarakat dan merencanakan kompetensi
-                  yang dibutuhkan untuk karier impian mereka.
+                  <strong>Konteks :</strong> Pembelajaran dialokasikan selama 2
+                  Jam Pelajaran (2 x 45 menit) yang berfokus pada subbab
+                  &quot;Informatika Masa Depan serta Karier dan Studi
+                  Lanjut&quot;. Materi inti mencakup pengenalan konsep Society
+                  5.0, peran informatika dalam mencapai Sustainable Development
+                  Goals (SDGs), pemetaan profesi IT, serta pentingnya
+                  sertifikasi profesional seperti Microsoft, Google, dan Oracle.
+                  <br />
+                  <strong>Tujuan :</strong> Melalui pemaparan presentasi (PPT)
+                  dan kuis interaktif, peserta didik ditargetkan mampu
+                  menjabarkan tren perkembangan informatika di era Society 5.0,
+                  mengaitkannya dengan pencapaian Sustainable Development Goals
+                  (SDGs), serta mengidentifikasi berbagai profesi, jalur studi,
+                  dan pentingnya sertifikasi di bidang IT.
                 </div>
               </div>
             </div>
@@ -555,80 +567,79 @@
               class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
             >
               <div
-                class="p-5 flex justify-between items-center cursor-pointer hover:bg-green-50/50 transition-colors"
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-rose-50/50 transition-colors"
                 onclick="toggleAccordion(this)"
               >
                 <h4
                   class="font-bold text-gray-900 flex items-center gap-3 text-sm"
                 >
                   <div
-                    class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm"
+                    class="w-8 h-8 rounded-full bg-rose-100 text-rose-500 flex items-center justify-center text-sm"
                   >
-                    <i class="fas fa-check"></i>
+                    <i class="fas fa-chart-line"></i>
                   </div>
-                  2. Analisis Kelebihan Artifak
+                  2. Kelebihan & Kekurangan
                 </h4>
                 <div
                   class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
                 >
-                  <i class="fas fa-chevron-down transition-transform"></i>
+                  <i
+                    class="fas fa-chevron-down transition-transform duration-300"
+                  ></i>
                 </div>
               </div>
               <div
                 class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
               >
-                <div
-                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
-                >
-                  Kelebihan utama dari perangkat ini adalah penggunaan
-                  <strong
-                    >Media Pembelajaran Berbasis Gamifikasi (Kahoot!)</strong
-                  >
-                  yang terlampir. Apersepsi yang menghubungkan teknologi modern
-                  dengan gaya hidup siswa secara nyata memicu antusiasme belajar
-                  yang sangat tinggi. Media interaktif ini sukses menghidupkan
-                  kompetisi positif, bahkan siswa yang pasif pun terdorong untuk
-                  berpartisipasi dan merespons pertanyaan pemantik.
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
-            >
-              <div
-                class="p-5 flex justify-between items-center cursor-pointer hover:bg-red-50/50 transition-colors"
-                onclick="toggleAccordion(this)"
-              >
-                <h4
-                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
-                >
+                <div class="pb-5 pt-1 pl-[3.25rem] space-y-3">
                   <div
-                    class="w-8 h-8 rounded-full bg-red-100 text-red-500 flex items-center justify-center text-sm"
+                    class="bg-green-50 border-l-4 border-green-500 p-3 rounded-r-lg"
                   >
-                    <i class="fas fa-minus-circle"></i>
+                    <p
+                      class="text-[10px] font-bold text-green-700 mb-1 uppercase tracking-widest"
+                    >
+                      Kelebihan:
+                    </p>
+                    <ul
+                      class="text-xs text-gray-700 text-justify list-disc pl-5 space-y-1"
+                    >
+                      <li>
+                        Kegiatan apersepsi yang mengaitkan tren teknologi dengan
+                        prospek karier masa depan sangat berhasil membangkitkan
+                        rasa ingin tahu peserta didik sejak awal kelas.
+                      </li>
+                      <li>
+                        Penggunaan media pembelajaran interaktif berbasis
+                        Kahoot! terbukti sangat efektif menghidupkan suasana
+                        belajar, sehingga siswa yang biasanya pasif pun ikut
+                        menunjukkan partisipasi yang signifikan.
+                      </li>
+                    </ul>
                   </div>
-                  3. Analisis Kekurangan Artifak
-                </h4>
-                <div
-                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
-                >
-                  <i class="fas fa-chevron-down transition-transform"></i>
-                </div>
-              </div>
-              <div
-                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
-              >
-                <div
-                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
-                >
-                  Kekurangan dari Modul Ajar dan pelaksanaannya terletak pada
-                  <strong>estimasi alokasi waktu pada bagian inti</strong>.
-                  Porsi diskusi mengenai sertifikasi internasional ternyata
-                  memancing banyak pertanyaan kritis dari siswa, sehingga waktu
-                  melebar melebihi rencana (RPP). Akibatnya, durasi untuk
-                  melakukan *refleksi penutup dan kesimpulan* di akhir jam
-                  pelajaran menjadi terlalu sempit dan terburu-buru.
+                  <div
+                    class="bg-red-50 border-l-4 border-red-500 p-3 rounded-r-lg"
+                  >
+                    <p
+                      class="text-[10px] font-bold text-red-700 mb-1 uppercase tracking-widest"
+                    >
+                      Analisis Kekurangan:
+                    </p>
+                    <ul
+                      class="text-xs text-gray-700 text-justify list-disc pl-5 space-y-1"
+                    >
+                      <li>
+                        Terdapat kelemahan dalam manajemen waktu, di mana porsi
+                        penjelasan materi mengenai jenis-jenis karier dan
+                        sertifikasi berjalan terlalu mendalam dan melebihi
+                        durasi yang dijadwalkan.
+                      </li>
+                      <li>
+                        Pembengkakan waktu pada kegiatan inti tersebut
+                        menyebabkan alur pembelajaran menuju sesi penutup
+                        menjadi sedikit terburu-buru.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -644,16 +655,18 @@
                   class="font-bold text-gray-900 flex items-center gap-3 text-sm"
                 >
                   <div
-                    class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-sm"
+                    class="w-8 h-8 rounded-full bg-pink-100 text-pink-500 flex items-center justify-center text-sm"
                   >
-                    <i class="fas fa-book"></i>
+                    <i class="fas fa-crosshairs"></i>
                   </div>
-                  4. Kajian Teori & Integrasi Mata Kuliah
+                  3. Tantangan Penyusunan
                 </h4>
                 <div
                   class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
                 >
-                  <i class="fas fa-chevron-down transition-transform"></i>
+                  <i
+                    class="fas fa-chevron-down transition-transform duration-300"
+                  ></i>
                 </div>
               </div>
               <div
@@ -662,15 +675,161 @@
                 <div
                   class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
                 >
-                  Perangkat ini disusun berdasarkan
-                  <strong>Teori Konstruktivisme Sosial Lev Vygotsky</strong>, di
-                  mana pemahaman mengenai masa depan teknologi tidak didekte,
-                  melainkan dibangun oleh siswa melalui diskusi kelompok
-                  (*scaffolding* teman sejawat). Artifak kuis Kahoot!
-                  terintegrasi secara langsung dengan prinsip **Assessment for
-                  Learning** yang dipelajari pada mata kuliah
-                  <em>Pembelajaran Mendalam dan Asesmen (PMA)</em>, berfungsi
-                  sebagai evaluasi formatif yang *joyful* (menyenangkan).
+                  Tantangan utama dalam menyusun perangkat ini adalah meramu
+                  materi dengan tingkat kesulitan moderat hingga tinggi seperti
+                  konsep Society 5.0, SDGs, dan analisis dampak sosial menjadi
+                  informasi yang mudah dicerna oleh siswa. Selain itu, terdapat
+                  tantangan untuk mengakomodasi berbagai gaya belajar di dalam
+                  kelas, mulai dari siswa yang membutuhkan visualisasi jelas
+                  melalui PPT hingga siswa yang lebih menyukai kompetisi
+                  interaktif. Di sisi manajerial kelas, ketergantungan pada
+                  media digital memunculkan tantangan bagi pendidik untuk
+                  melakukan pengawasan durasi secara ketat agar kegembiraan
+                  siswa tidak menyita waktu kegiatan lainnya.
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-purple-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-purple-100 text-purple-500 flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-graduation-cap"></i>
+                  </div>
+                  4. Landasan Pedagogik
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i
+                    class="fas fa-chevron-down transition-transform duration-300"
+                  ></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  Penyusunan perangkat pembelajaran pada pertemuan ini
+                  berlandaskan pada teori Perkembangan Kognitif Jean Piaget, di
+                  mana materi disajikan untuk menstimulasi kemampuan berpikir
+                  abstrak siswa Fase E melalui analisis masalah nyata seperti
+                  SDGs dan karier masa depan. Teori ini didukung oleh
+                  Konstruktivisme Sosial Lev Vygotsky, di mana guru berperan
+                  sebagai fasilitator yang memberikan scaffolding melalui
+                  diskusi kelas untuk membantu siswa mencapai pemahaman yang
+                  lebih dalam. Praktik ini diwujudkan melalui penerapan model
+                  Project-Based Learning (PjBL) agar siswa aktif bereksplorasi.
+                  Pendekatan tersebut terintegrasi dengan mata kuliah
+                  Pembelajaran Mendalam dan Asesmen (PMA) Dasar melalui
+                  penerapan Assessment for Learning, di mana kuis interaktif
+                  seperti Kahoot! menjadi wujud nyata pemanfaatan teknologi
+                  untuk evaluasi formatif yang berorientasi pada pengembangan
+                  kemampuan siswa secara berkelanjutan.
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-green-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-green-100 text-green-500 flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-check-double"></i>
+                  </div>
+                  5. Faktor Keberhasilan
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i
+                    class="fas fa-chevron-down transition-transform duration-300"
+                  ></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  Keberhasilan pembelajaran pada pertemuan ini didorong oleh
+                  kuatnya relevansi materi dengan kehidupan siswa sebagai
+                  digital native, sehingga mereka merasa topik yang dibahas
+                  sangat dekat dengan kebutuhan masa depan mereka. Strategi
+                  apersepsi kontekstual berhasil memicu rasa ingin tahu siswa
+                  sejak awal pelajaran melalui pertanyaan pemantik yang relevan
+                  dengan perkembangan teknologi saat ini. Selain itu,
+                  terciptanya iklim kelas yang menyenangkan dan kompetitif
+                  melalui media interaktif Kahoot! menjadi kunci utama yang
+                  mampu meningkatkan partisipasi aktif siswa, termasuk bagi
+                  mereka yang biasanya cenderung pasif.
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-yellow-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-yellow-100 text-yellow-500 flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-pen-to-square"></i>
+                  </div>
+                  6. Modifikasi &amp; Adaptasi
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i
+                    class="fas fa-chevron-down transition-transform duration-300"
+                  ></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  Untuk situasi kelas dengan karakteristik berbeda, dapat
+                  dilakukan beberapa adaptasi:
+                  <ul
+                    class="text-xs text-gray-700 text-justify list-disc pl-5 space-y-1"
+                  >
+                    <li>
+                      Memangkas porsi ceramah dan menggantinya dengan pemberian
+                      studi kasus singkat di awal kelas untuk memicu diskusi.
+                    </li>
+                    <li>
+                      Mengalokasikan durasi secara lebih proporsional agar sesi
+                      refleksi penutup tetap mendapatkan porsi waktu yang cukup
+                      untuk penguatan materi.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -689,12 +848,14 @@
           </div>
           <div>
             <h2 class="text-2xl font-bold text-gray-900">
-              Siklus 2: Proyek Visualisasi Road Map Karier
+              Siklus 2: Dampak Sosial Informatika (Proyek Road Map Karier &
+              Studi Lanjut)
             </h2>
             <p
-              class="text-xs text-cyber-blue font-medium mt-1 flex items-center gap-1.5"
+              class="text-xs text-sunset-orange font-medium mt-1 flex items-center gap-1.5"
             >
-              <i class="fas fa-location-dot"></i> SMA Negeri 14 Surabaya
+              <i class="fas fa-location-dot"></i> Praktik di: SMA Negeri 14
+              Surabaya
             </p>
           </div>
         </div>
@@ -704,26 +865,25 @@
             <div
               class="flex items-center gap-2 mb-2 bg-gray-50 w-max px-4 py-2 rounded-lg border border-gray-100"
             >
-              <i class="fas fa-layer-group text-cyber-blue"></i>
-              <h3 class="font-bold text-gray-800 text-sm">
-                Bukti Artefak Pembelajaran
-              </h3>
+              <i class="fas fa-layer-group text-sunset-orange"></i>
+              <h3 class="font-bold text-gray-800 text-sm">Artefak Utama</h3>
             </div>
 
             <div
               class="bg-white/80 border border-gray-200 p-5 rounded-3xl flex flex-col relative overflow-hidden shadow-sm"
             >
               <div class="w-full flex items-center gap-3 mb-4 text-gray-500">
-                <i class="fas fa-file-word text-blue-500 text-2xl"></i>
+                <i class="fas fa-file-word text-sunset-plum text-2xl"></i>
                 <span class="font-bold text-base text-gray-700"
                   >Modul Ajar Siklus 2</span
                 >
               </div>
+
               <div
                 class="relative group cursor-pointer"
                 onclick="
                   openModal(
-                    '<i class=\'fas fa-file-word text-blue-500\'></i> Modul Ajar Siklus 2',
+                    '<i class=\'fas fa-file-word text-sunset-plum\'></i> Modul Ajar Siklus 2',
                     'https://drive.google.com/file/d/1905kkXTN6sItLusWCZh7IHogHKmDvmxk/preview',
                   )
                 "
@@ -740,12 +900,12 @@
                     class="absolute inset-0 flex flex-col items-center justify-center bg-black/40 group-hover:bg-black/60 transition-all"
                   >
                     <div
-                      class="w-12 h-12 bg-white text-cyber-blue rounded-full flex items-center justify-center mb-3 animate-pulse-slow shadow-xl"
+                      class="w-12 h-12 bg-white text-sunset-orange rounded-full flex items-center justify-center mb-3 animate-pulse-slow shadow-xl"
                     >
                       <i class="fas fa-expand-alt text-xl"></i>
                     </div>
                     <span
-                      class="bg-cyber-blue text-white px-6 py-2 rounded-full text-xs font-bold tracking-wide"
+                      class="bg-sunset-orange text-white px-6 py-2 rounded-full text-xs font-bold tracking-wide"
                       >Pratinjau Modul</span
                     >
                   </div>
@@ -757,50 +917,50 @@
               <button
                 onclick="
                   openModal(
-                    '<i class=\'fas fa-desktop text-orange-500\'></i> Slide Materi',
+                    '<i class=\'fas fa-desktop text-orange-500\'></i> Media PPT',
                     'https://drive.google.com/file/d/1weCeRa_2GYwYJb7Ntj9-v-JPWAZD2J3k/preview',
                   )
                 "
-                class="bg-gradient-to-br from-white to-orange-50 border border-orange-200 text-orange-600 hover:border-orange-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+                class="bg-gradient-to-br from-white to-orange-50 border border-orange-200 text-orange-600 hover:border-orange-400 hover:shadow-[0_10px_25px_rgba(249,115,22,0.2)] hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all w-full text-left group"
               >
                 <div class="flex justify-between w-full items-center">
                   <i
                     class="fas fa-desktop text-xl group-hover:scale-110 transition-transform"
                   ></i>
                   <div
-                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-orange-100"
                   >
-                    <i class="fas fa-expand text-[10px]"></i>
+                    <i class="fas fa-expand text-[10px] text-orange-500"></i>
                   </div>
                 </div>
                 <div class="mt-1">
                   <span
                     class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
-                    >Media Utama</span
+                    >Media</span
                   >
-                  <span class="text-xs font-bold text-gray-900 block"
-                    >PPT & Apersepsi Canva</span
+                  <span
+                    class="text-xs font-bold text-gray-900 block group-hover:text-orange-600 transition-colors"
+                    >PPT</span
                   >
                 </div>
               </button>
-
               <button
                 onclick="
                   openModal(
-                    '<i class=\'fas fa-play-circle text-red-500\'></i> Video Dokumentasi',
+                    '<i class=\'fas fa-play-circle text-red-500\'></i> Video Praktik',
                     'https://drive.google.com/file/d/1THO2Md3tnQjytM1G44vtA35PhWpNypjg/preview',
                   )
                 "
-                class="bg-gradient-to-br from-white to-red-50 border border-red-200 text-red-600 hover:border-red-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+                class="bg-gradient-to-br from-white to-red-50 border border-red-200 text-red-600 hover:border-red-400 hover:shadow-[0_10px_25px_rgba(239,68,68,0.2)] hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all w-full text-left group"
               >
                 <div class="flex justify-between w-full items-center">
                   <i
                     class="fas fa-play-circle text-xl group-hover:scale-110 transition-transform"
                   ></i>
                   <div
-                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-red-100"
                   >
-                    <i class="fas fa-expand text-[10px]"></i>
+                    <i class="fas fa-expand text-[10px] text-red-500"></i>
                   </div>
                 </div>
                 <div class="mt-1">
@@ -808,68 +968,69 @@
                     class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
                     >Video</span
                   >
-                  <span class="text-xs font-bold text-gray-900 block"
-                    >Sesi Presentasi Siswa</span
+                  <span
+                    class="text-xs font-bold text-gray-900 block group-hover:text-red-600 transition-colors"
+                    >Praktik</span
                   >
                 </div>
               </button>
-
               <button
                 onclick="
                   openModal(
-                    '<i class=\'fas fa-book-open text-blue-500\'></i> Rubrik & LKPD',
+                    '<i class=\'fas fa-book-open-reader text-fuchsia-500\'></i> LKPD Siswa',
                     'https://drive.google.com/file/d/1ByCWVntKjFE4tqTT_u3P8scSSo0qQ95M/preview',
                   )
                 "
-                class="bg-gradient-to-br from-white to-blue-50 border border-blue-200 text-blue-600 hover:border-blue-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+                class="bg-gradient-to-br from-white to-fuchsia-50 border border-fuchsia-200 text-fuchsia-600 hover:border-fuchsia-400 hover:shadow-[0_10px_25px_rgba(217,70,239,0.2)] hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all w-full text-left group"
               >
                 <div class="flex justify-between w-full items-center">
                   <i
-                    class="fas fa-book-open text-xl group-hover:scale-110 transition-transform"
+                    class="fas fa-book-open-reader text-xl group-hover:scale-110 transition-transform"
                   ></i>
                   <div
-                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-fuchsia-100"
                   >
-                    <i class="fas fa-expand text-[10px]"></i>
+                    <i class="fas fa-expand text-[10px] text-fuchsia-500"></i>
                   </div>
                 </div>
                 <div class="mt-1">
                   <span
                     class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
-                    >Penugasan & Instrumen</span
+                    >LKPD</span
                   >
-                  <span class="text-xs font-bold text-gray-900 block"
-                    >Rubrik Proyek Visual</span
+                  <span
+                    class="text-xs font-bold text-gray-900 block group-hover:text-fuchsia-600 transition-colors"
+                    >Siswa</span
                   >
                 </div>
               </button>
-
               <button
                 onclick="
                   openModal(
-                    '<i class=\'fas fa-clipboard-check text-green-500\'></i> Umpan Balik GP',
-                    'https://drive.google.com/file/d/1CfZT8nXf0GohA6RXtdNhMSFvqS7o85-W/preview',
+                    '<i class=\'fas fa-list-check text-green-500\'></i> LK PPL',
+                    'https://drive.google.com/file/d/1zWMC7Gi8vditryTxYoKARdysr7bxD9-m/preview',
                   )
                 "
-                class="bg-gradient-to-br from-white to-green-50 border border-green-200 text-green-600 hover:border-green-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+                class="bg-gradient-to-br from-white to-green-50 border border-green-200 text-green-600 hover:border-green-400 hover:shadow-[0_10px_25px_rgba(34,197,94,0.2)] hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all w-full text-left group"
               >
                 <div class="flex justify-between w-full items-center">
                   <i
-                    class="fas fa-clipboard-check text-xl group-hover:scale-110 transition-transform"
+                    class="fas fa-list-check text-xl group-hover:scale-110 transition-transform"
                   ></i>
                   <div
-                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-green-100"
                   >
-                    <i class="fas fa-expand text-[10px]"></i>
+                    <i class="fas fa-expand text-[10px] text-green-500"></i>
                   </div>
                 </div>
                 <div class="mt-1">
                   <span
                     class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
-                    >Penilaian</span
+                    >Lembar Kerja</span
                   >
-                  <span class="text-xs font-bold text-gray-900 block"
-                    >Lembar Observasi GP</span
+                  <span
+                    class="text-xs font-bold text-gray-900 block group-hover:text-green-600 transition-colors"
+                    >PPL</span
                   >
                 </div>
               </button>
@@ -881,23 +1042,25 @@
               class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
             >
               <div
-                class="p-5 flex justify-between items-center cursor-pointer hover:bg-blue-50/50 transition-colors"
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-orange-50/50 transition-colors"
                 onclick="toggleAccordion(this)"
               >
                 <h4
                   class="font-bold text-gray-900 flex items-center gap-3 text-sm"
                 >
                   <div
-                    class="w-8 h-8 rounded-full bg-blue-100 text-cyber-blue flex items-center justify-center text-sm"
+                    class="w-8 h-8 rounded-full bg-orange-100 text-sunset-orange flex items-center justify-center text-sm"
                   >
                     <i class="fas fa-info"></i>
                   </div>
-                  1. Konteks & Tujuan Pembuatan
+                  1. Konteks & Tujuan
                 </h4>
                 <div
                   class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
                 >
-                  <i class="fas fa-chevron-down transition-transform"></i>
+                  <i
+                    class="fas fa-chevron-down transition-transform duration-300"
+                  ></i>
                 </div>
               </div>
               <div
@@ -906,15 +1069,21 @@
                 <div
                   class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
                 >
-                  <strong>Konteks:</strong> Pembelajaran ini difokuskan pada
-                  aktivitas penciptaan karya (Project). Siswa dibagi dalam
-                  kelompok untuk melakukan riset di internet mengenai profesi
-                  spesifik IT dan memvisualisasikannya dalam bentuk Peta Jalan
-                  (Road Map) Karier.<br /><br />
-                  <strong>Tujuan:</strong> Peserta didik mampu melatih kemampuan
-                  kolaborasi, mengoperasikan perangkat desain digital, menyaring
-                  informasi kredibel dari internet, serta mengasah kepercayaan
-                  diri dan komunikasi verbal saat sesi presentasi.
+                  <strong>Konteks :</strong> Pembelajaran dialokasikan selama 2
+                  Jam Pelajaran (2 x 45 menit) yang berfokus pada proyek
+                  pembuatan dan presentasi Road Map Karier. Materi inti mencakup
+                  kolaborasi peserta didik dalam 5 kelompok kerja untuk
+                  merancang peta jalan karier secara visual, memuat profesi
+                  spesifik yang dituju, jalur studi lanjut, sertifikasi
+                  internasional yang relevan, dan persiapan kompetensi lainnya
+                  melalui riset internet.
+                  <br />
+                  <strong>Tujuan :</strong> Melalui diskusi kelompok dengan
+                  pendekatan Project-Based Learning (PjBL), peserta didik
+                  ditargetkan mampu merancang sebuah Road Map (peta jalan) yang
+                  berisi langkah-langkah menuju karier informatika serta
+                  mempresentasikannya di depan kelas untuk melatih keterampilan
+                  dan komunikasi.
                 </div>
               </div>
             </div>
@@ -923,80 +1092,89 @@
               class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
             >
               <div
-                class="p-5 flex justify-between items-center cursor-pointer hover:bg-green-50/50 transition-colors"
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-rose-50/50 transition-colors"
                 onclick="toggleAccordion(this)"
               >
                 <h4
                   class="font-bold text-gray-900 flex items-center gap-3 text-sm"
                 >
                   <div
-                    class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm"
+                    class="w-8 h-8 rounded-full bg-rose-100 text-rose-500 flex items-center justify-center text-sm"
                   >
-                    <i class="fas fa-check"></i>
+                    <i class="fas fa-chart-line"></i>
                   </div>
-                  2. Analisis Kelebihan Artifak
+                  2. Kelebihan & Kekurangan
                 </h4>
                 <div
                   class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
                 >
-                  <i class="fas fa-chevron-down transition-transform"></i>
+                  <i
+                    class="fas fa-chevron-down transition-transform duration-300"
+                  ></i>
                 </div>
               </div>
               <div
                 class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
               >
-                <div
-                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
-                >
-                  Kekuatan perangkat ini terletak pada instrumen
-                  <strong>Rubrik Penilaian Proyek</strong> yang sangat jelas dan
-                  objektif. Rubrik tidak hanya menilai estetika visual *road
-                  map*, tetapi juga kedalaman riset dan kekompakan tim. Selain
-                  itu, penggunaan papan tulis virtual (seperti *Canva sticky
-                  notes*) pada saat apersepsi berhasil memberikan ruang
-                  partisipasi yang inklusif bagi semua siswa sebelum proyek
-                  dimulai.
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
-            >
-              <div
-                class="p-5 flex justify-between items-center cursor-pointer hover:bg-red-50/50 transition-colors"
-                onclick="toggleAccordion(this)"
-              >
-                <h4
-                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
-                >
+                <div class="pb-5 pt-1 pl-[3.25rem] space-y-3">
                   <div
-                    class="w-8 h-8 rounded-full bg-red-100 text-red-500 flex items-center justify-center text-sm"
+                    class="bg-green-50 border-l-4 border-green-500 p-3 rounded-r-lg"
                   >
-                    <i class="fas fa-minus-circle"></i>
+                    <p
+                      class="text-[10px] font-bold text-green-700 mb-1 uppercase tracking-widest"
+                    >
+                      Kelebihan:
+                    </p>
+                    <ul
+                      class="text-xs text-gray-700 text-justify list-disc pl-5 space-y-1"
+                    >
+                      <li>
+                        Kegiatan apersepsi memanfaatkan media Canva (sticky
+                        notes digital) terbukti sangat efektif untuk
+                        mengaktifkan kembali memori kolektif kelas, sehingga
+                        peserta didik melihat keterkaitan yang jelas antara
+                        konsep dasar sebelumnya dengan tugas pembuatan roadmap.
+                      </li>
+                      <li>
+                        Peserta didik menunjukkan kemandirian yang tinggi dan
+                        produktif dalam melakukan riset di internet mengenai
+                        jalur pendidikan dan sertifikasi.
+                      </li>
+                      <li>
+                        Sesi presentasi berhasil menjadi wadah yang menonjolkan
+                        kreativitas serta pemahaman mendalam peserta didik
+                        mengenai masa depan profesional di bidang teknologi.
+                      </li>
+                    </ul>
                   </div>
-                  3. Analisis Kekurangan Artifak
-                </h4>
-                <div
-                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
-                >
-                  <i class="fas fa-chevron-down transition-transform"></i>
-                </div>
-              </div>
-              <div
-                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
-              >
-                <div
-                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
-                >
-                  Kekurangannya terletak pada skenario
-                  <strong>Manajemen Dinamika Kelompok</strong> yang tertuang
-                  dalam RPP. Karena antusiasme riset internet yang tinggi,
-                  pendidik kewalahan melakukan transisi perhatian siswa dari
-                  *gadget* kembali ke instruksi di depan kelas. Perbedaan
-                  kecepatan kelompok dalam merampungkan proyek juga membuat
-                  kelompok yang sudah selesai harus menunggu lama sebelum
-                  presentasi dimulai, sehingga memicu sedikit kegaduhan.
+                  <div
+                    class="bg-red-50 border-l-4 border-red-500 p-3 rounded-r-lg"
+                  >
+                    <p
+                      class="text-[10px] font-bold text-red-700 mb-1 uppercase tracking-widest"
+                    >
+                      Analisis Kekurangan:
+                    </p>
+                    <ul
+                      class="text-xs text-gray-700 text-justify list-disc pl-5 space-y-1"
+                    >
+                      <li>
+                        Penjelasan konsep roadmap di awal pembelajaran memakan
+                        durasi yang cukup lama.
+                      </li>
+                      <li>
+                        Antusiasme peserta didik yang sangat tinggi saat riset
+                        internet membuat aktivitas diskusi melampaui jadwal RPP,
+                        sehingga sesi presentasi dan refleksi akhir menjadi
+                        sangat terburu-buru.
+                      </li>
+                      <li>
+                        Luapan energi peserta didik selama sesi eksplorasi
+                        terkadang menyulitkan pendidik dalam melakukan transisi
+                        antar-kegiatan secara tenang dan teratur.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1012,16 +1190,18 @@
                   class="font-bold text-gray-900 flex items-center gap-3 text-sm"
                 >
                   <div
-                    class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-sm"
+                    class="w-8 h-8 rounded-full bg-pink-100 text-pink-500 flex items-center justify-center text-sm"
                   >
-                    <i class="fas fa-book"></i>
+                    <i class="fas fa-crosshairs"></i>
                   </div>
-                  4. Kajian Teori & Integrasi Mata Kuliah
+                  3. Tantangan Penyusunan
                 </h4>
                 <div
                   class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
                 >
-                  <i class="fas fa-chevron-down transition-transform"></i>
+                  <i
+                    class="fas fa-chevron-down transition-transform duration-300"
+                  ></i>
                 </div>
               </div>
               <div
@@ -1030,15 +1210,169 @@
                 <div
                   class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
                 >
-                  Pelaksanaan ini bersandar pada model pembelajaran
-                  <strong>Project-Based Learning (PjBL)</strong>. Terintegrasi
-                  erat dengan mata kuliah
-                  <em>Pemahaman Peserta Didik dan Pembelajarannya</em>,
-                  pendekatan ini mengakomodasi kebutuhan gaya belajar
-                  *kinestetik-visual* dan memberikan ruang otonomi kepada siswa
-                  untuk meregulasi proses belajarnya sendiri secara merdeka.
-                  Rubrik rubrik instrumen proyek juga merupakan perwujudan
-                  langsung dari teori <strong>Assessment of Learning</strong>.
+                  Tantangan utama dalam menyusun perangkat untuk siklus ini
+                  adalah merancang instrumen dan rubrik asesmen yang
+                  komprehensif serta objektif. Penilaian tidak boleh hanya
+                  berfokus pada keindahan desain visual Road Map, tetapi juga
+                  harus mampu mengukur keakuratan konten materi (profesi dan
+                  jalur studi), kerja sama tim, kedisiplinan, serta kedalaman
+                  analisis peserta didik saat merespons audiens dalam sesi tanya
+                  jawab presentasi. Selain itu, terdapat tantangan teknis dalam
+                  merancang alternatif skenario pembelajaran untuk mengakomodasi
+                  keterbatasan akses gawai di kelas saat menggunakan platform
+                  kolaborasi digital. Di sisi manajerial kelas, pemberian tugas
+                  berbasis riset internet menuntut pendidik untuk menyeimbangkan
+                  antara pemberian otonomi belajar kepada peserta didik dengan
+                  ketegasan dalam mengendalikan waktu operasional agar esensi
+                  penutup pembelajaran tidak hilang.
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-purple-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-purple-100 text-purple-500 flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-graduation-cap"></i>
+                  </div>
+                  4. Landasan Pedagogik
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i
+                    class="fas fa-chevron-down transition-transform duration-300"
+                  ></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  Penyusunan perangkat pembelajaran pada pertemuan ini
+                  berlandaskan pada teori Konstruktivisme Sosial Lev Vygotsky,
+                  di mana peserta didik mempraktikkan penalaran kritis melalui
+                  kolaborasi kelompok (scaffolding teman sejawat) untuk
+                  membangun pemahaman secara mandiri. Praktik ini diwujudkan
+                  melalui penerapan model Project-Based Learning (PjBL) yang
+                  dipadukan dengan eksplorasi mandiri, sehingga peserta didik
+                  merasa lebih berkuasa atas proses pencarian informasi mereka
+                  sebagai kreator aktif. Pendekatan tersebut terintegrasi dengan
+                  mata kuliah Pembelajaran Mendalam dan Asesmen (PMA) Dasar
+                  melalui penerapan Assessment of Learning (Asesmen Hasil
+                  Pembelajaran), di mana instrumen penilaian menggunakan rubrik
+                  autentik untuk mengukur hasil proyek visual dan keterampilan
+                  komunikasi.
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-green-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-green-100 text-green-500 flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-check-double"></i>
+                  </div>
+                  5. Faktor Keberhasilan
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i
+                    class="fas fa-chevron-down transition-transform duration-300"
+                  ></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  Keberhasilan pembelajaran pada pertemuan ini didorong oleh
+                  pemberian otonomi belajar melalui tugas berbasis riset
+                  internet, yang benar-benar menjadi penggerak utama partisipasi
+                  aktif dan membuat kelas terasa dinamis. Selain itu, penggunaan
+                  sticky notes pada Canva di awal pembelajaran memberikan ruang
+                  inklusif bagi seluruh peserta didik tanpa terkecuali untuk
+                  memberikan pendapat secara visual, sehingga mereka memiliki
+                  kesiapan mental dan gambaran utuh mengenai arah pembelajaran
+                  pada hari tersebut.
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-yellow-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-yellow-100 text-yellow-500 flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-pen-to-square"></i>
+                  </div>
+                  6. Modifikasi &amp; Adaptasi
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i
+                    class="fas fa-chevron-down transition-transform duration-300"
+                  ></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  Untuk situasi kelas dengan karakteristik berbeda, dapat
+                  dilakukan beberapa adaptasi:
+                  <ul
+                    class="text-xs text-gray-700 text-justify list-disc pl-5 space-y-1"
+                  >
+                    <li>
+                      Memodifikasi aktivitas review materi menggunakan tautan
+                      kolaborasi Canva dengan sekadar menampilkannya lewat
+                      proyektor dan diisi bersama secara lisan atau perwakilan
+                      jika akses gawai peserta didik sangat terbatas.
+                    </li>
+                    <li>
+                      Mengoptimalkan penggunaan pengingat waktu visual (timer
+                      digital) di depan kelas untuk memberikan struktur kendali
+                      waktu yang lebih ketat pada setiap fase kegiatan kelompok.
+                    </li>
+                    <li>
+                      Menyiapkan media fisik seperti kertas karton dan sticky
+                      notes konvensional sebagai alternatif pengerjaan proyek
+                      kelompok agar perancangan Road Map tetap dapat berjalan
+                      lancar tanpa terkendala masalah koneksi jaringan internet.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -1057,12 +1391,13 @@
           </div>
           <div>
             <h2 class="text-2xl font-bold text-gray-900">
-              Siklus 3: Pembuatan Aplikasi Mobile dengan MIT App Inventor
+              Siklus 3: Praktik Lintas Bidang
             </h2>
             <p
-              class="text-xs text-cyber-blue font-medium mt-1 flex items-center gap-1.5"
+              class="text-xs text-sunset-orange font-medium mt-1 flex items-center gap-1.5"
             >
-              <i class="fas fa-location-dot"></i> SMA Negeri 14 Surabaya
+              <i class="fas fa-location-dot"></i> Praktik di: SMA Negeri 14
+              Surabaya
             </p>
           </div>
         </div>
@@ -1072,26 +1407,25 @@
             <div
               class="flex items-center gap-2 mb-2 bg-gray-50 w-max px-4 py-2 rounded-lg border border-gray-100"
             >
-              <i class="fas fa-layer-group text-cyber-blue"></i>
-              <h3 class="font-bold text-gray-800 text-sm">
-                Bukti Artefak Pembelajaran
-              </h3>
+              <i class="fas fa-layer-group text-sunset-orange"></i>
+              <h3 class="font-bold text-gray-800 text-sm">Artefak Utama</h3>
             </div>
 
             <div
               class="bg-white/80 border border-gray-200 p-5 rounded-3xl flex flex-col relative overflow-hidden shadow-sm"
             >
               <div class="w-full flex items-center gap-3 mb-4 text-gray-500">
-                <i class="fas fa-file-word text-blue-500 text-2xl"></i>
+                <i class="fas fa-file-word text-sunset-plum text-2xl"></i>
                 <span class="font-bold text-base text-gray-700"
                   >Modul Ajar Siklus 3</span
                 >
               </div>
+
               <div
                 class="relative group cursor-pointer"
                 onclick="
                   openModal(
-                    '<i class=\'fas fa-file-word text-blue-500\'></i> Modul Ajar Siklus 3',
+                    '<i class=\'fas fa-file-word text-sunset-plum\'></i> Modul Ajar Siklus 3',
                     'https://drive.google.com/file/d/1c83Yevhkax_9xOum6PkoJyBmGftKDAfn/preview',
                   )
                 "
@@ -1108,12 +1442,12 @@
                     class="absolute inset-0 flex flex-col items-center justify-center bg-black/40 group-hover:bg-black/60 transition-all"
                   >
                     <div
-                      class="w-12 h-12 bg-white text-cyber-blue rounded-full flex items-center justify-center mb-3 animate-pulse-slow shadow-xl"
+                      class="w-12 h-12 bg-white text-sunset-orange rounded-full flex items-center justify-center mb-3 animate-pulse-slow shadow-xl"
                     >
                       <i class="fas fa-expand-alt text-xl"></i>
                     </div>
                     <span
-                      class="bg-cyber-blue text-white px-6 py-2 rounded-full text-xs font-bold tracking-wide"
+                      class="bg-sunset-orange text-white px-6 py-2 rounded-full text-xs font-bold tracking-wide"
                       >Pratinjau Modul</span
                     >
                   </div>
@@ -1125,33 +1459,33 @@
               <button
                 onclick="
                   openModal(
-                    '<i class=\'fas fa-desktop text-orange-500\'></i> Modul App Inventor',
+                    '<i class=\'fas fa-desktop text-orange-500\'></i> Media PPT',
                     'https://drive.google.com/file/d/1rrcxEUiOIIoU6cfULzQnHPZww4kzq7dW/preview',
                   )
                 "
-                class="bg-gradient-to-br from-white to-orange-50 border border-orange-200 text-orange-600 hover:border-orange-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+                class="bg-gradient-to-br from-white to-orange-50 border border-orange-200 text-orange-600 hover:border-orange-400 hover:shadow-[0_10px_25px_rgba(249,115,22,0.2)] hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all w-full text-left group"
               >
                 <div class="flex justify-between w-full items-center">
                   <i
                     class="fas fa-desktop text-xl group-hover:scale-110 transition-transform"
                   ></i>
                   <div
-                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-orange-100"
                   >
-                    <i class="fas fa-expand text-[10px]"></i>
+                    <i class="fas fa-expand text-[10px] text-orange-500"></i>
                   </div>
                 </div>
                 <div class="mt-1">
                   <span
                     class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
-                    >Media Utama</span
+                    >Media</span
                   >
-                  <span class="text-xs font-bold text-gray-900 block"
-                    >Panduan Blok & UI</span
+                  <span
+                    class="text-xs font-bold text-gray-900 block group-hover:text-orange-600 transition-colors"
+                    >PPT</span
                   >
                 </div>
               </button>
-
               <button
                 onclick="
                   openModal(
@@ -1159,16 +1493,16 @@
                     'https://drive.google.com/file/d/1THO2Md3tnQjytM1G44vtA35PhWpNypjg/preview',
                   )
                 "
-                class="bg-gradient-to-br from-white to-red-50 border border-red-200 text-red-600 hover:border-red-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+                class="bg-gradient-to-br from-white to-red-50 border border-red-200 text-red-600 hover:border-red-400 hover:shadow-[0_10px_25px_rgba(239,68,68,0.2)] hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all w-full text-left group"
               >
                 <div class="flex justify-between w-full items-center">
                   <i
                     class="fas fa-play-circle text-xl group-hover:scale-110 transition-transform"
                   ></i>
                   <div
-                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-red-100"
                   >
-                    <i class="fas fa-expand text-[10px]"></i>
+                    <i class="fas fa-expand text-[10px] text-red-500"></i>
                   </div>
                 </div>
                 <div class="mt-1">
@@ -1176,29 +1510,59 @@
                     class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
                     >Video</span
                   >
-                  <span class="text-xs font-bold text-gray-900 block"
-                    >Aktivitas Lab Komputer</span
+                  <span
+                    class="text-xs font-bold text-gray-900 block group-hover:text-red-600 transition-colors"
+                    >Praktik</span
                   >
                 </div>
               </button>
-
               <button
                 onclick="
                   openModal(
-                    '<i class=\'fas fa-book-open text-blue-500\'></i> LKPD App Inventor',
+                    '<i class=\'fas fa-book-open-reader text-fuchsia-500\'></i> LKPD Siswa',
                     'https://drive.google.com/file/d/1pBCIDac59DIi0UleDc2pZnnPDV5zdhbk/preview',
                   )
                 "
-                class="bg-gradient-to-br from-white to-blue-50 border border-blue-200 text-blue-600 hover:border-blue-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
+                class="bg-gradient-to-br from-white to-fuchsia-50 border border-fuchsia-200 text-fuchsia-600 hover:border-fuchsia-400 hover:shadow-[0_10px_25px_rgba(217,70,239,0.2)] hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all w-full text-left group"
               >
                 <div class="flex justify-between w-full items-center">
                   <i
                     class="fas fa-book-open-reader text-xl group-hover:scale-110 transition-transform"
                   ></i>
                   <div
-                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-fuchsia-100"
                   >
-                    <i class="fas fa-expand text-[10px]"></i>
+                    <i class="fas fa-expand text-[10px] text-fuchsia-500"></i>
+                  </div>
+                </div>
+                <div class="mt-1">
+                  <span
+                    class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
+                    >LKPD</span
+                  >
+                  <span
+                    class="text-xs font-bold text-gray-900 block group-hover:text-fuchsia-600 transition-colors"
+                    >Siswa</span
+                  >
+                </div>
+              </button>
+              <button
+                onclick="
+                  openModal(
+                    '<i class=\'fas fa-list-check text-green-500\'></i> LK PPL',
+                    'https://drive.google.com/file/d/1Cy3jqKcE2VozpumFI_hfkkuQVeXjOWJ0/preview',
+                  )
+                "
+                class="bg-gradient-to-br from-white to-green-50 border border-green-200 text-green-600 hover:border-green-400 hover:shadow-[0_10px_25px_rgba(34,197,94,0.2)] hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all w-full text-left group"
+              >
+                <div class="flex justify-between w-full items-center">
+                  <i
+                    class="fas fa-list-check text-xl group-hover:scale-110 transition-transform"
+                  ></i>
+                  <div
+                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-green-100"
+                  >
+                    <i class="fas fa-expand text-[10px] text-green-500"></i>
                   </div>
                 </div>
                 <div class="mt-1">
@@ -1206,38 +1570,9 @@
                     class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
                     >Lembar Kerja</span
                   >
-                  <span class="text-xs font-bold text-gray-900 block"
-                    >Sintaks & Uji Coba App</span
-                  >
-                </div>
-              </button>
-
-              <button
-                onclick="
-                  openModal(
-                    '<i class=\'fas fa-clipboard-check text-green-500\'></i> Umpan Balik GP',
-                    'https://drive.google.com/file/d/1CfZT8nXf0GohA6RXtdNhMSFvqS7o85-W/preview',
-                  )
-                "
-                class="bg-gradient-to-br from-white to-green-50 border border-green-200 text-green-600 hover:border-green-400 hover:-translate-y-1 p-4 rounded-2xl flex flex-col items-start gap-2 transition-all text-left group"
-              >
-                <div class="flex justify-between w-full items-center">
-                  <i
-                    class="fas fa-clipboard-check text-xl group-hover:scale-110 transition-transform"
-                  ></i>
-                  <div
-                    class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-                  >
-                    <i class="fas fa-expand text-[10px]"></i>
-                  </div>
-                </div>
-                <div class="mt-1">
                   <span
-                    class="text-[9px] font-bold text-gray-500 uppercase tracking-widest block mb-0.5"
-                    >Penilaian Akhir</span
-                  >
-                  <span class="text-xs font-bold text-gray-900 block"
-                    >Lembar Penilaian DPL/GP</span
+                    class="text-xs font-bold text-gray-900 block group-hover:text-green-600 transition-colors"
+                    >PPL</span
                   >
                 </div>
               </button>
@@ -1249,23 +1584,25 @@
               class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
             >
               <div
-                class="p-5 flex justify-between items-center cursor-pointer hover:bg-blue-50/50 transition-colors"
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-orange-50/50 transition-colors"
                 onclick="toggleAccordion(this)"
               >
                 <h4
                   class="font-bold text-gray-900 flex items-center gap-3 text-sm"
                 >
                   <div
-                    class="w-8 h-8 rounded-full bg-blue-100 text-cyber-blue flex items-center justify-center text-sm"
+                    class="w-8 h-8 rounded-full bg-orange-100 text-sunset-orange flex items-center justify-center text-sm"
                   >
                     <i class="fas fa-info"></i>
                   </div>
-                  1. Konteks & Tujuan Pembuatan
+                  1. Konteks & Tujuan
                 </h4>
                 <div
                   class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
                 >
-                  <i class="fas fa-chevron-down transition-transform"></i>
+                  <i
+                    class="fas fa-chevron-down transition-transform duration-300"
+                  ></i>
                 </div>
               </div>
               <div
@@ -1274,16 +1611,19 @@
                 <div
                   class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
                 >
-                  <strong>Konteks:</strong> Siklus ini dilaksanakan di
-                  laboratorium komputer, berfokus pada pengenalan antarmuka dan
-                  penyusunan logika pemrograman visual (*block-based
-                  programming*) menggunakan *MIT App Inventor* untuk menciptakan
-                  aplikasi *mobile* sederhana.<br /><br />
-                  <strong>Tujuan:</strong> Peserta didik diharapkan mampu
-                  menerapkan *Computational Thinking*, merancang *User
-                  Interface* (UI), menyusun logika *puzzle block* pemrograman,
-                  serta menguji (running/testing) aplikasi buatan mereka secara
-                  langsung di perangkat *smartphone* masing-masing.
+                  <strong>Konteks :</strong> Pembelajaran dialokasikan selama 2
+                  Jam Pelajaran (2 x 45 menit) yang berfokus pada materi Praktik
+                  Lintas Bidang. Materi inti mencakup kolaborasi peserta didik
+                  merancang solusi atas masalah nyata melalui pembuatan
+                  prototipe aplikasi atau halaman web sederhana menggunakan
+                  perangkat seperti Microsoft PowerPoint atau Figma.
+                  <br />
+                  <strong>Tujuan :</strong> Melalui model Project-Based Learning
+                  (PjBL), peserta didik ditargetkan mampu mengidentifikasi
+                  masalah di lingkungan sekitar, merumuskan solusi berbasis
+                  Informatika (input-proses-output), merancang mock-up atau
+                  antarmuka pengguna (UI/UX) secara kolaboratif, serta
+                  mengevaluasi dan mempresentasikan hasil karyanya.
                 </div>
               </div>
             </div>
@@ -1292,82 +1632,88 @@
               class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
             >
               <div
-                class="p-5 flex justify-between items-center cursor-pointer hover:bg-green-50/50 transition-colors"
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-rose-50/50 transition-colors"
                 onclick="toggleAccordion(this)"
               >
                 <h4
                   class="font-bold text-gray-900 flex items-center gap-3 text-sm"
                 >
                   <div
-                    class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm"
+                    class="w-8 h-8 rounded-full bg-rose-100 text-rose-500 flex items-center justify-center text-sm"
                   >
-                    <i class="fas fa-check"></i>
+                    <i class="fas fa-chart-line"></i>
                   </div>
-                  2. Analisis Kelebihan Artifak
+                  2. Kelebihan & Kekurangan
                 </h4>
                 <div
                   class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
                 >
-                  <i class="fas fa-chevron-down transition-transform"></i>
+                  <i
+                    class="fas fa-chevron-down transition-transform duration-300"
+                  ></i>
                 </div>
               </div>
               <div
                 class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
               >
-                <div
-                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
-                >
-                  Kelebihan utama modul dan LKPD ini adalah kemampuannya
-                  menghadirkan <strong>*Joyful Learning* yang nyata</strong>.
-                  Pendekatan *block-based programming* terbukti mengeliminasi
-                  ketakutan siswa terhadap kode-kode yang rumit (*syntax
-                  error*). Reaksi siswa sangat positif dan bersemangat ketika
-                  mereka memindai kode QR dari layar PC dan aplikasi yang mereka
-                  rancang langsung beroperasi dan memunculkan animasi UI di
-                  *smartphone* pribadi mereka.
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
-            >
-              <div
-                class="p-5 flex justify-between items-center cursor-pointer hover:bg-red-50/50 transition-colors"
-                onclick="toggleAccordion(this)"
-              >
-                <h4
-                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
-                >
+                <div class="pb-5 pt-1 pl-[3.25rem] space-y-3">
                   <div
-                    class="w-8 h-8 rounded-full bg-red-100 text-red-500 flex items-center justify-center text-sm"
+                    class="bg-green-50 border-l-4 border-green-500 p-3 rounded-r-lg"
                   >
-                    <i class="fas fa-minus-circle"></i>
+                    <p
+                      class="text-[10px] font-bold text-green-700 mb-1 uppercase tracking-widest"
+                    >
+                      Kelebihan:
+                    </p>
+                    <ul
+                      class="text-xs text-gray-700 text-justify list-disc pl-5 space-y-1"
+                    >
+                      <li>
+                        Kegiatan apersepsi yang menayangkan contoh aplikasi
+                        sehari-hari berhasil memusatkan fokus dan membuat
+                        peserta didik percaya diri bahwa pembuatan program
+                        antarmuka adalah hal yang sangat mungkin dicapai tanpa
+                        harus menguasai bahasa pemrograman yang rumit.
+                      </li>
+                      <li>
+                        Praktik pembuatan desain prototipe dinilai sangat
+                        berhasil karena sebagian besar peserta didik mampu
+                        menyelesaikan proyek dan fitur-fitur dasar (seperti
+                        kelancaran hyperlink navigasi) berfungsi dengan baik.
+                      </li>
+                      <li>
+                        Pelaksanaan asesmen awal dan akhir menggunakan alat
+                        bantu Google Form berjalan dengan tertib, memudahkan
+                        pendidik memantau tingkat pemahaman siswa secara
+                        real-time dan transparan.
+                      </li>
+                    </ul>
                   </div>
-                  3. Analisis Kekurangan Artifak
-                </h4>
-                <div
-                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
-                >
-                  <i class="fas fa-chevron-down transition-transform"></i>
-                </div>
-              </div>
-              <div
-                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
-              >
-                <div
-                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
-                >
-                  Terdapat celah kekurangan pada
-                  <strong>antisipasi kendala teknis (infrastruktur)</strong>
-                  dalam RPP. Aplikasi MIT App Inventor membutuhkan koneksi
-                  internet yang stabil di seluruh komputer lab. Pada saat
-                  praktik, *bandwidth* yang terbagi menyebabkan kelambatan
-                  (*lag*) saat memuat proyek emulator. Selain itu, modul kurang
-                  menyediakan "jalur pintas" instruksi tertulis, sehingga ketika
-                  ada siswa tertinggal merakit satu blok logika, pendidik harus
-                  menjelaskan ulang secara personal yang menyita waktu cukup
-                  banyak.
+                  <div
+                    class="bg-red-50 border-l-4 border-red-500 p-3 rounded-r-lg"
+                  >
+                    <p
+                      class="text-[10px] font-bold text-red-700 mb-1 uppercase tracking-widest"
+                    >
+                      Analisis Kekurangan:
+                    </p>
+                    <ul
+                      class="text-xs text-gray-700 text-justify list-disc pl-5 space-y-1"
+                    >
+                      <li>
+                        Terdapat kendala teknis pada beberapa perangkat komputer
+                        dan koneksi internet saat proses pengerjaan dan
+                        deployment karya, yang terkadang menghambat alur kerja
+                        beberapa kelompok.
+                      </li>
+                      <li>
+                        Perbedaan kecepatan teknis antar peserta didik dalam
+                        menyelesaikan proyek membuat waktu untuk sesi tanya
+                        jawab mendalam sedikit berkurang karena harus menunggu
+                        kelompok lain menyusul.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1383,16 +1729,18 @@
                   class="font-bold text-gray-900 flex items-center gap-3 text-sm"
                 >
                   <div
-                    class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-sm"
+                    class="w-8 h-8 rounded-full bg-pink-100 text-pink-500 flex items-center justify-center text-sm"
                   >
-                    <i class="fas fa-book"></i>
+                    <i class="fas fa-crosshairs"></i>
                   </div>
-                  4. Kajian Teori & Integrasi Mata Kuliah
+                  3. Tantangan Penyusunan
                 </h4>
                 <div
                   class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
                 >
-                  <i class="fas fa-chevron-down transition-transform"></i>
+                  <i
+                    class="fas fa-chevron-down transition-transform duration-300"
+                  ></i>
                 </div>
               </div>
               <div
@@ -1401,16 +1749,157 @@
                 <div
                   class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
                 >
-                  Desain perangkat pembelajaran ini mengadopsi
-                  <strong>Metode Tutor Sebaya (*Peer Tutoring*)</strong> yang
-                  merupakan turunan dari Teori Vygotsky (*Zone of Proximal
-                  Development*), di mana peserta didik yang lebih cepat memahami
-                  algoritma blok diminta untuk melakukan *debugging* aplikasi
-                  milik teman di sebelahnya. Pendekatan ini relevan dengan mata
-                  kuliah <em>Pemahaman Peserta Didik</em> karena memfasilitasi
-                  keragaman tingkat abstraksi siswa, dengan memberikan
-                  pengalaman belajar *hands-on* yang konkrit bagi siswa bergaya
-                  belajar kinestetik-visual.
+                  Tantangan utama dalam menyusun perangkat untuk siklus ini
+                  adalah mengakomodasi keberagaman kesiapan belajar peserta
+                  didik, mengingat ada siswa yang unggul dalam teori logika,
+                  sementara yang lain lebih dominan di aspek desain perangkat
+                  lunak. Selain itu, merancang sintaks Deep Learning yang
+                  menyeimbangkan antara pemecahan masalah yang serius
+                  (Meaningful Learning) dengan suasana penciptaan karya yang
+                  menyenangkan (Joyful Learning) menuntut persiapan lembar kerja
+                  dan observasi yang matang dari pendidik.
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-purple-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-purple-100 text-purple-500 flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-graduation-cap"></i>
+                  </div>
+                  4. Landasan Pedagogik
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i
+                    class="fas fa-chevron-down transition-transform duration-300"
+                  ></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  Penyusunan perangkat pembelajaran ini sangat lekat dengan
+                  teori Konstruktivisme Sosial Vygotsky, di mana proses
+                  pemecahan masalah nyata dilakukan melalui interaksi sosial dan
+                  diskusi tim (scaffolding teman sejawat). Pendidik menerapkan
+                  pendekatan Deep Learning (meliputi Mindful, Meaningful, dan
+                  Joyful Learning) yang diintegrasikan dalam sintaks
+                  Project-Based Learning (PjBL). Pendekatan tersebut
+                  terintegrasi dengan mata kuliah Pembelajaran Mendalam dan
+                  Asesmen (PMA) Dasar melalui penerapan Assessment as Learning
+                  melalui keterlibatan peserta didik dalam evaluasi mandiri
+                  (Self-Assessment) dan rekan sejawat (Peer Assessment), serta
+                  Assessment of Learning untuk menguji produk akhir mock-up
+                  secara objektif.
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-green-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-green-100 text-green-500 flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-check-double"></i>
+                  </div>
+                  5. Faktor Keberhasilan
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i
+                    class="fas fa-chevron-down transition-transform duration-300"
+                  ></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  Keberhasilan pada siklus ini didorong oleh peningkatan
+                  kompetensi pedagogik guru praktikan dalam aspek manajemen
+                  kelas, yang dinilai oleh Guru Pamong sudah jauh lebih baik,
+                  efisien, dan tenang dalam mengendalikan dinamika kelas saat
+                  sesi teori maupun pendampingan praktik kelompok. Selain itu,
+                  pemanfaatan media visual (berupa blok interaktif PPT/Figma)
+                  memudahkan peserta didik bereksperimen langsung, sehingga
+                  memunculkan reaksi kegembiraan saat prototipe navigasi mereka
+                  sukses dijalankan di perangkat masing-masing.
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 accordion-wrapper"
+            >
+              <div
+                class="p-5 flex justify-between items-center cursor-pointer hover:bg-yellow-50/50 transition-colors"
+                onclick="toggleAccordion(this)"
+              >
+                <h4
+                  class="font-bold text-gray-900 flex items-center gap-3 text-sm"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-yellow-100 text-yellow-500 flex items-center justify-center text-sm"
+                  >
+                    <i class="fas fa-pen-to-square"></i>
+                  </div>
+                  6. Modifikasi &amp; Adaptasi
+                </h4>
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 chevron-box"
+                >
+                  <i
+                    class="fas fa-chevron-down transition-transform duration-300"
+                  ></i>
+                </div>
+              </div>
+              <div
+                class="accordion-content max-h-0 opacity-0 overflow-hidden px-5"
+              >
+                <div
+                  class="pb-5 pt-1 pl-[3.25rem] text-sm text-gray-600 text-justify leading-relaxed"
+                >
+                  Untuk situasi kelas dengan karakteristik berbeda, dapat
+                  dilakukan beberapa adaptasi:
+                  <ul
+                    class="text-xs text-gray-700 text-justify list-disc pl-5 space-y-1"
+                  >
+                    <li>
+                      Penerapan strategi bimbingan sebaya (peer tutoring) secara
+                      lebih terstruktur.
+                    </li>
+                    <li>
+                      Peserta didik yang lebih cepat menyelesaikan rancangan
+                      proyeknya akan langsung diarahkan untuk menjadi tutor bagi
+                      rekan atau kelompok lain yang mengalami hambatan teknis.
+                      Hal ini bertujuan agar pendidik dapat lebih fokus pada
+                      pengelolaan kelas menyeluruh dan efisiensi waktu
+                      presentasi tetap terjaga.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -1425,7 +1914,7 @@
       <div
         class="max-w-[1300px] mx-auto px-6 flex flex-col md:flex-row items-center justify-center text-xs font-mono text-gray-500 font-medium"
       >
-        <p>© 2026 Fatasya Aulia Suyono. E-Portofolio 2 Refleksi Akhir PPL.</p>
+        <p>© 2026 Fatasya Aulia Suyono. E-Portofolio UAS Refleksi Akhir PPL.</p>
       </div>
     </footer>
 
@@ -1458,7 +1947,7 @@
             class="absolute inset-0 flex flex-col items-center justify-center z-0"
           >
             <i
-              class="fas fa-circle-notch fa-spin text-4xl text-cyber-blue mb-4"
+              class="fas fa-circle-notch fa-spin text-4xl text-sunset-orange mb-4"
             ></i>
             <p class="text-sm font-mono text-gray-500 animate-pulse">
               Memuat Dokumen...
@@ -1524,11 +2013,14 @@
                   "fa-chevron-down",
                 );
               otherWrapper.classList.remove(
-                "border-blue-300",
-                "shadow-[0_10px_25px_-5px_rgba(0,122,255,0.15)]",
+                "border-orange-300",
+                "shadow-[0_10px_25px_-5px_rgba(233,100,67,0.15)]",
               );
               if (otherIconBox) {
-                otherIconBox.classList.remove("bg-blue-100", "text-cyber-blue");
+                otherIconBox.classList.remove(
+                  "bg-orange-100",
+                  "text-sunset-orange",
+                );
                 otherIconBox.classList.add("bg-gray-50", "text-gray-400");
               }
             }
@@ -1542,10 +2034,10 @@
           content.classList.add("opacity-0");
           chevron.classList.replace("fa-chevron-up", "fa-chevron-down");
           wrapper.classList.remove(
-            "border-blue-300",
-            "shadow-[0_10px_25px_-5px_rgba(0,122,255,0.15)]",
+            "border-orange-300",
+            "shadow-[0_10px_25px_-5px_rgba(233,100,67,0.15)]",
           );
-          iconBox.classList.remove("bg-blue-100", "text-cyber-blue");
+          iconBox.classList.remove("bg-orange-100", "text-sunset-orange");
           iconBox.classList.add("bg-gray-50", "text-gray-400");
         } else {
           content.style.maxHeight = content.scrollHeight + "px";
@@ -1553,11 +2045,11 @@
           content.classList.add("opacity-100");
           chevron.classList.replace("fa-chevron-down", "fa-chevron-up");
           wrapper.classList.add(
-            "border-blue-300",
-            "shadow-[0_10px_25px_-5px_rgba(0,122,255,0.15)]",
+            "border-orange-300",
+            "shadow-[0_10px_25px_-5px_rgba(233,100,67,0.15)]",
           );
           iconBox.classList.remove("bg-gray-50", "text-gray-400");
-          iconBox.classList.add("bg-blue-100", "text-cyber-blue");
+          iconBox.classList.add("bg-orange-100", "text-sunset-orange");
         }
       }
 
