@@ -31,11 +31,11 @@
               mono: ["Fira Code", "monospace"],
             },
             colors: {
-              cyber: {
-                blue: "#007AFF",
-                cyan: "#32ADE6",
-                purple: "#AF52DE",
-                indigo: "#5856D6",
+              sunset: {
+                orange: "#e96443",
+                peach: "#f48c71",
+                plum: "#904e95",
+                wine: "#6d3972",
               },
             },
             animation: {
@@ -70,27 +70,28 @@
     </script>
 
     <style>
+      /* Grapefruit Sunset Background Gradient */
       body {
-        background-color: #f2f4f8;
+        background-color: #fffaf9;
         background-image:
           radial-gradient(
             at 0% 0%,
-            rgba(50, 173, 230, 0.15) 0px,
+            rgba(233, 100, 67, 0.15) 0px,
             transparent 50%
           ),
           radial-gradient(
             at 100% 0%,
-            rgba(175, 82, 222, 0.15) 0px,
+            rgba(144, 78, 149, 0.15) 0px,
             transparent 50%
           ),
           radial-gradient(
             at 100% 100%,
-            rgba(0, 122, 255, 0.15) 0px,
+            rgba(233, 100, 67, 0.15) 0px,
             transparent 50%
           ),
           radial-gradient(
             at 0% 100%,
-            rgba(88, 86, 214, 0.15) 0px,
+            rgba(144, 78, 149, 0.15) 0px,
             transparent 50%
           );
         background-attachment: fixed;
@@ -104,12 +105,12 @@
         background-image:
           linear-gradient(
             to right,
-            rgba(0, 122, 255, 0.05) 1px,
+            rgba(233, 100, 67, 0.05) 1px,
             transparent 1px
           ),
           linear-gradient(
             to bottom,
-            rgba(0, 122, 255, 0.05) 1px,
+            rgba(233, 100, 67, 0.05) 1px,
             transparent 1px
           );
       }
@@ -122,7 +123,7 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.4);
         border-right: 1px solid rgba(255, 255, 255, 0.4);
         box-shadow:
-          0 20px 40px -10px rgba(0, 122, 255, 0.08),
+          0 20px 40px -10px rgba(233, 100, 67, 0.08),
           inset 0 1px 0 rgba(255, 255, 255, 1);
         border-radius: 2.5rem;
         transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -133,9 +134,9 @@
       .bento-card:hover {
         transform: translateY(-5px);
         box-shadow:
-          0 30px 60px -15px rgba(0, 122, 255, 0.15),
+          0 30px 60px -15px rgba(233, 100, 67, 0.15),
           inset 0 1px 0 rgba(255, 255, 255, 1);
-        border-color: rgba(0, 122, 255, 0.3);
+        border-color: rgba(233, 100, 67, 0.3);
         background: rgba(255, 255, 255, 0.65);
       }
 
@@ -156,21 +157,19 @@
   <body class="antialiased relative min-h-screen flex flex-col">
     <div class="fixed inset-0 tech-grid-bg pointer-events-none z-0"></div>
     <div
-      class="fixed top-20 left-20 w-72 h-72 border-[1px] border-cyber-purple/20 rounded-full animate-[spin_25s_linear_infinite] border-dashed pointer-events-none z-0"
+      class="fixed top-20 left-20 w-72 h-72 border-[1px] border-sunset-plum/20 rounded-full animate-[spin_25s_linear_infinite] border-dashed pointer-events-none z-0"
     ></div>
 
-    <!-- ================= NAVIGASI MENU ================= -->
     <nav class="fixed w-full z-50 mt-4 px-6 transition-all duration-300">
       <div
         class="max-w-[1300px] mx-auto bg-white/60 backdrop-blur-2xl border border-white/80 shadow-[0_8px_30px_rgba(0,0,0,0.04)] rounded-full px-6 py-3 flex justify-between items-center"
       >
-        <!-- Logo -->
         <div class="flex items-center gap-3 group cursor-pointer relative">
           <div
-            class="absolute inset-0 bg-cyber-blue rounded-xl animate-pulse-ring"
+            class="absolute inset-0 bg-sunset-orange rounded-xl animate-pulse-ring"
           ></div>
           <div
-            class="w-10 h-10 bg-gradient-to-br from-cyber-blue to-cyber-cyan text-white rounded-xl flex items-center justify-center font-mono font-bold text-lg shadow-lg relative z-10 group-hover:scale-105 transition-transform"
+            class="w-10 h-10 bg-gradient-to-br from-sunset-orange to-sunset-peach text-white rounded-xl flex items-center justify-center font-mono font-bold text-lg shadow-lg relative z-10 group-hover:scale-105 transition-transform"
           >
             &lt;/&gt;
           </div>
@@ -178,7 +177,7 @@
             <h1
               class="font-bold text-gray-900 text-lg leading-none tracking-tight"
             >
-              Fatasya<span class="text-cyber-blue animate-blink">_</span>
+              Fatasya<span class="text-sunset-orange animate-blink">_</span>
             </h1>
             <p
               class="text-[9px] text-gray-500 font-bold font-mono uppercase tracking-widest mt-1"
@@ -188,40 +187,37 @@
           </div>
         </div>
 
-        <!-- Desktop Menu -->
         <div class="hidden md:flex items-center gap-1">
           <a
             href="index.html"
-            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-cyber-blue rounded-full text-sm font-semibold transition"
+            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-sunset-orange rounded-full text-sm font-semibold transition"
             >Beranda</a
           >
           <a
             href="filosofi.html"
-            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-cyber-blue rounded-full text-sm font-semibold transition"
+            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-sunset-orange rounded-full text-sm font-semibold transition"
             >Filosofi Mengajar</a
           >
           <a
             href="artifak.html"
-            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-cyber-blue rounded-full text-sm font-semibold transition"
+            class="px-5 py-2.5 text-gray-600 hover:bg-white/50 hover:text-sunset-orange rounded-full text-sm font-semibold transition"
             >Artifak & Analisis</a
           >
           <a
             href="refleksi.html"
-            class="px-5 py-2.5 bg-white text-cyber-blue border-b-2 border-cyber-blue rounded-full text-sm font-bold shadow-sm transition"
+            class="px-5 py-2.5 bg-white text-sunset-orange border-b-2 border-sunset-orange rounded-full text-sm font-bold shadow-sm transition"
             >Refleksi Akhir</a
           >
         </div>
 
-        <!-- Kontak Button -->
         <a
           href="https://wa.me/6285732003774"
           target="_blank"
-          class="hidden md:flex items-center gap-2 bg-gradient-to-r from-cyber-blue to-cyber-cyan text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-blue-500/30 hover:scale-105 transition-transform"
+          class="hidden md:flex items-center gap-2 bg-gradient-to-r from-sunset-orange to-sunset-peach text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-orange-500/30 hover:scale-105 transition-transform"
         >
           <i class="fab fa-whatsapp"></i> Kontak
         </a>
 
-        <!-- Mobile Toggle -->
         <button
           id="mobile-menu-button"
           class="md:hidden text-gray-800 text-2xl focus:outline-none bg-white/50 p-2 rounded-full"
@@ -230,47 +226,43 @@
         </button>
       </div>
 
-      <!-- Mobile Menu -->
       <div
         id="mobile-menu"
         class="hidden md:hidden absolute top-20 left-6 right-6 bg-white/90 backdrop-blur-2xl border border-white shadow-2xl rounded-3xl flex flex-col p-4 space-y-2 font-medium z-40"
       >
         <a
           href="index.html"
-          class="block w-full text-gray-600 hover:bg-gray-50 p-3 rounded-2xl"
+          class="block w-full text-gray-600 hover:bg-orange-50 p-3 rounded-2xl"
           >Beranda</a
         >
         <a
           href="filosofi.html"
-          class="block w-full text-gray-600 hover:bg-gray-50 p-3 rounded-2xl"
+          class="block w-full text-gray-600 hover:bg-orange-50 p-3 rounded-2xl"
           >Filosofi Mengajar</a
         >
         <a
           href="artifak.html"
-          class="block w-full text-gray-600 hover:bg-gray-50 p-3 rounded-2xl"
+          class="block w-full text-gray-600 hover:bg-orange-50 p-3 rounded-2xl"
           >Artifak & Analisis</a
         >
         <a
           href="refleksi.html"
-          class="block w-full text-cyber-blue bg-blue-50 p-3 rounded-2xl font-bold"
+          class="block w-full text-sunset-orange bg-orange-50 p-3 rounded-2xl font-bold"
           >Refleksi Akhir</a
         >
       </div>
     </nav>
-    <!-- ================= END NAVIGASI ================= -->
-
     <main
       class="flex-1 max-w-[1300px] mx-auto w-full pt-40 pb-20 px-6 lg:px-8 relative z-10 space-y-10"
     >
-      <!-- HERO SECTION -->
       <div
         class="text-center opacity-0 animate-fade-in-up flex flex-col items-center justify-center pt-4 pb-6"
       >
         <div
-          class="flex items-center gap-2 mb-4 bg-white/60 backdrop-blur-md px-4 py-2 rounded-full border border-blue-100 shadow-sm"
+          class="flex items-center gap-2 mb-4 bg-white/60 backdrop-blur-md px-4 py-2 rounded-full border border-orange-100 shadow-sm"
         >
           <span
-            class="text-cyber-blue font-bold text-[10px] uppercase tracking-widest"
+            class="text-sunset-orange font-bold text-[10px] uppercase tracking-widest"
             >EVALUASI DIRI MAHASISWA PPG</span
           >
         </div>
@@ -279,29 +271,28 @@
         >
           Refleksi Akhir
           <span
-            class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-cyber-cyan to-cyber-purple"
+            class="text-transparent bg-clip-text bg-gradient-to-r from-sunset-orange via-sunset-peach to-sunset-plum"
             >PPL Terbimbing</span
           >
         </h1>
         <p class="text-gray-600 text-base md:text-lg leading-relaxed max-w-3xl">
-          Sintesis dari perjalanan awal, identifikasi tantangan, hingga
-          penyusunan strategi tindak lanjut berdasarkan umpan balik Guru Pamong
-          menuju PPL Mandiri.
+          &quot;Prinsip mengajar saya memadukan kemampuan teknis Informatika
+          dengan sikap humanis yang mengutamakan kebutuhan siswa.&quot;
         </p>
       </div>
 
-      <!-- ================= 1. PEMBELAJARAN SELAMA PPL ================= -->
       <section
         class="bento-card p-8 md:p-12 opacity-0 animate-fade-in-up delay-100"
       >
         <div class="flex items-center gap-3 mb-6">
           <div
-            class="w-10 h-10 bg-blue-100 text-cyber-blue rounded-xl flex items-center justify-center text-xl shadow-inner"
+            class="w-10 h-10 bg-orange-100 text-sunset-orange rounded-xl flex items-center justify-center text-xl shadow-inner"
           >
             <i class="fas fa-seedling"></i>
           </div>
           <h2 class="text-2xl font-bold text-gray-900">
-            Apa yang Telah Saya Pelajari?
+            Apa yang telah dipelajari sebagai calon guru selama tahapan PPL
+            Terbimbing?
           </h2>
         </div>
         <div class="space-y-4 text-gray-700 leading-relaxed text-justify">
@@ -309,26 +300,25 @@
             Berangkat dari latar belakang ilmu murni
             <strong>Sistem Informasi</strong> tanpa pengalaman mengajar
             sebelumnya, masa PPL Terbimbing ini adalah proses transisi yang
-            sangat transformatif bagi saya. Saya belajar bahwa menjadi guru
-            Informatika bukan sekadar memindahkan *coding* dari layar saya ke
-            layar siswa. Saya belajar tentang pentingnya
-            <strong>Pedagogi Digital</strong>.
+            sangat transformatif bagi saya. Selama PPL Terbimbing di SMA Negeri
+            14 Surabaya, saya belajar bahwa menjadi guru Informatika bukan
+            sekadar mentransfer materi teknis di depan kelas, melainkan
+            membangun lingkungan belajar yang berpusat pada siswa
+            <i>(student-centered learning).</i> Saya telah mengimplementasikan
+            pendekatan <i>Deep Learning</i> yang mencakup
+            <i>Mindful, Meaningful, dan Joyful Learning</i> dalam modul ajar
+            saya.
           </p>
           <p>
-            Saya menyadari bahwa kecanggihan teknologi, seperti materi pembuatan
-            antarmuka aplikasi menggunakan *MIT App Inventor*, membutuhkan
-            pengemasan model pembelajaran yang tepat seperti
-            <strong>Project-Based Learning (PjBL)</strong>. Melalui model ini,
-            saya belajar bagaimana memfasilitasi kolaborasi siswa, menyusun
-            *scaffolding* (bantuan bertahap), dan mengelola manajemen kelas agar
-            lingkungan belajar tetap kondusif, berpusat pada siswa, dan
-            bermakna. Saya belajar bahwa empati dan komunikasi sama pentingnya
-            dengan penguasaan sintaks pemrograman.
+            Saya juga belajar pentingnya manajemen kelas yang adaptif, bahwa
+            mengajar di era digital menuntut saya untuk menjadi fasilitator yang
+            mampu menyediakan scaffolding atau bantuan tepat sasaran kepada
+            siswa, sehingga mereka tidak sekadar menjadi pengguna teknologi,
+            tetapi mampu menjadi pencipta (creator) atas karya mereka sendiri.
           </p>
         </div>
       </section>
 
-      <!-- ================= 2. TANTANGAN & SOLUSI ================= -->
       <section
         class="bento-card p-8 md:p-12 opacity-0 animate-fade-in-up delay-200"
       >
@@ -342,74 +332,96 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Tantangan -->
           <div class="bg-red-50/50 border border-red-100 p-6 rounded-2xl">
             <h3 class="font-bold text-red-600 mb-3 flex items-center gap-2">
-              <i class="fas fa-exclamation-triangle"></i> Pengalaman Menantang
+              <i class="fas fa-exclamation-triangle"></i> Tantangan (Challenges)
             </h3>
-            <p class="text-gray-700 text-sm leading-relaxed text-justify">
-              Tantangan terbesar yang saya hadapi adalah
-              <strong>kesenjangan literasi digital siswa</strong> dan
-              <strong>manajemen waktu</strong>. Saat mengajarkan pembuatan
-              aplikasi mobile, beberapa siswa kesulitan memahami logika
-              algoritma, sementara siswa lain menyelesaikannya dengan sangat
-              cepat. Perbedaan kecepatan ini membuat saya kewalahan di lab
-              komputer, dan berdampak pada membengkaknya alokasi waktu hingga
-              menyita sesi penutup/refleksi pembelajaran.
-            </p>
+            <ul
+              class="text-sm text-gray-700 text-justify list-disc pl-5 space-y-1"
+            >
+              <li>
+                Penjelasan konsep atau materi di awal sesi sering kali memakan
+                durasi lebih lama dari yang direncanakan. Akibatnya, antusiasme
+                peserta didik saat melakukan riset atau diskusi membuat alur
+                kegiatan melebihi jadwal RPP, sehingga sesi presentasi dan
+                refleksi menjadi terburu-buru.
+              </li>
+              <li>
+                Terdapat variasi kemampuan teknis di antara peserta didik. Hal
+                ini menyebabkan peserta didik yang lebih lambat harus menunggu
+                bantuan teknis, sementara peserta didik yang lebih cepat sudah
+                menyelesaikan proyeknya. Kendala Teknis: Gangguan teknis pada
+                perangkat komputer dan koneksi internet saat proses pengerjaan
+                tugas atau deployment aplikasi sempat menghambat alur kerja
+                peserta didik.
+              </li>
+              <li>
+                Tingginya antusiasme peserta didik selama sesi diskusi terkadang
+                membuat saya kesulitan dalam melakukan transisi antar kegiatan
+                dengan tenang dan teratur.
+              </li>
+            </ul>
           </div>
 
-          <!-- Solusi -->
           <div class="bg-green-50/50 border border-green-100 p-6 rounded-2xl">
             <h3 class="font-bold text-green-600 mb-3 flex items-center gap-2">
-              <i class="fas fa-lightbulb"></i> Solusi yang Diterapkan
+              <i class="fas fa-lightbulb"></i> Solusi (Solutions)
             </h3>
-            <p class="text-gray-700 text-sm leading-relaxed text-justify">
-              Untuk mengatasi hal tersebut, saya mengubah metode coding
-              konvensional menjadi
-              <strong>*Visual Block-based Programming*</strong> agar lebih
-              intuitif. Selain itu, saya menerapkan strategi
-              <strong>Tutor Sebaya (*Peer Tutoring*)</strong>. Siswa yang lebih
-              dulu selesai saya beri tanggung jawab untuk menjadi "asisten
-              teknis" bagi kelompok yang tertinggal. Solusi ini berhasil
-              mengefisiensikan waktu saya untuk fokus pada manajemen kelas
-              secara keseluruhan.
-            </p>
+            <ul
+              class="text-sm text-gray-700 text-justify list-disc pl-5 space-y-1"
+            >
+              <li>
+                Penerapan Kendali Waktu yang Ketat: Saya menggunakan pengingat
+                waktu untuk mengingatkan di depan kelas agar peserta didik lebih
+                sadar akan durasi yang tersedia. Saya juga menyederhanakan
+                instruksi dengan menggunakan infografis di layar, sehingga tidak
+                membuang banyak waktu untuk penjelasan lisan yang berulang.
+              </li>
+              <li>
+                Saya menerapkan strategi bimbingan sebaya secara lebih
+                terstruktur. Peserta didik yang lebih cepat menyelesaikan proyek
+                diarahkan untuk membantu rekan lainnya yang mengalami hambatan.
+              </li>
+              <li>
+                Saya lebih fokus pada pengelolaan kelas secara menyeluruh untuk
+                memastikan hambatan teknis yang dialami peserta didik dapat
+                teratasi dengan lebih cepat. Langkah ini bertujuan untuk
+                meningkatkan efisiensi waktu pembelajaran secara keseluruhan.
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <!-- ================= 3. KEKUATAN & KELEMAHAN (SWOT Layout) ================= -->
       <section
         class="grid grid-cols-1 lg:grid-cols-2 gap-6 opacity-0 animate-fade-in-up delay-300"
       >
-        <!-- Kekuatan -->
         <div
-          class="bg-white border-2 border-blue-500/20 hover:border-blue-500 rounded-[2rem] p-8 shadow-sm transition-all duration-300 relative overflow-hidden group"
+          class="bg-white border-2 border-orange-500/20 hover:border-orange-500 rounded-[2rem] p-8 shadow-sm transition-all duration-300 relative overflow-hidden group"
         >
           <div
-            class="absolute -right-10 -top-10 text-blue-50 opacity-50 group-hover:scale-110 transition-transform duration-500 text-9xl"
+            class="absolute -right-10 -top-10 text-orange-50 opacity-50 group-hover:scale-110 transition-transform duration-500 text-9xl"
           >
             <i class="fas fa-shield-alt"></i>
           </div>
           <div class="flex items-center gap-3 mb-6 relative z-10">
             <div
-              class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-lg"
+              class="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center shadow-lg"
             >
               <i class="fas fa-plus"></i>
             </div>
-            <h3 class="text-2xl font-bold text-blue-800">Kekuatan Diri</h3>
+            <h3 class="text-2xl font-bold text-orange-600">Kekuatan Diri</h3>
           </div>
           <ul class="space-y-4 relative z-10 text-gray-600">
             <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-blue-500 mt-1"></i>
+              <i class="fas fa-check-circle text-orange-500 mt-1"></i>
               <p>
                 Penguasaan <strong>Materi Informatika dan IT</strong> yang
                 mumpuni berkat latar belakang prodi Sistem Informasi.
               </p>
             </li>
             <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-blue-500 mt-1"></i>
+              <i class="fas fa-check-circle text-orange-500 mt-1"></i>
               <p>
                 Kemampuan tinggi dalam merancang
                 <strong>Media Pembelajaran Berbasis Teknologi</strong> (Canva,
@@ -419,7 +431,6 @@
           </ul>
         </div>
 
-        <!-- Kelemahan -->
         <div
           class="bg-white border-2 border-red-400/20 hover:border-red-400 rounded-[2rem] p-8 shadow-sm transition-all duration-300 relative overflow-hidden group"
         >
@@ -457,34 +468,50 @@
         </div>
       </section>
 
-      <!-- ================= 4. UMPAN BALIK & RENCANA TINDAK LANJUT ================= -->
       <section
         class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden opacity-0 animate-fade-in-up delay-400"
       >
         <div
-          class="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"
+          class="absolute top-0 right-0 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl"
         ></div>
         <div
           class="absolute bottom-0 left-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl"
         ></div>
 
-        <!-- Umpan Balik -->
         <div class="mb-10 relative z-10">
           <h3
             class="text-amber-400 font-mono text-sm tracking-widest uppercase mb-3"
           >
-            <i class="fas fa-comments text-amber-400 mr-2"></i> Umpan Balik Guru
-            Pamong & DPL
+            <i class="fas fa-comments text-amber-400 mr-2"></i> Umpan Balik
+            (Feedback)
           </h3>
           <div
-            class="bg-white/10 border border-white/20 p-5 rounded-xl text-slate-200 text-sm leading-relaxed italic border-l-4 border-l-amber-400"
+            class="bg-white/10 border border-white/20 p-5 rounded-xl text-slate-200 text-sm leading-relaxed border-l-4 border-l-amber-400"
           >
-            "Secara penguasaan konten IT sudah sangat baik dan media sangat
-            menarik. Namun, untuk perbaikan di PPL Mandiri, perhatikan
-            <strong>kontrol dinamika kelas</strong>. Jangan sampai terlalu asyik
-            membimbing satu kelompok yang kesulitan, lalu mengabaikan kelompok
-            lain. Selain itu, porsi waktu untuk sesi *wrap-up* (kesimpulan dan
-            refleksi) wajib dijaga agar pembelajaran tuntas secara pedagogis."
+            <p>
+              Melalui diskusi refleksi akhir bersama Guru Pamong dan Dosen
+              Pembimbing Lapangan, saya mendapatkan masukan yang sangat berharga
+              sebagai acuan untuk mengembangkan kemampuan mengajar saya di tahap
+              PPL Mandiri.
+            </p>
+
+            <h3
+              class="my-4 p-0 text-amber-400 font-bold text-sm tracking-widest uppercase evaluation-title"
+            >
+              <i class="fas text-amber-400 mr-2"></i>Refleksi Perkembangan
+              Selama PPL Terbimbing
+            </h3>
+
+            <p>
+              Secara keseluruhan, perkembangan kompetensi saya dinilai meningkat
+              secara bertahap selama tiga siklus pembelajaran. Guru Pamong
+              mengapresiasi peningkatan yang signifikan pada aspek manajemen
+              kelas. Jika pada siklus awal saya merasa cukup kesulitan dalam
+              mengendalikan waktu dan suasana kelas, pada siklus ketiga saya
+              dinilai sudah lebih tenang dan efektif dalam mengelola dinamika
+              pembelajaran, baik saat penyampaian teori maupun saat mendampingi
+              praktik siswa.
+            </p>
           </div>
         </div>
 
@@ -492,13 +519,13 @@
           class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-white/10 pb-6 mb-8 relative z-10"
         >
           <div class="flex items-center gap-4">
-            <div class="w-12 h-1 bg-cyber-blue rounded-full"></div>
+            <div class="w-12 h-1 bg-sunset-orange rounded-full"></div>
             <h2 class="text-2xl md:text-3xl font-bold">
-              Rencana Tindak Lanjut (RTL)
+              Langkah Perbaikan untuk PPL Mandiri
             </h2>
           </div>
           <span
-            class="mt-4 md:mt-0 text-[10px] font-mono tracking-widest text-cyber-blue border border-cyber-blue/30 px-3 py-1.5 rounded-full uppercase"
+            class="mt-4 md:mt-0 text-[10px] font-mono tracking-widest text-sunset-orange border border-sunset-orange/30 px-3 py-1.5 rounded-full uppercase"
             >PPL Mandiri Roadmap</span
           >
         </div>
@@ -506,66 +533,63 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
           <div class="space-y-4">
             <div
-              class="w-10 h-10 rounded-full bg-amber-500 text-slate-900 font-bold flex items-center justify-center text-lg"
+              class="w-10 h-10 rounded-full bg-orange-500 text-white font-bold flex items-center justify-center text-lg"
             >
               01
             </div>
-            <h3 class="text-xl font-bold text-white">
-              Disiplin Manajemen Waktu
-            </h3>
+            <h3 class="text-xl font-bold text-white">Disiplin & Tegas</h3>
             <p class="text-slate-300 text-sm leading-relaxed">
-              Memanfaatkan <strong>*Digital Timer*</strong> yang ditampilkan di
-              proyektor selama sesi pengerjaan proyek (PjBL) agar siswa dan saya
-              memiliki patokan waktu yang tegas untuk transisi ke sesi
-              presentasi dan penutup.
+              Saya disarankan untuk lebih disiplin dan tegas dalam mengatur
+              durasi setiap fase pembelajaran. Saya akan menggunakan pengingat
+              waktu (timer digital) agar antusiasme siswa saat berdiskusi tidak
+              memangkas waktu untuk presentasi dan refleksi akhir.
             </p>
           </div>
           <div class="space-y-4">
             <div
-              class="w-10 h-10 rounded-full bg-blue-500 text-white font-bold flex items-center justify-center text-lg"
+              class="w-10 h-10 rounded-full bg-rose-500 text-white font-bold flex items-center justify-center text-lg"
             >
               02
             </div>
             <h3 class="text-xl font-bold text-white">Penerapan Tutor Sebaya</h3>
             <p class="text-slate-300 text-sm leading-relaxed">
-              Membangun struktur <strong>Kelompok Heterogen</strong> sejak awal
-              secara sengaja, di mana siswa dengan literasi IT tinggi
-              dipasangkan dengan yang kurang, untuk meratakan beban pendampingan
-              teknis di kelas.
+              Mengingat adanya perbedaan kecepatan belajar antar siswa, saya
+              akan menerapkan strategi bimbingan sebaya secara lebih
+              terstruktur. Siswa yang lebih cepat memahami materi akan diarahkan
+              untuk membantu teman sekelompoknya. Hal ini bertujuan agar proses
+              belajar lebih efisien dan saya dapat lebih fokus memantau
+              pengelolaan kelas secara keseluruhan.
             </p>
           </div>
           <div class="space-y-4">
             <div
-              class="w-10 h-10 rounded-full bg-indigo-500 text-white font-bold flex items-center justify-center text-lg"
+              class="w-10 h-10 rounded-full bg-fuchsia-500 text-white font-bold flex items-center justify-center text-lg"
             >
               03
             </div>
-            <h3 class="text-xl font-bold text-white">
-              Penguatan Asesmen Diagnostik
-            </h3>
+            <h3 class="text-xl font-bold text-white">Pemanfaatan Media</h3>
             <p class="text-slate-300 text-sm leading-relaxed">
-              Menggunakan fitur interaktif seperti <em>Mentimeter</em> atau
-              <em>Canva Sticky Notes</em> di 5 menit pertama untuk mengukur
-              kesiapan emosional (non-kognitif) dan pemahaman dasar (kognitif)
-              siswa secara cepat.
+              Saya akan terus menyederhanakan cara memberikan instruksi, salah
+              satu nya dengan bantuan media visual atau infografis singkat di
+              layar. Tujuannya adalah agar penjelasan lisan saya menjadi lebih
+              ringkas dan tidak berulang, sehingga waktu belajar siswa dapat
+              lebih optimal.
             </p>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
     <footer
       class="py-8 border-t border-white/50 relative z-10 bg-white/40 backdrop-blur-md mt-auto"
     >
       <div
         class="max-w-[1300px] mx-auto px-6 flex flex-col md:flex-row items-center justify-center text-xs font-mono text-gray-500 font-medium"
       >
-        <p>© 2026 Fatasya Aulia Suyono. E-Portofolio 2 Refleksi Akhir PPL.</p>
+        <p>© 2026 Fatasya Aulia Suyono. E-Portofolio UAS Refleksi Akhir PPL.</p>
       </div>
     </footer>
 
-    <!-- Mobile Menu Script -->
     <script>
       const btn = document.getElementById("mobile-menu-button");
       const menu = document.getElementById("mobile-menu");
